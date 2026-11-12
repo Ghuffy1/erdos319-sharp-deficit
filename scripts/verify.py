@@ -200,8 +200,9 @@ def main():
                 shutil.rmtree(build)
         results["clean_local_build_requested"] = args.clean
         checkpoint()
-        for number, module in enumerate(modules, start=1):
-            run(f"build-{number:03d}-{module}", [args.lake, "--no-cache", "--fail-fast", "build", "+" + module])
+        if args.clean:
+            for number, module in enumerate(modules, start=1):
+                run(f"build-{number:03d}-{module}", [args.lake, "--no-cache", "--fail-fast", "build", "+" + module])
         run("default-build", [args.lake, "--no-cache", "--fail-fast", "build"])
         audit = run("target-axioms", [args.lake, "env", "lean", "-DwarningAsError=true", "verification/Targets.lean"])
         expected_targets = read_json(ROOT / "verification" / "targets.json")["axiom_targets"]
