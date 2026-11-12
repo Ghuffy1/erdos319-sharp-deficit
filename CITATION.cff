@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying mathematical paper and retain the prior-work attributions."
+type: software
+title: "The sharp deficit in primitive signed reciprocal relations"
+version: 1.0.0
+abstract: "Mathematical paper and complete Lean proof of the sharp deficit asymptotic for the unrestricted fixed-sign maximum in Erdős Problem 319."
+authors:
+  - family-names: Howe
+    given-names: Will
+  - family-names: Huffman
+    given-names: Grant
+  - family-names: Kohlmeyer
+    given-names: Jensen
+  - family-names: Kruer
+    given-names: Liam
+keywords:
+  - Egyptian fractions
+  - primitive signed reciprocal relations
+  - Erdos Problem 319
+  - Lean
+  - JSP-000265
+license: Apache-2.0

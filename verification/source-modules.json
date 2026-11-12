@@ -1,0 +1,937 @@
+[
+  {
+    "module": "Erdos319Sharp.Basic",
+    "path": "Erdos319Sharp/Basic.lean",
+    "sha256": "32e6745be2c9f7a0574af82c15d8b74495dba3105e2e61734fad09ffe90e7fd0"
+  },
+  {
+    "module": "Erdos319Sharp.Harmonic",
+    "path": "Erdos319Sharp/Harmonic.lean",
+    "sha256": "c3ebbf821685a727d57cdbc4e771fd4b613724942d95bebf9e59c47cc45d6373"
+  },
+  {
+    "module": "Erdos319",
+    "path": "Erdos319.lean",
+    "sha256": "d6c4e9dc6e3cfcbf60beb9881b4bcb0cbea4887314968b5952cce8ea2ca07e23"
+  },
+  {
+    "module": "Erdos319Sharp.Target",
+    "path": "Erdos319Sharp/Target.lean",
+    "sha256": "79dfc98f0f20cf9f9bf644b41a874660492a605c2a1e6059bafdaa259f3bb08c"
+  },
+  {
+    "module": "Erdos319Sharp.Baseline",
+    "path": "Erdos319Sharp/Baseline.lean",
+    "sha256": "6aba196fba452652a1beff201752a2979a98e94008645add1dde1d06a778e65f"
+  },
+  {
+    "module": "Erdos319Sharp.ReciprocalTails",
+    "path": "Erdos319Sharp/ReciprocalTails.lean",
+    "sha256": "b79e509595460c57a54e2d4c0d324ce5c1e03d52fe31e5f4cdb70e438bd4f278"
+  },
+  {
+    "module": "Erdos319Sharp.LcmLowerBound",
+    "path": "Erdos319Sharp/LcmLowerBound.lean",
+    "sha256": "94c413c3ef8b43ee3f207b1df8dc076d93521efc5ddedba0b598831765eef48e"
+  },
+  {
+    "module": "Erdos319Sharp.Imported.UnitFractions.Definitions",
+    "path": "Erdos319Sharp/Imported/UnitFractions/Definitions.lean",
+    "sha256": "f90fdd27088e3ac41175619b88e2380de8087fd85680732595fe8e05c1959917"
+  },
+  {
+    "module": "Erdos319Sharp.Imported.UnitFractions.ForMathlib.IntegralRPow",
+    "path": "Erdos319Sharp/Imported/UnitFractions/ForMathlib/IntegralRPow.lean",
+    "sha256": "2853937c214a0439cb3790c8cece2519b17368bff143d2df1fe8133c84356668"
+  },
+  {
+    "module": "Erdos319Sharp.Imported.UnitFractions.ForMathlib.Misc",
+    "path": "Erdos319Sharp/Imported/UnitFractions/ForMathlib/Misc.lean",
+    "sha256": "7275c83d014ece05b329a43cf00cf45ed87212e56071d3aa03fbb00014f5e467"
+  },
+  {
+    "module": "Erdos319Sharp.Imported.UnitFractions.ForMathlib.BasicEstimates",
+    "path": "Erdos319Sharp/Imported/UnitFractions/ForMathlib/BasicEstimates.lean",
+    "sha256": "7fc81058f73dd8a4c3765f0495b419e0e824217c9cbe834075d2c29f78d8f739"
+  },
+  {
+    "module": "Erdos319Sharp.Imported.UnitFractions.AuxiliaryLemmas",
+    "path": "Erdos319Sharp/Imported/UnitFractions/AuxiliaryLemmas.lean",
+    "sha256": "005c6a85c1f00baf83f03813fb2c207743e42441bc5965bb67f677f588d62d7f"
+  },
+  {
+    "module": "Erdos319Sharp.PrimeTailCover",
+    "path": "Erdos319Sharp/PrimeTailCover.lean",
+    "sha256": "a9567bfdeb9ecc5f3b6015492c538d0e0709de6cd9910379299184206be91fd1"
+  },
+  {
+    "module": "Salt.Maynard.Mertens",
+    "path": "Salt/Maynard/Mertens.lean",
+    "sha256": "6f151c46249035130892f52ecdb02761556396a6aa2e5ef6e84b4e3a1c7ae22c"
+  },
+  {
+    "module": "Salt.BrunLower.MertensWindow",
+    "path": "Salt/BrunLower/MertensWindow.lean",
+    "sha256": "68c0e76e2935f4270c2c11bb008e6d865c01d2a5240fac22537e68666633849d"
+  },
+  {
+    "module": "Salt.Mertens.Second",
+    "path": "Salt/Mertens/Second.lean",
+    "sha256": "a52b9d9bba5534b5b472cb812f482589294d2c12584e3be13864d19876ce3fba"
+  },
+  {
+    "module": "Salt.BrunLower.Defs",
+    "path": "Salt/BrunLower/Defs.lean",
+    "sha256": "b8790ba9a96b098e833e458474d458d25e0fe3d24e6cb18ad41b8c79ec3c089e"
+  },
+  {
+    "module": "Salt.BrunLower.WRatio",
+    "path": "Salt/BrunLower/WRatio.lean",
+    "sha256": "f82f417f9d5dd06215a84f9eed6561bea727deeab2040f3cb0889fb719e10eda"
+  },
+  {
+    "module": "Salt.Brun",
+    "path": "Salt/Brun.lean",
+    "sha256": "473f6cb8581127a9f9338af0539864a5c48a805b81786bc57272b8d3003d34dd"
+  },
+  {
+    "module": "Salt.Brun.CongruenceCounting",
+    "path": "Salt/Brun/CongruenceCounting.lean",
+    "sha256": "f24d8ddc6bdaf9dfb1197f64c38415d8a445abe53af58f0c89e6330bc95aeb83"
+  },
+  {
+    "module": "Salt.Brun.M4",
+    "path": "Salt/Brun/M4.lean",
+    "sha256": "4ec5c75ab49aef71d33c3335f58e018939bd5be97f76a30723e78f0be3bfa155"
+  },
+  {
+    "module": "Salt.Brun.M2",
+    "path": "Salt/Brun/M2.lean",
+    "sha256": "cda37fa05d1fb53b3034149e14e921ef2488d383bcb20cd1e7ace7db8ece9581"
+  },
+  {
+    "module": "Salt.Brun.M3Expansion",
+    "path": "Salt/Brun/M3Expansion.lean",
+    "sha256": "e54615fde0fceae385f56f32c40f180d96ccc9b87921d91a6e021d966036b91c"
+  },
+  {
+    "module": "Salt.Brun.Sieve",
+    "path": "Salt/Brun/Sieve.lean",
+    "sha256": "58f9d2454832f162c07bb4f6983283d38223c07164df20e1a62ef1cdb7f42695"
+  },
+  {
+    "module": "Salt.BrunLower.MertensDischarge",
+    "path": "Salt/BrunLower/MertensDischarge.lean",
+    "sha256": "fe921599bbcd2c8f51fc7f5e7deb6981cb1ed53b509f1cde27d5f9379949abaa"
+  },
+  {
+    "module": "Salt.Mertens.PrimePower",
+    "path": "Salt/Mertens/PrimePower.lean",
+    "sha256": "e601f6106c6d5b2c6bdd5881e884a03744908b8166fdf8655daeeb1354fb4bc2"
+  },
+  {
+    "module": "Salt.Mertens.ZetaSide",
+    "path": "Salt/Mertens/ZetaSide.lean",
+    "sha256": "5eb5ab4c79062280e6257142460b529166def4549a0475ea07ab9d657a29064e"
+  },
+  {
+    "module": "Salt.Mertens.GammaIntegral",
+    "path": "Salt/Mertens/GammaIntegral.lean",
+    "sha256": "233fcf6f3373e5d3a30a82409f2ff973eeb940c616e3c43eaa529eb1da8dfb95"
+  },
+  {
+    "module": "Salt.Mertens.Third",
+    "path": "Salt/Mertens/Third.lean",
+    "sha256": "87c57874bce72a4c1c5f9c4f962f6efe8f191e8ccb5e142e9fdf008c3177f2ce"
+  },
+  {
+    "module": "Erdos319Sharp.Mertens",
+    "path": "Erdos319Sharp/Mertens.lean",
+    "sha256": "e216bdd8a5b8e8883cdf9858ab9d1bd8d3c7dfc650dd4433faa6e40d6e2bc876"
+  },
+  {
+    "module": "Erdos319Sharp.DivisorReciprocals",
+    "path": "Erdos319Sharp/DivisorReciprocals.lean",
+    "sha256": "35ff3cb19ac555742a002fe2ec9b575b2682bc9596114c82898735e05cacc30f"
+  },
+  {
+    "module": "Erdos319Sharp.LcmMass",
+    "path": "Erdos319Sharp/LcmMass.lean",
+    "sha256": "1fe58e3c9deffdb658eec54fdb0b52b771ef1531fb00027143a4cc56c86adf38"
+  },
+  {
+    "module": "Erdos319Sharp.MultiplicityCount",
+    "path": "Erdos319Sharp/MultiplicityCount.lean",
+    "sha256": "84c6f9c70543116065a865984dbc9bb8ac5b6d9c681d5837c097662b9af393dc"
+  },
+  {
+    "module": "Erdos319Sharp.PrimeSupply",
+    "path": "Erdos319Sharp/PrimeSupply.lean",
+    "sha256": "3cbd5413c1d1650ef4d1e91e64d2fb2947cdf5b9113c03570ab814a6576ca430"
+  },
+  {
+    "module": "Erdos319Sharp.MultiplicityMoment",
+    "path": "Erdos319Sharp/MultiplicityMoment.lean",
+    "sha256": "43f02a28cc88b1bf9df33ac31580c7cba08a01b374532e727ba426916356865b"
+  },
+  {
+    "module": "Erdos319Sharp.SmoothTailRate",
+    "path": "Erdos319Sharp/SmoothTailRate.lean",
+    "sha256": "ddcfc6d15028635190b1c6e305bf146cf39b9df85244c6a8008952e8bed81f6e"
+  },
+  {
+    "module": "Erdos319Sharp.CleaningBudget",
+    "path": "Erdos319Sharp/CleaningBudget.lean",
+    "sha256": "c8874808d8b4143e3abe8a9da1b2e3741f18d60c5dd81ad3c37833e9d3bca4aa"
+  },
+  {
+    "module": "Erdos319Sharp.QuantitativeCleaning",
+    "path": "Erdos319Sharp/QuantitativeCleaning.lean",
+    "sha256": "f807633cc49149414239bd72b6d0de085bcada6dddc53ed9e2cdd57b3e5e6c67"
+  },
+  {
+    "module": "Erdos319Sharp.FiniteLocalization",
+    "path": "Erdos319Sharp/FiniteLocalization.lean",
+    "sha256": "5eee4e572cea8ffbfa9e96af86ce62814f37da2035bc8d73f1e5a48ac17ac22c"
+  },
+  {
+    "module": "Erdos319Sharp.LocalizationScales",
+    "path": "Erdos319Sharp/LocalizationScales.lean",
+    "sha256": "542b0584209b49061457abc6f191b4ba6361ebf3dc1c3de4bf764ebd4f138d32"
+  },
+  {
+    "module": "Erdos319Sharp.LocalizationPrimeBands",
+    "path": "Erdos319Sharp/LocalizationPrimeBands.lean",
+    "sha256": "42e636f184f29b03f8d35c155fab9ce2e21310c6fa5d840248bfa45a86d4531f"
+  },
+  {
+    "module": "Erdos319Sharp.LocalizationEstimates",
+    "path": "Erdos319Sharp/LocalizationEstimates.lean",
+    "sha256": "95070188ada60a2e2b222d67dd4df8bd43dfccd002b3bf7276b3e63ce5287fb7"
+  },
+  {
+    "module": "Erdos319Sharp.LocalizationSieve",
+    "path": "Erdos319Sharp/LocalizationSieve.lean",
+    "sha256": "7160651d017aec5390f3aca91ccd5956c2de75c73df55751a9fd98397ad4fc5e"
+  },
+  {
+    "module": "Erdos319Sharp.Fourier",
+    "path": "Erdos319Sharp/Fourier.lean",
+    "sha256": "a0e73487655f28a8979e8f027e0f037dda472a3016dc932af227c5b365a793f8"
+  },
+  {
+    "module": "Erdos319Sharp.Localization",
+    "path": "Erdos319Sharp/Localization.lean",
+    "sha256": "df3c2d9e747ce69df76ce82c90bc20a756a4a0796ad32ae71da92c13369f39ac"
+  },
+  {
+    "module": "Erdos319Sharp.QuantitativeLocalization",
+    "path": "Erdos319Sharp/QuantitativeLocalization.lean",
+    "sha256": "8bfad34b676fd5c99a6ac166ff147abeaa86d40633027a4485659363fe83a32c"
+  },
+  {
+    "module": "Erdos319Sharp.ExactTarget",
+    "path": "Erdos319Sharp/ExactTarget.lean",
+    "sha256": "c4e259b396e5e375d92f001d13409cc3fd6c7bf8f49b67ab9c167140600c4dc1"
+  },
+  {
+    "module": "Erdos319Sharp.Uniform",
+    "path": "Erdos319Sharp/Uniform.lean",
+    "sha256": "ae4abe8ff3411013ef954f1a0d2f4fc18a08ec9308cc229166e900a76edb2d51"
+  },
+  {
+    "module": "Erdos319Sharp.Major",
+    "path": "Erdos319Sharp/Major.lean",
+    "sha256": "c4fbba137f402e8ef5c74745e5c84f671ab0c9d8a883c46af1518089a17a0945"
+  },
+  {
+    "module": "Erdos319Sharp.Middle",
+    "path": "Erdos319Sharp/Middle.lean",
+    "sha256": "7d6abdfb12135a4a5c614a65778267a16e3733a2e854e79bff94e53ca27f26c3"
+  },
+  {
+    "module": "Erdos319Sharp.Representation",
+    "path": "Erdos319Sharp/Representation.lean",
+    "sha256": "73ae29fa75129f0cd3d9b5d8a74a9389ca74b89b8ad9c7aac6226f4d52a0272a"
+  },
+  {
+    "module": "Erdos319Sharp.CorrectedRepresentation",
+    "path": "Erdos319Sharp/CorrectedRepresentation.lean",
+    "sha256": "ab7bea163a37e81a848568e358c7711ef4daf7702d51ac3b0cf41f78f837a426"
+  },
+  {
+    "module": "Erdos319Sharp.ExactSubset",
+    "path": "Erdos319Sharp/ExactSubset.lean",
+    "sha256": "d96b5827b082d558e6efde7612c5291b302f9dc7b4da850881a39fe494bf8612"
+  },
+  {
+    "module": "Erdos319Sharp.ZeroSum",
+    "path": "Erdos319Sharp/ZeroSum.lean",
+    "sha256": "ef3f70bda646e36f0028da5c0b1f40a61aa0897c3791339d4e5bb56d1bd6aaec"
+  },
+  {
+    "module": "Erdos319Sharp.ReciprocalResidues",
+    "path": "Erdos319Sharp/ReciprocalResidues.lean",
+    "sha256": "663ce42738e222ad19355542d5b8e59f420bc89eb9c26a8f2be12f8d7b101639"
+  },
+  {
+    "module": "Erdos319Sharp.ModularTarget",
+    "path": "Erdos319Sharp/ModularTarget.lean",
+    "sha256": "137a7b75d9ae092ebedc7e857e470d6977f1a26884efc9b90f4bf7ca11d9e8d2"
+  },
+  {
+    "module": "Erdos319Sharp.CommonPrimeTarget",
+    "path": "Erdos319Sharp/CommonPrimeTarget.lean",
+    "sha256": "ed9d6f44f217072d7949d93efa36ca83d26f1290eda275773bfdee04e6b4f79a"
+  },
+  {
+    "module": "Erdos319Sharp.OppositeSignTarget",
+    "path": "Erdos319Sharp/OppositeSignTarget.lean",
+    "sha256": "62a47c90620b564944053f09281c1897bdfa601ba749227a749d1c74ff7009ff"
+  },
+  {
+    "module": "Erdos319Sharp.MinorityAlgebra",
+    "path": "Erdos319Sharp/MinorityAlgebra.lean",
+    "sha256": "85b03324b3bb3cc040ea3f7e2ba9a91fc6d3d1bb55b034c71ba8fbb6cd85e09d"
+  },
+  {
+    "module": "Erdos319Sharp.PrimeAvoidance",
+    "path": "Erdos319Sharp/PrimeAvoidance.lean",
+    "sha256": "995f9feef8f3eba0156b9f97de05b5840a67595e9614e807a2d49e09e905e3a4"
+  },
+  {
+    "module": "Erdos319Sharp.PrimeAssignment",
+    "path": "Erdos319Sharp/PrimeAssignment.lean",
+    "sha256": "714c85849186e9be0020403bce7afa53ce8cde57ce82690c9decbeabeb79cc3b"
+  },
+  {
+    "module": "Erdos319Sharp.MinorityCounting",
+    "path": "Erdos319Sharp/MinorityCounting.lean",
+    "sha256": "454ca045771bc42d084cc8aa7aef38e89fd8a4abfa3603bfe12d09e58f644093"
+  },
+  {
+    "module": "Erdos319Sharp.PrimeBand",
+    "path": "Erdos319Sharp/PrimeBand.lean",
+    "sha256": "f4858bca59cbd6a34ee20da12649c67d19e5ac3ea4b7315ce9423c3e5dbe756f"
+  },
+  {
+    "module": "Erdos319Sharp.MinorityBand",
+    "path": "Erdos319Sharp/MinorityBand.lean",
+    "sha256": "d3506c213429270a439c5fe261cd16c36c31bf25bc467bc96690a48e3147aea2"
+  },
+  {
+    "module": "Erdos319Sharp.ConstructionParameters",
+    "path": "Erdos319Sharp/ConstructionParameters.lean",
+    "sha256": "72a572cd29f6de2d277d9e1c4e4f83f955e2fab0dc8fe6abca3d8dc35da92a0e"
+  },
+  {
+    "module": "Erdos319Sharp.BulkSets",
+    "path": "Erdos319Sharp/BulkSets.lean",
+    "sha256": "8cfd69a8b615e65dc4ca6e70134cb5daa385c7272727105fdc1270dc697b4ee0"
+  },
+  {
+    "module": "Erdos319Sharp.BulkMass",
+    "path": "Erdos319Sharp/BulkMass.lean",
+    "sha256": "72878ef3fb495dd41c7616ad52d320d0ccc78038f2cf4ca5dc0c5ca000789bd6"
+  },
+  {
+    "module": "Erdos319Sharp.ConstructionPrimeBand",
+    "path": "Erdos319Sharp/ConstructionPrimeBand.lean",
+    "sha256": "46e05e3566bb6dc61f2bf7f2795e5322432fb3e61265137e8b382f223224e517"
+  },
+  {
+    "module": "Erdos319Sharp.ConstructionGrowth",
+    "path": "Erdos319Sharp/ConstructionGrowth.lean",
+    "sha256": "71e79c2788cafeaba2860175ebff0701668d457be741392f0ba07526aaf6e9fd"
+  },
+  {
+    "module": "Erdos319Sharp.BoundaryScales",
+    "path": "Erdos319Sharp/BoundaryScales.lean",
+    "sha256": "08d53428b5bd194ecfc6cc71c0afdfe0aa4a54ea9469d143178d171eb8b79830"
+  },
+  {
+    "module": "Erdos319Sharp.BulkParameters",
+    "path": "Erdos319Sharp/BulkParameters.lean",
+    "sha256": "10af74143e788eed3efb13016b28568f6f984b3ee35df3636eaeb4325a51a839"
+  },
+  {
+    "module": "Erdos319Sharp.ProgressionAvoidance",
+    "path": "Erdos319Sharp/ProgressionAvoidance.lean",
+    "sha256": "91834c8bf98c2d8c14d38abf503135c09d0789f215d926930d7aa5518db60d85"
+  },
+  {
+    "module": "Erdos319Sharp.FiniteSelection",
+    "path": "Erdos319Sharp/FiniteSelection.lean",
+    "sha256": "4fda178d3406d2374fd0f01d1a1222e13d12af2d14955ff79f149797d952458b"
+  },
+  {
+    "module": "Erdos319Sharp.ConstructionSelection",
+    "path": "Erdos319Sharp/ConstructionSelection.lean",
+    "sha256": "5bb4372ae6a136f8bd75e8f191029b4cadbb8c44b18682b30cdd94b720746531"
+  },
+  {
+    "module": "Erdos319Sharp.BoundedCRT",
+    "path": "Erdos319Sharp/BoundedCRT.lean",
+    "sha256": "d0f9cc07bd0f695dd0c980764e5b6bc2df69d022c29320b163159b0d0be471ae"
+  },
+  {
+    "module": "Erdos319Sharp.Residue",
+    "path": "Erdos319Sharp/Residue.lean",
+    "sha256": "091b22060fa2339f7b8026378c39b5e249e68f6c552e970495eaf6bf7a9691f5"
+  },
+  {
+    "module": "Erdos319Sharp.PairConnector",
+    "path": "Erdos319Sharp/PairConnector.lean",
+    "sha256": "9a323c307d8e17566125eb08e985a0756074b0bcee5db372d09af3c55f93f7fb"
+  },
+  {
+    "module": "Erdos319Sharp.PathSupport",
+    "path": "Erdos319Sharp/PathSupport.lean",
+    "sha256": "580afa1a0d15da08a314c9cf0bbb0acc68a6a260c82192a382e966bc006cd8e9"
+  },
+  {
+    "module": "Erdos319Sharp.LocalResidue",
+    "path": "Erdos319Sharp/LocalResidue.lean",
+    "sha256": "663e592db2547317027a1b60e667636b26d172e16a079a9a283a712b14641243"
+  },
+  {
+    "module": "Erdos319Sharp.PrimeProductResidue",
+    "path": "Erdos319Sharp/PrimeProductResidue.lean",
+    "sha256": "199ccba6df6364afa0a5f323d3195b08c4147a70903602f2f5038d25005ae4d9"
+  },
+  {
+    "module": "Erdos319Sharp.PathIntegral",
+    "path": "Erdos319Sharp/PathIntegral.lean",
+    "sha256": "047a717ebb9d35c14d99bd05cf4b276987f30a6654d48ad19c98754213ab771c"
+  },
+  {
+    "module": "Erdos319Sharp.PathSelection",
+    "path": "Erdos319Sharp/PathSelection.lean",
+    "sha256": "73f5aa327cbd34f17d0092d925f00327ad304a380cd70bff5784f8feffc58e7c"
+  },
+  {
+    "module": "Erdos319Sharp.PathLocalSum",
+    "path": "Erdos319Sharp/PathLocalSum.lean",
+    "sha256": "8254c2efcf6e03ee9f29c071335b78758dd87845437945a7379780c2b2d36e53"
+  },
+  {
+    "module": "Erdos319Sharp.WeightedResidues",
+    "path": "Erdos319Sharp/WeightedResidues.lean",
+    "sha256": "d2581d2bea4a2b85f460de7678e3afef5e954e823cf784a581fe9dc451c9ff1c"
+  },
+  {
+    "module": "Erdos319Sharp.PathResidues",
+    "path": "Erdos319Sharp/PathResidues.lean",
+    "sha256": "a6dfdb40978494a83322e5c196d0c320fe0ac3d2995c6401bfca4427faeb6507"
+  },
+  {
+    "module": "Erdos319Sharp.DivisorBlockResidue",
+    "path": "Erdos319Sharp/DivisorBlockResidue.lean",
+    "sha256": "0fa426241179b5d7491cbffbd22c1ce1375c807fe2093d70b8c3da46a81632f7"
+  },
+  {
+    "module": "Erdos319Sharp.PathDichotomy",
+    "path": "Erdos319Sharp/PathDichotomy.lean",
+    "sha256": "691917e68f7beb898caf05c9e01462a1a98c8d9d6a2198694c11ec6399f49a66"
+  },
+  {
+    "module": "Erdos319Sharp.PathBounds",
+    "path": "Erdos319Sharp/PathBounds.lean",
+    "sha256": "2224a0304d7096b88e832da972bcbd94b36607f7adb314e2c918eaf6eb79aa76"
+  },
+  {
+    "module": "Erdos319Sharp.PathCore",
+    "path": "Erdos319Sharp/PathCore.lean",
+    "sha256": "1f725e864504bdbdfb4a12a9d488fa354f5b993a91129a183cbcde0fcc6781b5"
+  },
+  {
+    "module": "Erdos319Sharp.PathVertexChoice",
+    "path": "Erdos319Sharp/PathVertexChoice.lean",
+    "sha256": "7d0de1cd5cb2afb6721cfde9c9d60d820a06476312524770bbecc977d891c2da"
+  },
+  {
+    "module": "Erdos319Sharp.PrimeSetConnector",
+    "path": "Erdos319Sharp/PrimeSetConnector.lean",
+    "sha256": "133316811e951778956d80cbd8b4956adcdea50c09759ff3ff855c482a842c92"
+  },
+  {
+    "module": "Erdos319Sharp.Imported.ErdosProblems.Erdos285.Dispersion",
+    "path": "Erdos319Sharp/Imported/ErdosProblems/Erdos285/Dispersion.lean",
+    "sha256": "c8cfaaff441184ce3576bf88d77929ae80a73aeddbd442cf0aa1da4772d1c97b"
+  },
+  {
+    "module": "Erdos319Sharp.Imported.UnitFractions.Fourier",
+    "path": "Erdos319Sharp/Imported/UnitFractions/Fourier.lean",
+    "sha256": "57aff46cb6113f20c77199f0ea971d0027a74f6db12cd79b996cd5a66a53269e"
+  },
+  {
+    "module": "Erdos319Sharp.Imported.ErdosProblems.Erdos285.Modular",
+    "path": "Erdos319Sharp/Imported/ErdosProblems/Erdos285/Modular.lean",
+    "sha256": "a45a7eb266c33eed35fff46a743f1baffe25b7c69d5bfb27d97914abcd397119"
+  },
+  {
+    "module": "Erdos319Sharp.Imported.ErdosProblems.Erdos285.FourierBound",
+    "path": "Erdos319Sharp/Imported/ErdosProblems/Erdos285/FourierBound.lean",
+    "sha256": "2a0e4295bf9a6ac5d1e652cad7fcd4934eef6ac56e1e463fa15ae7dca7de0546"
+  },
+  {
+    "module": "Erdos319Sharp.Imported.ErdosProblems.Erdos285.SubsetSum",
+    "path": "Erdos319Sharp/Imported/ErdosProblems/Erdos285/SubsetSum.lean",
+    "sha256": "a3c1e5dc1f23af576721eeb9b264b3a6730e7f92b362bc66ad5e12f868bab088"
+  },
+  {
+    "module": "Erdos319Sharp.ModularInverse",
+    "path": "Erdos319Sharp/ModularInverse.lean",
+    "sha256": "3d4e0c4051a3fce7b9531c7fce633b31e4df3fc0e3fbf3a14fc0b399a583b72c"
+  },
+  {
+    "module": "Erdos319Sharp.PrimeFiber",
+    "path": "Erdos319Sharp/PrimeFiber.lean",
+    "sha256": "f328fbc4b6ad94c5f20d08de034722fdc6a75f8f9652b4e2beaf8be8d9d5e00d"
+  },
+  {
+    "module": "Erdos319Sharp.ResidueCorrection",
+    "path": "Erdos319Sharp/ResidueCorrection.lean",
+    "sha256": "841cc6afb331f3bf7cc7b27e68b0cebc1431f3039abe6c3958ba6656828a0d36"
+  },
+  {
+    "module": "Erdos319Sharp.PathMass",
+    "path": "Erdos319Sharp/PathMass.lean",
+    "sha256": "72fa8776ae1049458c94aaa65c1a79ce88395ccbf7162adf67287c913a3168c8"
+  },
+  {
+    "module": "Erdos319Sharp.QuantitativePath",
+    "path": "Erdos319Sharp/QuantitativePath.lean",
+    "sha256": "57c880fab2e478badf2166d1c381864ced8f9c3efb71b49e01a5f46b8a54f249"
+  },
+  {
+    "module": "Erdos319Sharp.PathError",
+    "path": "Erdos319Sharp/PathError.lean",
+    "sha256": "b94ed48f2634f52186991989ac113522f77e1b40063bac5b97556dd8ecbb8022"
+  },
+  {
+    "module": "Erdos319Sharp.BoundedPath",
+    "path": "Erdos319Sharp/BoundedPath.lean",
+    "sha256": "975d2caf6b32c89dc20b1587906ddb046799fc6933460cd849efcf423c959a99"
+  },
+  {
+    "module": "Erdos319Sharp.PrimeSetPath",
+    "path": "Erdos319Sharp/PrimeSetPath.lean",
+    "sha256": "1c4c5767103dfd2542eb331f3781445f6accc5372a45922818860802af4748bc"
+  },
+  {
+    "module": "Erdos319Sharp.ConstructionSupport",
+    "path": "Erdos319Sharp/ConstructionSupport.lean",
+    "sha256": "2b94d62cdc6400ab019043deaeba27b2bb45b1326a52f3167217fa02035b69df"
+  },
+  {
+    "module": "Erdos319Sharp.ConstructionMassWindow",
+    "path": "Erdos319Sharp/ConstructionMassWindow.lean",
+    "sha256": "d571028498368033f5d0ae56321259b28d21d48ced749147eae757f362ab3ba2"
+  },
+  {
+    "module": "Erdos319Sharp.BulkErrorScales",
+    "path": "Erdos319Sharp/BulkErrorScales.lean",
+    "sha256": "3b854e063ffdaa22d3f4699951bbecefe1c94125df0fff8f3b0b622f6939bb85"
+  },
+  {
+    "module": "Erdos319Sharp.BulkApproximation",
+    "path": "Erdos319Sharp/BulkApproximation.lean",
+    "sha256": "d31983a18138df567feef604827bb5b31c9ad7af56114b6308657579a6ca2ac5"
+  },
+  {
+    "module": "Erdos319Sharp.PrimePool",
+    "path": "Erdos319Sharp/PrimePool.lean",
+    "sha256": "bb42122e5e24b0a90a33426f13679f67d1d871e08dbb24256e6b57960245bd1d"
+  },
+  {
+    "module": "Erdos319Sharp.LogarithmicPrimeSupply",
+    "path": "Erdos319Sharp/LogarithmicPrimeSupply.lean",
+    "sha256": "28895716ebb84f720f5057b80a5dc603215d8e7d3ffd4fe94cc9d7cc5bdf74fa"
+  },
+  {
+    "module": "Erdos319Sharp.CorrectionCost",
+    "path": "Erdos319Sharp/CorrectionCost.lean",
+    "sha256": "4246dbe15ad715ce5e6814325f27095ce9e34c2a0956c3a5a6cc1830b52df6b1"
+  },
+  {
+    "module": "Erdos319Sharp.DenominatorStep",
+    "path": "Erdos319Sharp/DenominatorStep.lean",
+    "sha256": "0a738fd5316556da15c14128292da8fc9578ef7bc73277399963904238c51507"
+  },
+  {
+    "module": "Erdos319Sharp.DenominatorExcess",
+    "path": "Erdos319Sharp/DenominatorExcess.lean",
+    "sha256": "241b75e9ce63733d4e7f72f28118ab2dda73ff707b93c1b60674a863fad1bfd5"
+  },
+  {
+    "module": "Erdos319Sharp.PrimePowerExcess",
+    "path": "Erdos319Sharp/PrimePowerExcess.lean",
+    "sha256": "02a255c7a330d7827722084aeb3a891dbb2721fc2604dccf085f1c1d0545c877"
+  },
+  {
+    "module": "Erdos319Sharp.DenseTail",
+    "path": "Erdos319Sharp/DenseTail.lean",
+    "sha256": "4b96539a52a6e580ba2416e408045378cbaa515582fe698b285e0a5c89ba2bd4"
+  },
+  {
+    "module": "Erdos319Sharp.TailDivisibility",
+    "path": "Erdos319Sharp/TailDivisibility.lean",
+    "sha256": "4ed23b7fbe7a0d7b64903de05fdc6746482668a320fdf98ed6bba14b4b0e320b"
+  },
+  {
+    "module": "Erdos319Sharp.DivisorMoments",
+    "path": "Erdos319Sharp/DivisorMoments.lean",
+    "sha256": "0b874dce68ba99c5f05bb3e73b50aeca5085c16f8d0c6b8889644626d98eaecc"
+  },
+  {
+    "module": "Erdos319Sharp.MissingDivisorMass",
+    "path": "Erdos319Sharp/MissingDivisorMass.lean",
+    "sha256": "e6319e3e6bde20784217056d6bb466f2acb1eeecde80998937b21bd9ad805d38"
+  },
+  {
+    "module": "Erdos319Sharp.FirstMissingPowers",
+    "path": "Erdos319Sharp/FirstMissingPowers.lean",
+    "sha256": "d9e7d0c1818c054eabd032babf6462c04a6283bfe6fa571865d17d4c9ea46b32"
+  },
+  {
+    "module": "Erdos319Sharp.MissingCofactors",
+    "path": "Erdos319Sharp/MissingCofactors.lean",
+    "sha256": "ec240a947a7323e39000322ade9528e7cbdc051d5793ad37caa87bbe1413077a"
+  },
+  {
+    "module": "Erdos319Sharp.ExcessWeights",
+    "path": "Erdos319Sharp/ExcessWeights.lean",
+    "sha256": "719ba8493e45bf631a21ed7dd84a8b8e911c2a7ec8cfb465df2de348b5fd8678"
+  },
+  {
+    "module": "Erdos319Sharp.PrimaryHeight",
+    "path": "Erdos319Sharp/PrimaryHeight.lean",
+    "sha256": "b5d3fa7b204ab909d4e97225683241b0597808553024932be74170973b9249e5"
+  },
+  {
+    "module": "Erdos319Sharp.PrimaryProducts",
+    "path": "Erdos319Sharp/PrimaryProducts.lean",
+    "sha256": "f74754045e09557b5b8006116bf0b046769bc2ca4afeb4e3b50404b7d3165654"
+  },
+  {
+    "module": "Erdos319Sharp.DenominatorDescent",
+    "path": "Erdos319Sharp/DenominatorDescent.lean",
+    "sha256": "03da5624714774f4a1731876d14af46eb56b5cf24a26cf192c12f899706b5e29"
+  },
+  {
+    "module": "Erdos319Sharp.RationalCompatibility",
+    "path": "Erdos319Sharp/RationalCompatibility.lean",
+    "sha256": "b88c4c8b456de7fcfe36b3aa86fc76635d93a2d2fb690675bb28bffd34199a26"
+  },
+  {
+    "module": "Erdos319Sharp.CoprimeArithmetic",
+    "path": "Erdos319Sharp/CoprimeArithmetic.lean",
+    "sha256": "5beeffec16e7cf95f1037d1505958e6784605b7dea8a2dff5b6bbdcf0445ad6e"
+  },
+  {
+    "module": "Erdos319Sharp.FiniteDescent",
+    "path": "Erdos319Sharp/FiniteDescent.lean",
+    "sha256": "005f985ed187ea01f916aacacb4857251a44abfa0374e55ea7d2f1e3a7e32669"
+  },
+  {
+    "module": "Erdos319Sharp.DenseCore",
+    "path": "Erdos319Sharp/DenseCore.lean",
+    "sha256": "ce41989a6c439b821c141e4560a5b4cfa6b2594a14a561c772a683f1b02fe91a"
+  },
+  {
+    "module": "Erdos319Sharp.DenseRepresentation",
+    "path": "Erdos319Sharp/DenseRepresentation.lean",
+    "sha256": "89866bd601470a12f70ee7d6b4bbd604854a101357fefaf447b3ff9eea71f9de"
+  },
+  {
+    "module": "Erdos319Sharp.UnitReservoir",
+    "path": "Erdos319Sharp/UnitReservoir.lean",
+    "sha256": "eec4642c97469f7513b0c65e4d9a5cdde882367f437986f7451e537f0b043f30"
+  },
+  {
+    "module": "Erdos319Sharp.TerminalReservoir",
+    "path": "Erdos319Sharp/TerminalReservoir.lean",
+    "sha256": "b18ae532de07d46e08c672004fd697c66f70549bd33d4ecc5695daf7010ba8e6"
+  },
+  {
+    "module": "Erdos319Sharp.UniformCompletion",
+    "path": "Erdos319Sharp/UniformCompletion.lean",
+    "sha256": "d700689fe3d4af80211c6884bb8519bf3b612bf877bc0a0c027e0608f44fa95a"
+  },
+  {
+    "module": "Erdos319Sharp.QuantitativeCompletion",
+    "path": "Erdos319Sharp/QuantitativeCompletion.lean",
+    "sha256": "265549849d039e38ff5285ede370d0f235108f624699ddde858f1c95df69d6ee"
+  },
+  {
+    "module": "Erdos319Sharp.CompletionParameters",
+    "path": "Erdos319Sharp/CompletionParameters.lean",
+    "sha256": "f90f6b8bd46f58540b542f2ad12d0f1e7083dc768afa4dafba6c1dc81fdd3b66"
+  },
+  {
+    "module": "Erdos319Sharp.PrimarySums",
+    "path": "Erdos319Sharp/PrimarySums.lean",
+    "sha256": "db57ba41891dab53424cdfff24b76dab8d3d58cadb3ff7e90d178b813cbfc388"
+  },
+  {
+    "module": "Erdos319Sharp.CompletionHeight",
+    "path": "Erdos319Sharp/CompletionHeight.lean",
+    "sha256": "a3f7ed491286e9fd409782a52d15d753f9bfdc5309e000c958fa342563288049"
+  },
+  {
+    "module": "Erdos319Sharp.UpperAssembly",
+    "path": "Erdos319Sharp/UpperAssembly.lean",
+    "sha256": "aa95e742f906e5b16efe77198a9309f3826a7adab901b60e9c50299c219a6db7"
+  },
+  {
+    "module": "Erdos319Sharp.UpperWitnessConstruction",
+    "path": "Erdos319Sharp/UpperWitnessConstruction.lean",
+    "sha256": "500f2f3b2fbc65c6c6a88fd5da07b3d7c8e477f9a19d88c5b04d34991703a27a"
+  },
+  {
+    "module": "Erdos319Sharp.MinorityDensity",
+    "path": "Erdos319Sharp/MinorityDensity.lean",
+    "sha256": "4457bbcc4c54814d2892f99adcc7157f2e9bc38c0352fae749f69e1ae7d84da6"
+  },
+  {
+    "module": "Erdos319Sharp.MinorityError",
+    "path": "Erdos319Sharp/MinorityError.lean",
+    "sha256": "d1e74362754e1429b7f3e42dd88cca9e4421faf5252aa24b3b06f6362c6d0943"
+  },
+  {
+    "module": "Erdos319Sharp.MinorityBound",
+    "path": "Erdos319Sharp/MinorityBound.lean",
+    "sha256": "0f6c55cd09e7731e640286161533c71dcfb9e6bdd47d021f67d50fb07be60108"
+  },
+  {
+    "module": "Erdos319Sharp.DenseSigning",
+    "path": "Erdos319Sharp/DenseSigning.lean",
+    "sha256": "03c25c346526bceb51fd021c71098490556a545a26bdf533eeeeed66c15b28d1"
+  },
+  {
+    "module": "Erdos319Sharp.CoreMissingPowers",
+    "path": "Erdos319Sharp/CoreMissingPowers.lean",
+    "sha256": "41b6373a2646b1891f8af1c7e6db2036a2d008529dada9d9e900b90721b794cb"
+  },
+  {
+    "module": "Erdos319Sharp.DenseDeletion",
+    "path": "Erdos319Sharp/DenseDeletion.lean",
+    "sha256": "8a9f96f69092d32b2c57dc7185ec196c4846884578d45df682d264e2bb8a2bc3"
+  },
+  {
+    "module": "Erdos319Sharp.OmissionNormalization",
+    "path": "Erdos319Sharp/OmissionNormalization.lean",
+    "sha256": "f816262eed3e1ad3cb6efcb760f39790c6e8e20e3e09cabd17de0d91336b6fc4"
+  },
+  {
+    "module": "Erdos319Sharp.Reduction",
+    "path": "Erdos319Sharp/Reduction.lean",
+    "sha256": "52bb40a1fe8580cf0421739e1c172d4b3d39f63163bcfa267cf49a688b8181a7"
+  },
+  {
+    "module": "Erdos319Sharp.SharpUpper",
+    "path": "Erdos319Sharp/SharpUpper.lean",
+    "sha256": "6f30f70632675f054f084af7b834a041809e677a874aa3c517ac03cbd03a78da"
+  },
+  {
+    "module": "Erdos319Sharp.CommonMass",
+    "path": "Erdos319Sharp/CommonMass.lean",
+    "sha256": "c5bc656fbc785136770c27913b9ca9056f2c8dadda3482f703083709fec8e0e2"
+  },
+  {
+    "module": "Erdos319Sharp.RankinFactors",
+    "path": "Erdos319Sharp/RankinFactors.lean",
+    "sha256": "b14850ce7049034a945f7498de1fe4cf104be6b88bf37ec7ea3c036386278366"
+  },
+  {
+    "module": "Erdos319Sharp.RankinProduct",
+    "path": "Erdos319Sharp/RankinProduct.lean",
+    "sha256": "4d156f0315e9f76d87b2da5b60999a13834272feac84454fcf640d752a32b21a"
+  },
+  {
+    "module": "Erdos319Sharp.ExcessEuler",
+    "path": "Erdos319Sharp/ExcessEuler.lean",
+    "sha256": "36b3f401b93bd11d4e1901354500f2ce1aa5056cffca5e44ecb31d99abd4e332"
+  },
+  {
+    "module": "Erdos319Sharp.PrimeWeightCover",
+    "path": "Erdos319Sharp/PrimeWeightCover.lean",
+    "sha256": "7a09fbbe37d008e7a944ca59f81656a9da60b32bc6fb48b274c20f9c4e7d51c3"
+  },
+  {
+    "module": "Erdos319Sharp.ZeroSumBlocks",
+    "path": "Erdos319Sharp/ZeroSumBlocks.lean",
+    "sha256": "3faae7353a098a6b7ff311b65503155fc52608cc92153d6a0b8a183e16ffb341"
+  },
+  {
+    "module": "Erdos319Sharp.Peeling",
+    "path": "Erdos319Sharp/Peeling.lean",
+    "sha256": "8f53ea3ddf9749b4f7d852852add02da5abd5f536639872152e6aad7841ab88c"
+  },
+  {
+    "module": "Erdos319Sharp.CompatiblePeeling",
+    "path": "Erdos319Sharp/CompatiblePeeling.lean",
+    "sha256": "3ad56d48d4d9bf9f53052e8ae8a49612fa9c6f0d6bd392cff2cb235b46436c89"
+  },
+  {
+    "module": "Erdos319Sharp.ExcessGroups",
+    "path": "Erdos319Sharp/ExcessGroups.lean",
+    "sha256": "e9bc84731d157b65a0b2ddd965a3e1abb5ab905eca813cf4f742c89689e67157"
+  },
+  {
+    "module": "Erdos319Sharp.WeightSupport",
+    "path": "Erdos319Sharp/WeightSupport.lean",
+    "sha256": "4fd2b2d221063eaae0c342fdc7664610e06a6b4a5d3060f162b436b97794550f"
+  },
+  {
+    "module": "Erdos319Sharp.PrimeBlock",
+    "path": "Erdos319Sharp/PrimeBlock.lean",
+    "sha256": "4229307facc3886af74d4ac46e716c766b1857fece51f2ce6da312fb441340fa"
+  },
+  {
+    "module": "Erdos319Sharp.PrimeBlockEstimates",
+    "path": "Erdos319Sharp/PrimeBlockEstimates.lean",
+    "sha256": "09d84e567ff0d9e4ea5f740c550fa0a80907eedb9965ebcd92af97f7434c17d7"
+  },
+  {
+    "module": "Erdos319Sharp.PrimeTail",
+    "path": "Erdos319Sharp/PrimeTail.lean",
+    "sha256": "2a7d479d2b5f52a4772c32f07c87965f9024f04926c70e660ebf632d3283c647"
+  },
+  {
+    "module": "Erdos319Sharp.PrimeTailCutoff",
+    "path": "Erdos319Sharp/PrimeTailCutoff.lean",
+    "sha256": "fa3070e32584bdd0a4cad606c2ec0e5203455b30ffb59f23e5a873316cd416b8"
+  },
+  {
+    "module": "Erdos319Sharp.RankinTail",
+    "path": "Erdos319Sharp/RankinTail.lean",
+    "sha256": "ef9fddb0890d4f65d87965d9b5259c01102f1fecaa49fe581101f8f8775ab904"
+  },
+  {
+    "module": "Erdos319Sharp.Regularization",
+    "path": "Erdos319Sharp/Regularization.lean",
+    "sha256": "c8405bf4c870655e8b68c7a59fcc888aa63033f352aab4dbd3e86f748e579f2a"
+  },
+  {
+    "module": "Erdos319Sharp.DyadicObstruction",
+    "path": "Erdos319Sharp/DyadicObstruction.lean",
+    "sha256": "920ea52f9bdaa3520332fd20daf7f49e0dee91606ef772f87927be046c6d7bbc"
+  },
+  {
+    "module": "Erdos319Sharp.DyadicMass",
+    "path": "Erdos319Sharp/DyadicMass.lean",
+    "sha256": "b817ef94ad5d44111746a817c7fc15517ca673028e6e7cd327d96bb539ee7557"
+  },
+  {
+    "module": "Erdos319Sharp.HarmonicSmallPrimes",
+    "path": "Erdos319Sharp/HarmonicSmallPrimes.lean",
+    "sha256": "7a71e1d3487ad29e63721326c6185f37cb777224b896713957ca8c5691e8a083"
+  },
+  {
+    "module": "Erdos319Sharp.InverseHarmonic",
+    "path": "Erdos319Sharp/InverseHarmonic.lean",
+    "sha256": "31fc2f07f8f8e329f620741f4c11be5ba1311b9afd0426518518990749090307"
+  },
+  {
+    "module": "Erdos319Sharp.GroupHarmonic",
+    "path": "Erdos319Sharp/GroupHarmonic.lean",
+    "sha256": "0178f00ae5db3523e41361f70290d54f73fc7c88ab42372b7acafd0650dd41ce"
+  },
+  {
+    "module": "Erdos319Sharp.WeightedGroupMass",
+    "path": "Erdos319Sharp/WeightedGroupMass.lean",
+    "sha256": "880f42c92ab2e589b6163ce9e31aa213b47f677ffa2fa488f02c08cbd432be4e"
+  },
+  {
+    "module": "Erdos319Sharp.PrimitivePeeling",
+    "path": "Erdos319Sharp/PrimitivePeeling.lean",
+    "sha256": "7a8762c9adeebbb4145a196968b81c88dd8fa70eff8c5139ae35d9c4ee2d58f7"
+  },
+  {
+    "module": "Erdos319Sharp.UniformWeightedMass",
+    "path": "Erdos319Sharp/UniformWeightedMass.lean",
+    "sha256": "4f938bae6384110bdb0d6df5288b8fe68391269033e98e178fd119f28d70de1c"
+  },
+  {
+    "module": "Erdos319Sharp.DenseCorePeeling",
+    "path": "Erdos319Sharp/DenseCorePeeling.lean",
+    "sha256": "bcf2d07227da5aaac10a53dcf9874672ba7cc7dbb5b0d902406bdcd72032d532"
+  },
+  {
+    "module": "Erdos319Sharp.MissingMassLower",
+    "path": "Erdos319Sharp/MissingMassLower.lean",
+    "sha256": "dc91ef894a491595117e13364bd7e775a91f66361dcea4427ea3f01a36683808"
+  },
+  {
+    "module": "Erdos319Sharp.SingleDivisorCount",
+    "path": "Erdos319Sharp/SingleDivisorCount.lean",
+    "sha256": "b58282ab7353c72d6d03a881302578287f77149d22ac03f6c05020ae8c6787f9"
+  },
+  {
+    "module": "Erdos319Sharp.PrefixDensity",
+    "path": "Erdos319Sharp/PrefixDensity.lean",
+    "sha256": "8f3efa52f5407d6c47376f016d75ce95a419169145e48092de0725d01d76b3c9"
+  },
+  {
+    "module": "Erdos319Sharp.InverseDensity",
+    "path": "Erdos319Sharp/InverseDensity.lean",
+    "sha256": "29fb5298720af92949f50e7ceb7c573a2c94d97c8aee55c490a82af6a8a695cb"
+  },
+  {
+    "module": "Erdos319Sharp.CofactorDensity",
+    "path": "Erdos319Sharp/CofactorDensity.lean",
+    "sha256": "31c33f00e4bf650284f72c9b149c6398756a2eb0f790fae27526d196d69e1cca"
+  },
+  {
+    "module": "Erdos319Sharp.ExcessCounting",
+    "path": "Erdos319Sharp/ExcessCounting.lean",
+    "sha256": "9dc0f58e834a136d564abd1ea7b04f2d0af2ae5e60b6718f2b5232d66ab02d71"
+  },
+  {
+    "module": "Erdos319Sharp.SmallMissingPowers",
+    "path": "Erdos319Sharp/SmallMissingPowers.lean",
+    "sha256": "cb1b0cd9f7d58fd64887a4fb9b41f9a70cf95503579aa949c21e9f03193260a1"
+  },
+  {
+    "module": "Erdos319Sharp.OmissionCounting",
+    "path": "Erdos319Sharp/OmissionCounting.lean",
+    "sha256": "d0685bf1820e217e2f7a726aee1b2bce84f2cdabf08c0498ed8fcbc93d42dd5e"
+  },
+  {
+    "module": "Erdos319Sharp.LowerBoundScales",
+    "path": "Erdos319Sharp/LowerBoundScales.lean",
+    "sha256": "14a501509a6f5cb0d42ca6a3043fea9ec32888e970782f2af6f7bda4e1b0057f"
+  },
+  {
+    "module": "Erdos319Sharp.SharpLower",
+    "path": "Erdos319Sharp/SharpLower.lean",
+    "sha256": "84adb4f0a696fddc1f72fd1d6b001859efcc08a60f3794385ba786250422d121"
+  },
+  {
+    "module": "Erdos319Sharp.SharpFinal",
+    "path": "Erdos319Sharp/SharpFinal.lean",
+    "sha256": "71a3db112ac96f90bb0fa46ffcacd7a97e859f231d04693cb8885ea604fbe85a"
+  },
+  {
+    "module": "Erdos319Sharp",
+    "path": "Erdos319Sharp.lean",
+    "sha256": "a1adcf586abc29b965caa51d63cc82f879b98ad02a262e9ce41d03b65bf88fe9"
+  },
+  {
+    "module": "Submission",
+    "path": "Submission.lean",
+    "sha256": "9c7e5d6d5b5fa5cc294997673d566ea6030b6b99f360f92efc2b0b70dde7848d"
+  },
+  {
+    "module": "Solution",
+    "path": "Solution.lean",
+    "sha256": "bfaa6eec54b5f645957ec14f9d4dad7ec4190444a9e8e7580e204cdeeec97106"
+  },
+  {
+    "module": "Challenge",
+    "path": "Challenge.lean",
+    "sha256": "5a51c142b659c6644fce9aefacaee5755e92e953a69de175a83063ea4e9cf4f9"
+  }
+]

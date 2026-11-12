@@ -1,0 +1,56 @@
+{
+  "problem_id": "JSP-000265",
+  "erdos_problem": 319,
+  "original_source": "https://mathweb.ucsd.edu/~ronspubs/80_11_number_theory.pdf#page=39",
+  "original_location": "Printed page 43, PDF page 39",
+  "primary_target": "Erdos319Jsp.full_solution",
+  "requirements": [
+    {
+      "requirement": "Distinct positive integer denominators in the inclusive interval 1 through N",
+      "target": "Erdos319Challenge.original_maximum"
+    },
+    {
+      "requirement": "One fixed signing by plus or minus one, zero total, every nonempty proper signed subsum nonzero",
+      "target": "Erdos319Challenge.admissible_iff"
+    },
+    {
+      "requirement": "Attained maximum over all admissible sets and signs",
+      "target": "Erdos319Jsp.maximum_correspondence"
+    },
+    {
+      "requirement": "Asymptotically optimal primitive construction for every sufficiently large integer N",
+      "target": "Erdos319Sharp.sharpUpperWitnesses_proved"
+    },
+    {
+      "requirement": "Matching lower deficit bound for every original primitive support",
+      "target": "Erdos319Sharp.sharpLowerBound_proved"
+    },
+    {
+      "requirement": "The sharp unrestricted deficit limit with constant exp(-Euler gamma)",
+      "target": "Erdos319Jsp.sharp_asymptotic"
+    },
+    {
+      "requirement": "Equivalent asymptotic ratio tending to one",
+      "target": "Erdos319Jsp.sharp_asymptotic_ratio"
+    }
+  ],
+  "axiom_targets": [
+    "Erdos319Formal.maxSize_isGreatest",
+    "Erdos319Submission.literalPrimitive_iff",
+    "Erdos319Submission.literal_maximum",
+    "Erdos319Submission.original_problem_density_one",
+    "Erdos319Submission.original_problem_nonempty_witnesses",
+    "Erdos319Sharp.sharpUpperWitnesses_proved",
+    "Erdos319Sharp.sharpLowerBound_proved",
+    "Erdos319Sharp.erdos319_sharp_deficit",
+    "Erdos319Sharp.erdos319_sharp_deficit_ratio",
+    "Erdos319Jsp.maximum_correspondence",
+    "Erdos319Jsp.sharp_asymptotic",
+    "Erdos319Jsp.sharp_asymptotic_ratio",
+    "Erdos319Jsp.sharp_for_every_literal_maximum",
+    "Erdos319Jsp.full_solution",
+    "Erdos319Challenge.admissible_iff",
+    "Erdos319Challenge.original_maximum",
+    "Erdos319Challenge.original_sharp"
+  ]
+}

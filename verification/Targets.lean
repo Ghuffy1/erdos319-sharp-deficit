@@ -1,0 +1,46 @@
+import Challenge
+
+set_option pp.universes true
+
+#print Erdos319Formal.Primitive
+#print Erdos319Sharp.IsPrimitiveSigning
+#print Erdos319Formal.maxSize
+#print Erdos319Submission.LiteralPrimitive
+#print Erdos319Jsp.IsOriginalMaximum
+#print Erdos319Challenge.Admissible
+
+#check Erdos319Formal.maxSize_isGreatest
+#check Erdos319Submission.literalPrimitive_iff
+#check Erdos319Submission.literal_maximum
+#check Erdos319Submission.original_problem_density_one
+#check Erdos319Submission.original_problem_nonempty_witnesses
+#check Erdos319Sharp.sharpUpperWitnesses_proved
+#check Erdos319Sharp.sharpLowerBound_proved
+#check Erdos319Sharp.erdos319_sharp_deficit
+#check Erdos319Sharp.erdos319_sharp_deficit_ratio
+#check Erdos319Jsp.maximum_correspondence
+#check Erdos319Jsp.sharp_asymptotic
+#check Erdos319Jsp.sharp_asymptotic_ratio
+#check Erdos319Jsp.sharp_for_every_literal_maximum
+#check Erdos319Jsp.full_solution
+#check Erdos319Challenge.admissible_iff
+#check Erdos319Challenge.original_maximum
+#check Erdos319Challenge.original_sharp
+
+#print axioms Erdos319Formal.maxSize_isGreatest
+#print axioms Erdos319Submission.literalPrimitive_iff
+#print axioms Erdos319Submission.literal_maximum
+#print axioms Erdos319Submission.original_problem_density_one
+#print axioms Erdos319Submission.original_problem_nonempty_witnesses
+#print axioms Erdos319Sharp.sharpUpperWitnesses_proved
+#print axioms Erdos319Sharp.sharpLowerBound_proved
+#print axioms Erdos319Sharp.erdos319_sharp_deficit
+#print axioms Erdos319Sharp.erdos319_sharp_deficit_ratio
+#print axioms Erdos319Jsp.maximum_correspondence
+#print axioms Erdos319Jsp.sharp_asymptotic
+#print axioms Erdos319Jsp.sharp_asymptotic_ratio
+#print axioms Erdos319Jsp.sharp_for_every_literal_maximum
+#print axioms Erdos319Jsp.full_solution
+#print axioms Erdos319Challenge.admissible_iff
+#print axioms Erdos319Challenge.original_maximum
+#print axioms Erdos319Challenge.original_sharp

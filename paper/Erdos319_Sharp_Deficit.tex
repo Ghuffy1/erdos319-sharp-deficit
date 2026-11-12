@@ -1,0 +1,1257 @@
+\documentclass[11pt,leqno]{amsart}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{microtype}
+\usepackage{needspace}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={The sharp deficit in primitive signed reciprocal relations},
+ pdfauthor={Will Howe, Grant Huffman, Jensen Kohlmeyer, Liam Kruer},
+ pdfsubject={Erdos Problem 319}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\e}{\mathrm e}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\pp}{\mathcal Q}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\Ph}{P^{+}}
+\newcommand{\card}[1]{\lvert #1\rvert}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\rec}[1]{R(#1)}
+\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\Logtwo}{\log\log}
+\newcommand{\Logthree}{\log\log\log}
+\allowdisplaybreaks[1]
+
+\title[Primitive signed reciprocal relations]{The sharp deficit in primitive signed reciprocal relations}
+\author{Will Howe}
+\author{Grant Huffman}
+\author{Jensen Kohlmeyer}
+\author{Liam Kruer}
+\thanks{Email addresses.\ 
+\href{mailto:howew@purdue.edu}{\nolinkurl{howew@purdue.edu}} (Will Howe),
+\href{mailto:huffma97@purdue.edu}{\nolinkurl{huffma97@purdue.edu}} (Grant Huffman).\newline
+\href{mailto:jenwin@purdue.edu}{\nolinkurl{jenwin@purdue.edu}} (Jensen Kohlmeyer),
+\href{mailto:kruerl@purdue.edu}{\nolinkurl{kruerl@purdue.edu}} (Liam Kruer).}
+\date{November 12, 2026}
+\subjclass[2020]{11D68, 11B75, 11N25}
+\keywords{Egyptian fractions, primitive relations, reciprocal sums, Erd\H{o}s Problem 319}
+
+\begin{document}
+\begin{abstract}
+Let $c(N)$ be the largest cardinality of a subset of $\{1,\ldots,N\}$
+admitting a signed reciprocal sum equal to zero with no nonempty proper
+zero subsum under the same signs. We prove
+\[
+ N-c(N)\sim \e^{-\gamma}
+ \frac{N\log\log\log N}{\log\log N},
+\]
+where $\gamma$ is Euler's constant. The construction joins divisor blocks
+along a path of primes and completes their reciprocal sum while avoiding
+those primes. For the converse, we prove a sharp harmonic bound for sets
+whose reciprocals have no nonempty zero subsum modulo an arbitrary
+integer. Exact rational representation in a dense sign class then turns
+this modular bound into a lower bound for the omitted denominators.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+
+For an integer $N\ge1$, write $[N]=\{1,\ldots,N\}$.
+A pair $(A,\delta)$, where $A\subseteq[N]$ and
+$\delta\colon A\longrightarrow\{-1,1\}$, is a \emph{primitive signed
+reciprocal relation} if
+\begin{equation}\label{eq:primitive}
+ \sum_{n\in A}\frac{\delta(n)}n=0,
+ \qquad
+ \sum_{n\in B}\frac{\delta(n)}n\ne0
+ \quad(\varnothing\ne B\subsetneq A).
+\end{equation}
+The signs in the second condition are the restrictions of $\delta$.
+Let $c(N)$ be the maximum cardinality of such a support, with value zero
+when no nonempty support exists. Erd\H{o}s and Graham asked for the size
+of this extremal function \cite[p.~43]{EG}. The question is recorded as
+Problem~319 in \cite{Bloom319}.
+
+\begin{theorem}\label{thm:main}
+As $N\longrightarrow\infty$ through the positive integers,
+\begin{equation}\label{eq:main}
+ N-c(N)=\bigl(\e^{-\gamma}+o(1)\bigr)
+ \frac{N\log\log\log N}{\log\log N}.
+\end{equation}
+\end{theorem}
+
+Throughout the paper, all logarithms are natural. We use the notation
+\begin{equation}\label{eq:scales}
+ L=\log N,\qquad \lambda=\log\log N,\qquad
+ \mu=\log\log\log N,\qquad \Delta_N=\frac{N\mu}{\lambda}.
+\end{equation}
+These quantities are used only for sufficiently large $N$.
+For a finite set $E$ of positive integers, put
+\[
+ R(E)=\sum_{n\in E}\frac1n,
+ \qquad E_q=\{n\in E:q\mid n\},\qquad D_E=\lcm\{n:n\in E\},
+\]
+and set $D_\varnothing=1$. We write $\pp(E)$ for the set of all prime
+powers dividing at least one member of $E$. In particular, every positive
+power of a prime up to its exponent in $D_E$ belongs to $\pp(E)$.
+An integer is \emph{$S$-powersmooth} if every prime-power divisor is at
+most $S$. We take $\Ph(1)=1$ and use $\Omega(n)$ for the number of prime
+factors counted with multiplicity.
+
+Croot's short-interval theorem \cite{Croot} gives the earlier lower bound
+$c(N)\ge(1-1/\e+o(1))N$, as observed by Adenwalla
+\cite{Bloom319}. A density-one construction was subsequently proposed
+by g-01234, also known as popular\_12345 \cite{DensityOne}. Its mechanism
+couples a positive family with a dense set of denominators avoiding a
+specified collection of primes. We use this mechanism with a path of
+pairwise connectors and quantitative denominator control. A complementary
+large-prime obstruction appears in \cite{RexHannes}. The exact rational
+representation theorem of Liu and Sawhney \cite{LS} supplies the analytic
+input for our converse. We state the form needed here and give its
+divisor and Fourier argument in Appendix~\ref{app:representation}.
+
+\section{Analytic preliminaries}\label{sec:prelim}
+
+We use the prime number theorem, partial summation, and the Mertens
+estimates in the forms
+\begin{equation}\label{eq:mertens}
+ \sum_{p\le x}\frac1p=\log\log x+O(1),\qquad
+ \prod_{p\le x}(1-p^{-1})^{-1}\sim\e^\gamma\log x,
+ \qquad \sum_{p^j\le x}\log p\sim x.
+\end{equation}
+Here and below a letter $p$ in a prime sum denotes a prime, and $j\ge1$.
+The usual prime-number-theorem error term also gives
+$\sum_{x<p\le x^2}p^{-1}=\log2+o(1)$.
+
+\begin{lemma}\label{lem:cleanestimates}
+Put $S=N\exp(-6L^{4/5})$. Then
+\begin{align}
+ \Theta(N,S):=\sum_{\substack{q\le N\\q\text{ a prime power}\\q>S}}
+ \frac1q&=O(L^{-1/5}),\label{eq:pptail}\\
+ \card{\{n\le N:n\text{ is not }S\text{-powersmooth}\}}
+ &\le N\Theta(N,S),\label{eq:nonsmooth}\\
+ \card{\{n\le N:\Omega(n)>5\lambda\}}&=O(NL^{-3/2}).
+ \label{eq:omega}
+\end{align}
+If $Y\longrightarrow\infty$ and $u\ge1$, then
+\begin{equation}\label{eq:rankin}
+ \sum_{\substack{n>Y^u\\\Ph(n)\le Y}}\frac1n
+ \ll \e^{-u}\log Y.
+\end{equation}
+The implied constants are absolute.
+\end{lemma}
+
+\begin{proof}
+For primes in $(S,N]$, partial summation and $\pi(x)\ll x/\log x$ give
+\[
+ \sum_{S<p\le N}\frac1p
+ \ll \frac{1+\log(N/S)}{\log S}\ll L^{-1/5}.
+\]
+For powers of exponent at least two, the sum over bases $p\le\sqrt S$
+is $O(S^{-1/2})$, since each geometric tail is at most $2/S$.
+The bases $p>\sqrt S$ contribute at most
+$2\sum_{n>\sqrt S}n^{-2}=O(S^{-1/2})$.
+This proves \eqref{eq:pptail}, and a union bound proves
+\eqref{eq:nonsmooth}.
+
+The multiplicative identity
+\[
+ (3/2)^{\Omega(n)}=\sum_{d\mid n}g(d),\qquad
+ g(p^j)=\tfrac12(3/2)^{j-1}
+\]
+and its Euler product give
+\[
+ \sum_{n\le N}(3/2)^{\Omega(n)}
+ \le N\prod_{p\le N}\left(1+\frac{1/2}{p-3/2}\right)
+ \ll N L^{1/2}.
+\]
+Markov's inequality proves \eqref{eq:omega}, because
+$1/2-5\log(3/2)<-3/2$.
+
+For \eqref{eq:rankin}, take $\sigma=1/\log Y$. Rankin's inequality gives
+\[
+ \sum_{\substack{n>Y^u\\\Ph(n)\le Y}}\frac1n
+ \le \e^{-u}\prod_{p\le Y}(1-p^{-1+\sigma})^{-1}.
+\]
+The product on the right is $O(\log Y)$. Indeed, its logarithm differs
+from that of the Mertens product by $O(1)$, using
+$p^\sigma-1\le\e\sigma\log p$ and
+$\sum_{p\le Y}(\log p)/p\ll\log Y$. The terms of degree at least two in
+the logarithmic expansions have bounded total.
+\end{proof}
+
+\begin{lemma}[Exact rational representation]\label{lem:exact}
+For all sufficiently large $N$, let
+$L^{-3/100}\le c\le1$ and let $E\subseteq[cN,N]\cap\N$ satisfy
+\begin{gather}
+ \card E\ge N/L^2,\qquad
+ n\text{ is }S\text{-powersmooth and }\Omega(n)\le5\lambda
+ \quad(n\in E),\label{eq:exacthyp1}\\
+ qR(E_q)\ge L^{-1/25}\quad(q\in\pp(E)),
+ \qquad S=N\exp(-6L^{4/5}).\label{eq:exacthyp2}
+\end{gather}
+If $r>0$ is rational, its reduced denominator divides $D_E$, and
+\begin{equation}\label{eq:targetrange}
+ (1+L^{-1})r\le R(E)\le Lr,
+\end{equation}
+then $R(F)=r$ for some $F\subseteq E$.
+The threshold is uniform over $c,E,r$.
+\end{lemma}
+
+This is the logarithmic-parameter specialization of the reciprocal-sum
+criterion of Liu and Sawhney \cite[Proposition~5.2]{LS}.
+Appendix~\ref{app:representation} supplies the specialization and the
+details of the divisor extraction used in its proof.
+
+\begin{lemma}[Cleaning]\label{lem:cleaning}
+For all sufficiently large $N$ and every $E\subseteq[N]$ there is
+$F\subseteq E$ such that all members
+of $F$ are $S$-powersmooth, $\Omega(n)\le5\lambda$ on $F$, and
+$qR(F_q)\ge L^{-1/25}$ for every $q\in\pp(F)$. Moreover,
+\begin{equation}\label{eq:cleanloss}
+ \card{E\setminus F}
+ \ll N\bigl(L^{-1/5}+L^{-3/2}+L^{-1/25}\lambda\bigr).
+\end{equation}
+After the first two restrictions, the further loss in reciprocal mass is
+$O(L^{-1/25}\lambda)$.
+\end{lemma}
+
+\begin{proof}
+Apply the first two restrictions using Lemma~\ref{lem:cleanestimates}.
+Whenever a prime power $q$ divides a member of the current set and
+$qR(E_q)<\eta:=L^{-1/25}$, remove all its multiples.
+A processed prime power never reappears. The total reciprocal mass
+removed is at most
+\[
+ \eta\sum_{\substack{q\le N\\q\text{ a prime power}}}\frac1q
+ =O(\eta\lambda).
+\]
+The number of removed denominators is at most $N$ times this mass.
+The finite process terminates with the required properties.
+\end{proof}
+
+\section{Reciprocal sums modulo an integer}\label{sec:modular}
+
+For $q\ge2$, a finite set $V$ of positive integers coprime to $q$ is
+\emph{inverse-zero-free modulo $q$} if
+\[
+ \sum_{n\in U}n^{-1}\ne0\pmod q
+ \qquad(\varnothing\ne U\subseteq V).
+\]
+The inverses in this definition are taken in $\Z/q\Z$.
+The partial sums along any ordering of $V$, including the initial zero,
+are distinct. Consequently,
+\begin{equation}\label{eq:length}
+ \card V\le q-1.
+\end{equation}
+
+\begin{lemma}[Prime inverse sums]\label{lem:primecover}
+There is an absolute constant $C$ with the following property.
+For sufficiently large $q$, write $\ell=\log q$ and
+$Y=\ell^3(1+\log\ell)^2$. If $Y\le X\le q$ and a set contains at least
+\[
+ k_X=\ceil{C\ell X^{2/3}(\log X)^{-2/3}}
+\]
+distinct primes in $[X,2X)$ coprime to $q$, its inverse subset sums cover
+every residue class modulo $q$.
+\end{lemma}
+
+\begin{proof}
+Use exactly $k=k_X$ primes. Fix $0<h<q$. For each selected prime $p$,
+choose $u_p\in(-q/2,q/2]$ with $u_p\equiv hp^{-1}\pmod q$ and write
+$pu_p=h+j_pq$. Put $J=\floor{k\log X/(32\ell)}$.
+Uniformly in the stated range, $J\longrightarrow\infty$ and $J<q-1$.
+Each nonzero integer $h+jq$ with $|j|\le J$ has magnitude less than $q^2$
+and has at most $2\ell/\log X$ prime divisors in $[X,2X)$.
+Thus fewer than $k/2$ selected primes have $|j_p|\le J$.
+For all the others,
+\[
+ \frac{|u_p|}{q}\ge\frac{J-1}{2X}
+ \gg\frac{k\log X}{\ell X}.
+\]
+The modulus of the $h$th Fourier coefficient of a uniformly random
+inverse subset sum is
+\[
+ \prod_p\left|\cos\frac{\pi u_p}{q}\right|
+ \le\exp\left(-c_0\frac{k^3(\log X)^2}{\ell^2X^2}\right)
+ <q^{-2}
+\]
+when $C$ is sufficiently large. We used
+$|\cos\pi t|\le\exp(-2t^2)$ for $|t|\le1/2$.
+Fourier inversion now gives probability at least
+$q^{-1}(1-(q-1)q^{-2})>0$ at each residue.
+This is the prime-inverse Fourier argument of Croot
+\cite[Lemma~1 of the preprint]{Croot}, with a varying prime interval.
+\end{proof}
+
+\begin{lemma}\label{lem:largeprimeweight}
+Uniformly over inverse-zero-free $V$ modulo $q$,
+\[
+ \sum_{\substack{n\in V,\ n\le q\\\Ph(n)>Y}}\frac1n=O(1),
+ \qquad Y=(\log q)^3(1+\log\log q)^2.
+\]
+\end{lemma}
+
+\begin{proof}
+Write $n=mp$, where $p=\Ph(n)$, and partition $p>Y$ into dyadic
+intervals $[X,2X)$. For a fixed $m$, at most $k_X$ primes can occur.
+Otherwise one can reserve a prime, express its negative inverse using
+$k_X$ of the remaining primes by Lemma~\ref{lem:primecover}, and multiply
+by $m^{-1}$ to obtain a forbidden zero subsum.
+Since $\Ph(m)\le2X$, the contribution of this interval is at most
+\[
+ \frac{k_X}{X}\prod_{p\le2X}(1-p^{-1})^{-1}
+ \ll (\log q)X^{-1/3}(\log X)^{1/3}.
+\]
+The geometric sum over the intervals is
+$O((\log q)Y^{-1/3}(\log Y)^{1/3})=O(1)$.
+\end{proof}
+
+\begin{lemma}\label{lem:localdensity}
+For every $\beta>0$, all sufficiently large $q$ have the following
+property, uniformly for integers $t\ge\log q$ and inverse-zero-free $V$
+modulo $q$,
+\begin{equation}\label{eq:localdensity}
+ \card{\{n\in V:t/2<n\le t,\ \Ph(n)>\log q\}}<\beta t.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+We may assume $0<\beta<1$. Suppose the set in \eqref{eq:localdensity}
+has at least $\beta t$ members. Apply Lemma~\ref{lem:cleaning} with
+ambient parameter $t$. The resulting set $W\subseteq(t/2,t]$ has
+$\card W\ge\beta t/2$ for all sufficiently large $t$, and
+\[
+ \beta/2\le R(W)\le1.
+\]
+Put $D=D_W$ and $\ell=\log q$. Every member of $W$ has a prime factor
+greater than $\ell$. If $\mathcal P$ is the collection of such primes
+dividing $D$, a union bound gives $\sum_{p\in\mathcal P}p^{-1}\ge\beta/2$.
+Therefore
+\begin{equation}\label{eq:largelcm}
+ \log D\ge\sum_{p\in\mathcal P}\log p
+ \ge\ell\log\ell\sum_{p\in\mathcal P}\frac1p
+ \ge\tfrac\beta2\ell\log\ell.
+\end{equation}
+In particular $q/D\longrightarrow0$, uniformly in $t$.
+Choose a positive integer $x$ divisible by $q$ such that
+$\beta/8\le x/D\le\beta/4$. The hypotheses of
+Lemma~\ref{lem:exact}, with ambient parameter $t$ and $c=1/2$, hold for
+$W$ and $r=x/D$. Its cardinality condition and target inequalities hold
+once $t$ is sufficiently large in terms of $\beta$.
+It gives a nonempty $U\subseteq W$ with $R(U)=x/D$.
+Since $(D,q)=1$ and $q\mid x$, reduction modulo $q$ contradicts inverse
+zero-freeness. Every threshold in this argument is uniform for
+$t\ge\log q$, proving the assertion.
+\end{proof}
+
+\begin{theorem}[Sharp modular harmonic bound]\label{thm:harmonic}
+Uniformly over all finite inverse-zero-free sets $V$ modulo $q$,
+\begin{equation}\label{eq:modularsharp}
+ R(V)\le\bigl(\e^\gamma+o(1)\bigr)\log\log q
+ \qquad(q\longrightarrow\infty).
+\end{equation}
+The coefficient $\e^\gamma$ is sharp, even when $q$ is restricted to primes.
+\end{theorem}
+
+\begin{proof}
+Write $\ell=\log q$ and $Y=\ell^3(1+\log\ell)^2$.
+The terms exceeding $q$ have total at most $1$ by \eqref{eq:length}.
+Lemma~\ref{lem:largeprimeweight} treats the terms at most $q$ with
+$\Ph(n)>Y$. For fixed $A>1$, Lemma~\ref{lem:cleanestimates} gives
+\[
+ \sum_{\substack{n>Y^A\\\Ph(n)\le Y}}\frac1n
+ \ll\e^{-A}\log Y.
+\]
+There are $O(A\log Y)$ dyadic intervals between $\ell$ and $Y^A$.
+By Lemma~\ref{lem:localdensity}, each contributes at most $2\beta$ to
+the reciprocal mass of terms with $\Ph(n)>\ell$, for sufficiently large
+$q$ in terms of $\beta$. Thus this entire part has mass
+\[
+ O(1)+O(\e^{-A}\log Y)+O(\beta A\log Y).
+\]
+Divide by $\log\ell$. First let $q$ tend to infinity with $A,\beta$
+fixed, then let $A$ tend to infinity and $\beta A$ tend to zero.
+The contribution is $o(\log\ell)$, uniformly in $V$.
+The remaining terms have total at most
+\[
+ \sum_{\Ph(n)\le\ell}\frac1n
+ =\prod_{p\le\ell}(1-p^{-1})^{-1}
+ =\bigl(\e^\gamma+o(1)\bigr)\log\ell.
+\]
+
+For sharpness, let $q$ be prime and put
+$D=\lcm(1,\ldots,\floor{\tfrac14\log q})$.
+The set of positive divisors of $D$ is coprime to $q$ for large $q$.
+Every nonempty reciprocal subtotal is $a/D$ with
+$0<a\le DR(\{d:d\mid D\})<q$, using
+$\log D\sim\tfrac14\log q$ and the Mertens product.
+It is consequently inverse-zero-free, and its reciprocal mass is
+$(\e^\gamma+o(1))\log\log q$.
+\end{proof}
+
+\begin{corollary}\label{cor:uniformdensity}
+For every $\eps>0$, all sufficiently large $N$ satisfy the following
+uniform assertion. If integers $q,t$ satisfy $2\le q\le N$ and
+$t\ge\exp(\lambda^3)$, and
+$V\subseteq[t]$ is inverse-zero-free modulo $q$, then
+$\card V\le\eps t$.
+\end{corollary}
+
+\begin{proof}
+For $q$ above a sufficiently large fixed threshold,
+Lemma~\ref{lem:localdensity} and a dyadic partition bound the number of
+members with $\Ph(n)>\log q$ by $\eps t/2$.
+All remaining members are $L$-smooth. Rankin's inequality, with
+$\sigma=1/\log L=1/\lambda$, gives
+\[
+ \card{\{n\le t:\Ph(n)\le L\}}
+ \le t^{1-\sigma}\prod_{p\le L}(1-p^{-1+\sigma})^{-1}
+ \ll t\lambda\e^{-\lambda^2}=o(t).
+\]
+For bounded $q$, use \eqref{eq:length}.
+\end{proof}
+
+\Needspace{20\baselineskip}
+\section{A dense primitive construction}\label{sec:construction}
+
+For a positive integer $G$, write
+\[
+ \Z_{(G)}=\{a/b\in\Q:(b,G)=1\}.
+\]
+Membership is understood after reduction, or equivalently through any
+representation with denominator coprime to $G$.
+
+\begin{lemma}[A path of prime blocks]\label{lem:path}
+Let $D\ge1$, put $H=\sum_{d\mid D}d^{-1}$ and $K=DH$, and let
+$p_1,\ldots,p_k$ be distinct primes, where $k\ge2$,
+$p_i>K+1$, and $p_i\nmid D$. Suppose
+\[
+ 0<B\le p_i\le M,\qquad \rho=\sum_{i=1}^k\frac1{p_i}\le\frac12,
+ \qquad G=\prod_{i=1}^k p_i.
+\]
+There is a finite set $E$ of positive integers such that
+\begin{gather}
+ (e,G)>1\quad(e\in E),\qquad R(E)\in\Z_{(G)},\label{eq:path1}\\
+ R(U)\in\Z_{(G)},\ U\subseteq E
+ \quad\Longrightarrow\quad U=\varnothing\text{ or }U=E,\label{eq:path2}\\
+ \max E\le\max\{MD,4kM^4\},\qquad
+ H\rho\le R(E)\le H\rho+\rho/B.\label{eq:path3}
+\end{gather}
+\end{lemma}
+
+\begin{proof}
+Place the block $\{p_i d:d\mid D\}$ at vertex $i$ of a path.
+For a denominator divisible by $p_i$ exactly once, its residue at $p_i$
+means the reduction of $p_i$ times its reciprocal modulo $p_i$.
+Let $\mathcal S_i\subseteq\mathbb F_{p_i}$ be the set of block subsums
+of these residues, and let $s_i$ be the full-block residue.
+After multiplication by $D$, every such subsum is an integer between
+$0$ and $K<p_i$. Hence residue zero occurs only for the empty block,
+residue $s_i$ occurs only for the full block, and
+\[
+ \card{\mathcal S_i}\le K+1<p_i,
+ \qquad \mathcal S_i=s_i-\mathcal S_i.
+\]
+
+At each internal vertex choose $a_i$ such that
+$-a_i\notin\mathcal S_i$. Prescribe residue $a_i$ for the incoming
+edge and $-s_i-a_i$ for the outgoing edge. Both are nonzero.
+At an endpoint prescribe residue $-s_i$ for its unique edge.
+For an edge joining $p_i$ and $p_{i+1}$, the Chinese remainder theorem
+provides a unit residue class $u$ modulo $p_ip_{i+1}$ so that the
+denominator $p_ip_{i+1}u$ has the two prescribed residues.
+
+Among the first $4k$ positive representatives of this class, a different
+marked prime $p$ excludes at most $4k/p+1$ representatives.
+The total excluded is at most $4k\rho+k-2<4k$.
+Choose an unexcluded representative $u_i<4kp_ip_{i+1}$ and add the edge
+denominator $p_ip_{i+1}u_i$. Each edge denominator is divisible by exactly
+its two incident marked primes, each to exponent one. The block and edge
+denominators are therefore all distinct.
+
+Let $E$ be their union. The residue of its sum is zero at every marked
+prime, proving \eqref{eq:path1}. Suppose $R(U)\in\Z_{(G)}$ for a subset
+$U\subseteq E$. At an internal vertex, selecting exactly the incoming
+edge would require $-a_i\in\mathcal S_i$. Selecting exactly the outgoing
+edge would require $s_i+a_i\in\mathcal S_i$, which is equivalent to the
+same forbidden condition by complement symmetry. Thus the two edge
+indicators agree at each internal vertex. All edges are selected together
+or all are absent. In the latter case every block is empty, and in the
+former every block is full. The same conclusion holds when $k=2$.
+This proves \eqref{eq:path2}.
+
+The block denominators are at most $MD$, and the edge denominators are
+less than $4kM^4$. Finally,
+\[
+ 0\le R(E)-H\rho
+ =\sum_{i=1}^{k-1}\frac1{p_ip_{i+1}u_i}
+ \le\frac1B\sum_{i=1}^{k-1}\frac1{p_i}\le\frac\rho B.
+\]
+\end{proof}
+
+\Needspace{9\baselineskip}
+\begin{lemma}[Uniform rational completion]\label{lem:completion}
+For every fixed $\eta>0$ there is a constant $C_\eta$ such that the
+following holds for all sufficiently large integers $m$.
+Let $G\ge1$ and let $r\in[\eta,2]\cap\Z_{(G)}$. Suppose every
+prime-power component of the reduced denominator of $r$ is at most
+$m/(\log m)^{14}$, and every prime divisor of $G$ exceeds both $C_\eta$
+and $(\log m)^{13}$. Then
+\[
+ r=R(C),\qquad C\subseteq[m],\qquad (c,G)=1\quad(c\in C).
+\]
+\end{lemma}
+
+\begin{proof}
+For a sufficiently large prime power $q$, put $X=(\log q)^{12}$ and
+$k=\ceil{(\log q)^{10}}$. There are at least $k$ primes in $[X,2X)$
+coprime to $q$, by the prime number theorem. Lemma~\ref{lem:primecover}
+applies to any $k$ of them, since its required number is $o(k)$.
+Consequently every residue modulo $q$ is a sum of inverses of a subset
+of these primes. The corresponding denominators $qp$ have total
+reciprocal mass at most
+\begin{equation}\label{eq:completioncost}
+ \frac{k}{qX}\ll\frac1{q(\log q)^2}.
+\end{equation}
+Choose $q_0\ge5$ so large that this assertion holds above $q_0$ and the
+sum of the right side of \eqref{eq:completioncost} over all integers
+$q>q_0$ is less than $\eta/2$.
+
+Starting from $r$, choose the largest prime-power component $q>q_0$ of
+its current reduced denominator, and write the current fraction as
+$a/(qv)$, where $(q,v)=1$. Select distinct primes $p\in[X,2X)$ with
+\[
+ \sum_p p^{-1}\equiv av^{-1}\pmod q,
+\]
+and subtract $\sum_p1/(qp)$. The new denominator divides
+$\lcm(v,\{p\})$. To see this, multiply the difference by
+$q\lcm(v,\{p\})$ and use the congruence to cancel the full factor $q$.
+All its prime-power components are strictly less than $q$.
+The processed components thus form a strictly decreasing finite sequence.
+The total subtracted mass is less than $\eta/2$, so the residual remains
+positive.
+
+Every chosen denominator has largest prime-power component exactly its
+processed $q$. Thus different steps use disjoint denominators.
+All introduced primes are at most $2(\log m)^{12}< (\log m)^{13}$, and
+every chosen denominator is at most
+$2m/(\log m)^2<m$ for large $m$. The denominator remains coprime to $G$
+at every step.
+
+At termination the residual has denominator dividing
+$D_0=\lcm(1,\ldots,\floor{q_0})$ and lies in $(0,2]$.
+For each of $2D_0$ successive disjoint intervals, Croot's theorem
+\cite{Croot} supplies a finite set of distinct denominators with
+reciprocal sum $1$. Scaling all these sets by $D_0$ gives disjoint
+representations of $1/D_0$. Their denominators are fixed and divisible
+by $30$. They represent every $j/D_0$ with $1\le j\le2D_0$ by taking
+unions. This finite reservoir is disjoint from the previously used
+denominators, which have at most two distinct prime factors.
+Choose $C_\eta$ larger than every reservoir denominator. For large $m$
+the reservoir lies in $[m]$ and is coprime to $G$, completing the proof.
+\end{proof}
+
+\begin{proposition}\label{prop:upper}
+There are primitive signed reciprocal relations in $[N]$ with
+\[
+ N-\card A\le\bigl(\e^{-\gamma}+o(1)\bigr)\Delta_N.
+\]
+\end{proposition}
+
+\begin{proof}
+Put
+\[
+ s=\floor{L/1000},\quad D=\lcm(1,\ldots,s),\quad
+ H=\sum_{d\mid D}\frac1d,\quad B=\floor{N^{1/20}}.
+\]
+The prime number theorem gives $D\le N^{1/100}$ for large $N$.
+Moreover,
+\begin{equation}\label{eq:divisormass}
+ H=\prod_{p\le s}\frac{1-p^{-1-\floor{\log s/\log p}}}{1-p^{-1}}
+ =\bigl(\e^\gamma+o(1)\bigr)\lambda.
+\end{equation}
+Indeed, the sum of the omitted numerator factors is at most
+$\pi(s)/s=O(1/\log s)$, and the denominator is the Mertens product.
+
+Choose the shortest initial segment $p_1,\ldots,p_k$ of the primes in
+$(B,B^2]$ for which
+\begin{equation}\label{eq:rhochoice}
+ \frac{\log H+1}{H}\le\rho:=\sum_i\frac1{p_i}
+ <\frac{\log H+1}{H}+\frac1B.
+\end{equation}
+The choice is possible because the reciprocal mass of the band tends
+to $\log2$. Eventually $k\ge2$, $\rho\le1/2$, $DH+1<B$, and all the
+chosen primes are coprime to $D$. Apply Lemma~\ref{lem:path} and put
+$G=\prod_i p_i$. It gives a positive family $E$ with
+\begin{equation}\label{eq:Eupper}
+ \max E\le N^{3/4},\qquad R(E)=\log H+1+o(1).
+\end{equation}
+For the first inequality, the block bound is
+$B^2D\le N^{11/100}$, and the edge bound follows from $k\le B^2$ and
+$4k(B^2)^4\le4N^{1/2}$.
+
+Let $n=\floor{N/H}$ and let $F$ consist of the $S$-powersmooth integers
+in $(n,N]$ coprime to $G$, where $S=N\exp(-6L^{4/5})$.
+By a union bound and Lemma~\ref{lem:cleanestimates},
+\begin{equation}\label{eq:Fcount}
+ N-\card F\le n+N\rho+O(NL^{-1/5}).
+\end{equation}
+We also have
+\begin{equation}\label{eq:Fmass}
+ R(F)=\log H+o(1).
+\end{equation}
+In fact, the unrestricted interval has reciprocal mass
+$\log(N/n)+o(1)=\log H+o(1)$.
+The powersmooth restriction removes mass at most
+$O(NL^{-1/5}/n)=O(HL^{-1/5})=o(1)$.
+For a marked prime $p\le B^2=o(n)$, the reciprocal mass of its multiples
+in $(n,N]$ is at most
+$p^{-1}(1+\log(2N/n))$. Summing this bound removes at most
+$O(\rho(1+\log H))=o(1)$.
+
+The difference $r=R(E)-R(F)$ tends to $1$ and belongs to $\Z_{(G)}$.
+Its reduced denominator is $S$-powersmooth, because this holds for all
+denominators in $E\cup F$ and is preserved by taking an lcm and reducing
+a fraction. For large $N$,
+\[
+ S\le\frac{n}{(\log n)^{14}},\qquad
+ \min_i p_i>\max\{C_{1/2},(\log n)^{13}\}.
+\]
+Lemma~\ref{lem:completion} gives $C\subseteq[n]$, coprime to $G$, with
+$R(C)=r$. The sets $E,F,C$ are disjoint. Assign positive signs to $E$
+and negative signs to $F\cup C$.
+
+If a subfamily has signed sum zero, its positive reciprocal subtotal
+belongs to $\Z_{(G)}$. Lemma~\ref{lem:path} forces its positive part
+to be empty or all of $E$. Positivity of the unsigned summands then
+forces its negative part to be empty or all of $F\cup C$, respectively.
+The relation is primitive.
+
+Finally, \eqref{eq:Fcount} and \eqref{eq:rhochoice} imply
+\[
+ N-\card{E\cup F\cup C}
+ \le\frac{N}{H}\bigl(\log H+2+o(1)\bigr)+O(NL^{-1/5}).
+\]
+Now $H\sim\e^\gamma\lambda$ and $\log H\sim\mu$.
+The last error is $o(\Delta_N)$, proving the proposition.
+\end{proof}
+
+\section{The lower bound for arbitrary primitive relations}\label{sec:lower}
+
+\subsection{The smaller sign class}
+
+\begin{lemma}\label{lem:minority}
+Let $A=A_+\sqcup A_-$ be a primitive signed reciprocal relation in $[N]$
+and put $d=N-\card A$. Uniformly over these relations,
+\begin{equation}\label{eq:minority}
+ \min\{\card{A_+},\card{A_-}\}
+ \le (1+o(1))Nr+\frac{\sqrt r}{1-\sqrt r}\,d,
+ \qquad r\sim200\frac\mu\lambda.
+\end{equation}
+In particular, if $d=O(\Delta_N)$, the smaller sign class has
+$O(\Delta_N)$ elements.
+\end{lemma}
+
+\begin{proof}
+Fix $b=1/100$ and put
+\[
+ \mathcal P=\{p:\lambda^2\le p\le L^b\},\qquad
+ r=\prod_{p\in\mathcal P}(1-p^{-1}),\qquad \tau=L^{-b}.
+\]
+The Mertens product gives $r\sim(2/b)\mu/\lambda$.
+We may suppose both sign classes have at least $Nr/2$ elements.
+No $p\in\mathcal P$ can satisfy
+\begin{equation}\label{eq:bothpopular}
+ \card{(A_+)_p}\ge\tau N/p,
+ \qquad \card{(A_-)_p}\ge\tau N/p.
+\end{equation}
+To prove this, restrict either sign class to $[NL^{-3b},N]$ and apply
+Lemma~\ref{lem:cleaning}. The lower cutoff removes at most
+$NL^{-3b}/p+1$ multiples of $p$.
+The powersmooth and $\Omega$ restrictions remove
+$O(NL^{-1/5}+NL^{-3/2})=o(NL^{-2b})$ integers.
+Hence at least $\tau N/(2p)$ multiples of $p$ remain before pruning.
+Their reciprocal mass is at least $\tau/(2p)\ge L^{-2b}/2$.
+The pruning removes mass $O(L^{-4b}\lambda)=o(L^{-2b})$, so $p$ still
+divides the lcm of the resulting set $U$.
+Also $\card U\ge Nr/3$ and
+\[
+ r/3\le R(U)\le3b\lambda+O(1).
+\]
+Apply Lemma~\ref{lem:exact} to $U$ with target $1/p$.
+Its mass inequalities follow from $p\ge\lambda^2$ and $p\le L^b$.
+Doing this for both signs produces two subsets of equal mass $1/p$.
+Their union is a nonempty proper zero subsum, since the full mass of
+either sign class is at least $r/2>1/p$ for large $N$.
+This contradiction proves the assertion.
+
+Assign each prime in $\mathcal P$ to a sign with the greater number of
+multiples. A term bearing a prime assigned to its opposite sign lies
+in an exceptional set of size at most
+\[
+ E=\tau N\sum_{p\in\mathcal P}\frac1p=o(Nr).
+\]
+Write $r_+,r_-$ for the products of $1-1/p$ over the two assigned
+collections, so $r_+r_-=r$. Relabel the signs so $r_-\le\sqrt r$.
+The product $Q=\prod_{p\in\mathcal P}p$ is $N^{o(1)}$.
+Periodicity modulo $Q$ counts the integers bearing a prime from each
+collection as
+\[
+ N(1-r_+)(1-r_-)+O(Q)\le d+E+O(Q).
+\]
+The positive terms outside the exceptional set avoid all minus-assigned
+primes. Their number is at most
+\begin{align*}
+ \card{A_+}
+ &\le Nr+N(1-r_+)r_-+E+O(Q)\\
+ &\le Nr+\frac{r_-}{1-r_-}(d+E+O(Q))+E+O(Q).
+\end{align*}
+Since $Q=o(Nr)$, this proves \eqref{eq:minority}.
+\end{proof}
+
+\subsection{Denominator excess and reciprocal mass}
+
+Fix a positive integer $D$ and put $\nu_p=v_p(D)$ and
+\begin{equation}\label{eq:missingpowers}
+ s_p=p^{\nu_p+1},\qquad
+ \mathcal S_D=\{s_p:s_p\le N\},\qquad
+ \rho_D=\sum_{s\in\mathcal S_D}\frac1s.
+\end{equation}
+For $n\ge1$ define
+\begin{equation}\label{eq:excess}
+ b(n)=\prod_p p^{\max\{v_p(n)-\nu_p,0\}},\qquad
+ Q_b=\prod_{p\mid b}p^{\nu_p+v_p(b)}.
+\end{equation}
+If $b(n)=b$, then $n=Q_bm$, where $m\mid D_b$ and $(m,b)=1$, with
+$D_b=D/\prod_{p\mid b}p^{\nu_p}$.
+For any subset of this group,
+\begin{equation}\label{eq:compatibility}
+ D\sum_n\frac1n=\frac1b\sum_m\frac{D_b}{m}.
+\end{equation}
+Thus its reciprocal sum has reduced denominator dividing $D$ exactly
+when the inverse sum of its cofactors is zero modulo $b$.
+
+\begin{lemma}\label{lem:weighted}
+For every $\eps>0$ there are constants $C_\eps$ and $\delta_\eps>0$
+such that, for sufficiently large $N$, the following holds uniformly in
+$D$ and $V\subseteq[N]$. Suppose $V$ has no member dividing $D$, and
+the cofactors in each group $b(n)=b>1$ are inverse-zero-free modulo $b$.
+If $\rho_D\le\delta_\eps$, then
+\begin{equation}\label{eq:weighted}
+ R(V)\le C_\eps+(\e^\gamma+\eps)\lambda\rho_D.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Let $h(b)$ be the supremum of reciprocal masses of inverse-zero-free
+sets modulo $b$. Theorem~\ref{thm:harmonic} gives
+$h(b)\le(\e^\gamma+\eps')\log\log b$ for sufficiently large $b$,
+and \eqref{eq:length} gives $h(b)\le1+\log b$ for every $b\ge2$.
+The contribution of group $b$ is at most $h(b)/Q_b$.
+
+Fix a large constant $Y$. The sum over groups supported entirely on
+primes at most $Y$ is bounded by
+\[
+ \sum_{\substack{b>1\\\Ph(b)\le Y}}\frac{1+\log b}{b}<\infty,
+\]
+uniformly in $D,N$. For all other groups, choose $Y$ so large that the
+sharp estimate for $h(b)$ applies. Since $b\le N$ for a nonempty group,
+their total mass is at most $(\e^\gamma+\eps')\lambda$ times the sum of
+$Q_b^{-1}$ over groups containing a prime greater than $Y$.
+For a prime with $s_p\le N$, put
+\[
+ a_p=\sum_{j\ge1}p^{-\nu_p-j}
+ =\frac1{s_p(1-1/p)}.
+\]
+The required sum of weights is bounded by
+\[
+ \left(\sum_{p>Y}a_p\right)\prod_{s_p\le N}(1+a_p)
+ \le\left(1+\frac1{Y-1}\right)\rho_D\exp(2\rho_D).
+\]
+First choose $\eps'$ small and $Y$ large, and then choose
+$\delta_\eps$ small. This proves \eqref{eq:weighted}.
+\end{proof}
+
+\subsection{A dense sign class and the removal of small subsums}
+
+Consider a sequence of primitive relations with $d=O(\Delta_N)$.
+By Lemma~\ref{lem:minority}, orient the signs so that the negative
+class $B$ has $N-O(\Delta_N)$ elements and the positive class $P$ has
+$O(\Delta_N)$ elements. Their common reciprocal mass satisfies
+\begin{equation}\label{eq:commonmass}
+ R(P)=R(B)\ge H_N-H_{d+\card P}
+ \ge\mu-\log\mu-O(1)=(1-o(1))\mu,
+\end{equation}
+where $H_j=\sum_{i=1}^j1/i$ and $H_0=0$.
+
+Fix $0<a<\e^{-3}$. Apply Lemma~\ref{lem:cleaning} to $B\cap(aN,N]$,
+and call the resulting set $F$. Put $D=D_F$ and $\rho=\rho_D$.
+Then
+\begin{gather}
+ \card{(B\cap(aN,N])\setminus F}=o(\Delta_N),\qquad
+ R(F)=\log(1/a)+o(1),\label{eq:coremass}\\
+ \card{(aN,N]\setminus F}=o(N),\qquad \rho=o(1).
+ \label{eq:corerho}
+\end{gather}
+Only the last assertion needs explanation. Every integer in $(aN,N]$
+divisible by a member of $\mathcal S_D$ is absent from $F$.
+Let $Z(n)$ count these divisors. They have pairwise coprime bases, and
+$a<1/4$. Hence
+\[
+ \sum_{aN<n\le N}Z(n)\ge\frac{N\rho}{4},\qquad
+ \sum_{aN<n\le N}Z(n)^2\le N(\rho+\rho^2).
+\]
+For the first inequality use
+$\floor x-\floor{ax}\ge x/4$ for $x\ge1$.
+Cauchy--Schwarz gives at least $N\rho/(16(1+\rho))$ integers in this
+union. Its size is $o(N)$ by \eqref{eq:corerho}'s first assertion, so
+$\rho=o(1)$.
+
+Put $u_N=(\log(1/a)+1)/L$. For large $N$, Lemma~\ref{lem:exact} and
+\eqref{eq:coremass} imply
+\begin{equation}\label{eq:dense-targets}
+ \begin{gathered}
+ r\in\Q,\quad u_N\le r\le2,\quad \operatorname{den}(r)\mid D\\
+ \Longrightarrow\quad r=R(U)\text{ for some }U\subseteq F.
+ \end{gathered}
+\end{equation}
+The lower mass inequality uses $\log(1/a)>3$, and the upper one follows
+from $Lr\ge\log(1/a)+1$.
+
+In each positive group with a fixed $b>1$, successively remove
+inclusion-minimal nonempty subsets whose reciprocal sum has denominator
+dividing $D$. By \eqref{eq:compatibility} and the cyclic partial-sum
+argument, each has at most $b$ elements and therefore mass at most
+$b/Q_b\le1$. Remove members of the group $b=1$ as singletons.
+Let $Z\subseteq P$ be the union of all removed blocks.
+If $R(Z)\ge u_N$, a first collection of whole blocks crossing $u_N$
+would have mass in $[u_N,u_N+1)$ and denominator dividing $D$.
+By \eqref{eq:dense-targets}, it would have an equal-mass representation
+in $B$. This would give a nonempty proper zero subsum, since
+$R(P)>u_N+1$ by \eqref{eq:commonmass}.
+Consequently
+\begin{equation}\label{eq:peeled}
+ R(Z)<u_N,\qquad \card Z<Nu_N=o(\Delta_N).
+\end{equation}
+The remaining positive groups are inverse-zero-free on their cofactors.
+Lemma~\ref{lem:weighted} now gives, for every fixed $\eps>0$,
+\[
+ (1-o(1))\mu\le C_\eps+(\e^\gamma+\eps)\lambda\rho+u_N.
+\]
+Since $\mu\longrightarrow\infty$, we obtain
+\begin{equation}\label{eq:rholower}
+ \liminf_{N\to\infty}\frac{\lambda\rho}{\mu}\ge\e^{-\gamma}.
+\end{equation}
+
+\subsection{Counting omitted denominators}
+
+Let $\mathcal S=\{s\in\mathcal S_D:s\le S\}$, with
+$S=N\exp(-6L^{4/5})$. Let $T$ be the set of $S$-powersmooth integers
+in $(aN,N]$ divisible by exactly one member of $\mathcal S$.
+Then
+\begin{equation}\label{eq:Tlower}
+ \card T\ge(1-2a)N\rho-N\rho^2-4S-2N\Theta(N,S).
+\end{equation}
+Indeed, let $Z_0(n)$ count the divisors from $\mathcal S$.
+The pointwise inequality
+$\ind_{\{Z_0=1\}}\ge2Z_0-Z_0^2$, the first-moment bound
+\[
+ \sum_{aN<n\le N}Z_0(n)
+ \ge(1-a)N\sum_{s\in\mathcal S}\frac1s-2\card{\mathcal S},
+\]
+and the second-moment bound
+\[
+ \sum_{aN<n\le N}Z_0(n)^2
+ \le N\left(\sum_{s\in\mathcal S}\frac1s+
+                 \left(\sum_{s\in\mathcal S}\frac1s\right)^2\right)
+\]
+prove the estimate before the powersmooth restriction.
+Use $\card{\mathcal S}\le S$,
+$\rho-\sum_{s\in\mathcal S}s^{-1}\le\Theta(N,S)$, and
+\eqref{eq:nonsmooth} to obtain \eqref{eq:Tlower}.
+
+A member of $T$ cannot divide $D$. Since it is $S$-powersmooth, every
+first missing power that divides it belongs to $\mathcal S$.
+Its excess therefore has the form $b=p^j$, and
+$Q_b=p^{\nu_p+j}\le S$.
+For a group of $P\setminus Z$ with this property, its cofactors lie in
+$[\floor{N/Q_b}]$ and are inverse-zero-free modulo $b$.
+Moreover,
+\[
+ \floor{N/Q_b}\ge\tfrac12\exp(6L^{4/5})
+ \ge\exp(\lambda^3)
+\]
+for large $N$. Corollary~\ref{cor:uniformdensity} shows that for each
+fixed $\eps>0$ its cardinality is at most $\eps N/Q_b$.
+Summing over all such groups yields
+\begin{equation}\label{eq:positiveT}
+ \card{T\cap(P\setminus Z)}
+ \le\eps N\sum_{s_p\le N}\sum_{j\ge1}p^{-\nu_p-j}
+ \le2\eps N\rho.
+\end{equation}
+
+Every negative member of $T$ lies in $(B\cap(aN,N])\setminus F$.
+Every other member is omitted from $A$ or lies in $Z$ or in
+$T\cap(P\setminus Z)$. Combining
+\eqref{eq:coremass}, \eqref{eq:peeled}, \eqref{eq:Tlower}, and
+\eqref{eq:positiveT} gives
+\begin{equation}\label{eq:finalcount}
+ d\ge(1-2a-2\eps)N\rho-N\rho^2-o(\Delta_N).
+\end{equation}
+Here $S=o(\Delta_N)$ and $N\Theta(N,S)=o(\Delta_N)$ by
+Lemma~\ref{lem:cleanestimates}.
+Since $\rho=o(1)$, equations \eqref{eq:rholower} and
+\eqref{eq:finalcount} imply
+\[
+ \liminf\frac d{\Delta_N}\ge(1-2a-2\eps)\e^{-\gamma}.
+\]
+Let $a$ and $\eps$ tend to zero after taking the lower limit in $N$.
+This proves the lower bound for every sequence with $d=O(\Delta_N)$.
+For extremizers this size restriction follows from
+Proposition~\ref{prop:upper}. That proposition and the lower bound
+complete the proof of Theorem~\ref{thm:main}.
+
+
+\appendix
+\section{Exact rational representation}\label{app:representation}
+
+We prove Lemma~\ref{lem:exact} by the divisor extraction and Fourier
+method of Liu and Sawhney \cite[Section~5]{LS}.
+Throughout this appendix put
+\begin{gather*}
+ L=\log N,\quad \lambda=\log L,\quad z=L^{4/5},\quad
+ \eta=L^{-1/25},\quad S=N\e^{-6z},\\
+ M=\floor{cN/20000},\quad K=M\e^{-z},\quad w=\log(N/M),\\
+ \Gamma=\max\left\{\frac\eta{L^{1/5}\lambda^3},
+              \frac{\eta^2L^{3/5}}{w^2\lambda^5}\right\}.
+\end{gather*}
+Here $c\ge L^{-3/100}$, so $w=O(\lambda)$ uniformly. In particular,
+\begin{equation}\label{eq:appendixparameters}
+ \Gamma\gg\frac{L^{13/25}}{\lambda^7},\qquad
+ \frac{\Gamma^2}{L^{1/50}(w+z)}
+ \gg\frac{L^{11/50}}{\lambda^{14}}\longrightarrow\infty.
+\end{equation}
+Also $N^{.99}\le S\le K\le M\le N/10^4$ for all sufficiently large
+$N$. All thresholds below are uniform over the stated range of $c$.
+
+We use the following standard upper-bound sieve consequence, also in
+\cite[Lemma~2.4]{LS}. If $\mathcal P$ is a collection of primes at most
+$y$, and
+$y\le\exp(\log X/\sqrt{\log\log X})$, then
+\begin{equation}\label{eq:sieve}
+ \card{\{n\in[X,2X)\cap\N:p\nmid n\ (p\in\mathcal P)\}}
+ \ll X\prod_{p\in\mathcal P}(1-p^{-1}).
+\end{equation}
+The constant is absolute, and the same bound applies to a subinterval
+by enlarging to the displayed interval.
+
+\subsection{Divisor extraction}
+
+\begin{lemma}\label{lem:divisorextraction}
+Let $T\subseteq[M,N]\cap\N$ satisfy $\Omega(n)\le5\lambda$ for every
+$n\in T$. Suppose $q\le K$ is a prime power and $qR(T_q)\ge\eta/2$.
+Put
+\[
+ H_* =\exp\left(\frac{\eta z}{2\lambda^3w}\right).
+\]
+There are a positive integer $d$ and a nonempty $T^*\subseteq T_{qd}$
+such that
+\begin{equation}\label{eq:extraction}
+ qd\ge K,\qquad \min T^*\ge H_*qd,\qquad
+ qdR(T^*)\gg\frac\eta{L^{1/5}\lambda}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Set $y=\exp(z/(10\lambda))$. We have $2\le H_*\le y$ for large $N$.
+For $n\in T_q$, define
+\[
+ d_n=\prod_{\substack{p\mid n/q\\p>y}}p^{v_p(n/q)}.
+\]
+Then $qd_n\mid n$ and
+\[
+ qd_n\ge n/y^{\Omega(n)}\ge M\e^{-z/2}\ge K.
+\]
+Call $n$ poor if it has fewer than two distinct prime divisors in
+$[H_*,y]$. If $n$ is poor, so is $n/q$.
+
+We count poor integers in $[M/q,N/q]$ using doubling intervals
+$[X,2X)$. For integers with no prime in $[H_*,y]$,
+\eqref{eq:sieve} and the Mertens estimates give
+$O(X\log H_*/\log y)$.
+For those with exactly one such prime $p$, divide by $p$ and apply the
+sieve to the other primes of the interval. Leaving $p$ unsieved changes
+the product by at most a factor $2$, and permits all its higher powers.
+Summation over $p$ bounds their number by
+$O(X\lambda\log H_*/\log y)$.
+All sieve applications are valid, since $X\ge M/q\ge\e^z$ and
+$\log y=z/(10\lambda)$, including after division by $p\le y$.
+
+There are $O(w)$ doubling intervals, so their reciprocal mass gives
+\[
+ qR(\{n\in T_q:n\text{ poor}\})
+ \ll w\lambda\frac{\log H_*}{\log y}
+ \ll\frac\eta\lambda.
+\]
+Discard the poor elements. The remaining set has $q$ times reciprocal
+mass at least $\eta/4$. Each of its members has two distinct primes in
+$[H_*,y]$. Division by the prime power $q$ removes at most one of them,
+and division by $d_n$ removes none. Consequently $n\ge H_*qd_n$.
+
+Partition these members according to $d_n=d$. The possible $d$ have all
+prime divisors in $(y,N]$, and
+\[
+ \sum_d\frac1d\le\prod_{y<p\le N}(1-p^{-1})^{-1}
+ \ll\frac L{\log y}\ll L^{1/5}\lambda.
+\]
+Since $qR(T_q\setminus\{\text{poor elements}\})$
+is the sum of $d^{-1}qdR(T^*)$ over the fibers, one fiber satisfies
+\eqref{eq:extraction}.
+\end{proof}
+
+The quotient valuation $v_p(n/q)$ in this proof ensures $qd_n\mid n$.
+The use of two distinct intermediate primes ensures that one survives
+division by the prime power $q$. Both details are needed for
+\eqref{eq:extraction}.
+
+\subsection{Fourier inversion and small frequencies}
+
+Let $E$ satisfy Lemma~\ref{lem:exact}, put $Q=D_E$, and set
+$\tau=r/R(E)$. The target inequalities give
+\[
+ L^{-1}\le\tau\le\frac L{L+1},\qquad
+ \tau(1-\tau)\ge\frac1{2L}.
+\]
+Independently select every $n\in E$ with probability $\tau$ and call
+the resulting subset $U$. Write $\mathrm e(t)=\exp(2\pi it)$ and
+\[
+ \Phi(h)=\prod_{n\in E}(1-\tau+\tau\mathrm e(h/n)).
+\]
+Since $Qr$ is an integer, Fourier orthogonality gives
+\begin{equation}\label{eq:Fourierprob}
+ \mathbb P(R(U)-r\in\Z)
+ =\frac1Q\sum_{-Q/2<h\le Q/2}
+       \operatorname{Re}\bigl(\mathrm e(-hr)\Phi(h)\bigr).
+\end{equation}
+
+The small-frequency estimate of \cite[Lemma~3.1]{LS} gives
+\begin{equation}\label{eq:major}
+ \sum_{|h|\le M/2}\operatorname{Re}
+       \bigl(\mathrm e(-hr)\Phi(h)\bigr)\ge\frac34.
+\end{equation}
+Its hypotheses hold because $M\ge N^{.95}$,
+$\card E\ge N/L^2\ge N^{.95}$, and
+$\tau\in[L^{-2},1-L^{-2}]$ for large $N$.
+For completeness, the estimate follows by expanding at $h=0$ after the
+linear term is canceled by $r=\tau R(E)$. The leading term is the
+positive Gaussian
+\[
+ \exp\left(-2\pi^2\tau(1-\tau)h^2
+                  \sum_{n\in E}n^{-2}\right).
+\]
+The cubic remainder is uniform for $|h|\le M^{3/5}$ and is negligible
+on the Gaussian scale. For $M^{3/5}<|h|\le M/2$, the inequality
+\[
+ |1-\tau+\tau\mathrm e(t)|\le
+ \exp(-8\tau(1-\tau)\norm{t}^2)
+\]
+bounds the total contribution by $o(1)$. Here $\norm{t}$ denotes
+distance to the nearest integer. These estimates give
+\eqref{eq:major} uniformly in the present parameter range.
+
+\subsection{Localization of large frequencies}
+
+For an integer $h$, let $h_n\in(-n/2,n/2]$ be its least absolute
+residue modulo $n$. Put
+\[
+ T_0=\frac{50N^2L\lambda}{\tau(1-\tau)K^2},\qquad
+ I_h=(h-K/2,h+K/2),
+\]
+and define
+\[
+ \mathcal D_h=\left\{q\in\pp(E):
+       \card{\{n\in E_q:|h_n|\ge K/2\}}<T_0\right\}.
+\]
+Each $n$ lies in exactly $\Omega(n)$ prime-power divisibility classes.
+The preceding bound for a Fourier factor therefore gives
+\begin{equation}\label{eq:Fourierdecay}
+ |\Phi(h)|\le N^{-10\card{\pp(E)\setminus\mathcal D_h}}.
+\end{equation}
+Indeed, the product over all pairs $(q,n)$ with $q\mid n$ is at least
+$|\Phi(h)|^{5\lambda}$. For every $q$ outside $\mathcal D_h$, at least
+$T_0$ factors have $|h_n|\ge K/2$, and their product is at most
+$\exp(-2\tau(1-\tau)K^2T_0/N^2)=\exp(-100L\lambda)$.
+Taking the $1/(5\lambda)$ power proves an even stronger version of
+\eqref{eq:Fourierdecay}.
+
+We claim that there is an integer in $I_h$ divisible by every member
+of $\mathcal D_h$. Fix $q\in\mathcal D_h$ and let
+$T_q=\{n\in E_q:|h_n|<K/2\}$.
+The definitions and the parameter bounds give
+\[
+ R(T_q)\ge\eta/q-T_0/M\ge\eta/(2q).
+\]
+For the last inequality it suffices to note that
+\[
+ \frac{S T_0}{M\eta}
+ \ll c^{-3}L^2\lambda\eta^{-1}\e^{-4z}\longrightarrow0.
+\]
+Apply Lemma~\ref{lem:divisorextraction}. It produces $d_q$ and
+$T_q^*\subseteq T_q$ with $qd_q\ge K$.
+Every $n\in T_q^*$ has a multiple in $I_h$, which must be the unique
+multiple of $qd_q$ in this interval. Call that integer $x_q$.
+
+Let $E_q^*=\{n/(qd_q):n\in T_q^*\}$. Then
+\begin{equation}\label{eq:scaledmass}
+ \min E_q^*\ge H_*,\qquad
+ \frac{\max E_q^*}{\min E_q^*}\le\e^w,\qquad
+ R(E_q^*)\gg\frac\eta{L^{1/5}\lambda}.
+\end{equation}
+Partition $E_q^*$ into dyadic intervals $[2^j,2^{j+1})$, including the
+one containing its minimum. If $\sigma=\log H_*$, the reciprocal
+weights of these indices satisfy
+\[
+ \sum_j\frac1{j+1}\ll\min\{\lambda,w/\sigma\}.
+\]
+Weighted pigeonholing in \eqref{eq:scaledmass} gives a dyadic interval
+$[y_q,2y_q)$ with
+\begin{equation}\label{eq:dyadicmass}
+ R(E_q^*\cap[y_q,2y_q))\ge\frac\Gamma{\log y_q}.
+\end{equation}
+To check the constants, the lower bound obtained before absorbing them
+is an absolute positive multiple of
+\[
+ \frac1{\log y_q}
+ \max\left\{\frac\eta{L^{1/5}\lambda^2},
+             \frac{\eta^2L^{3/5}}{w^2\lambda^4}\right\}
+ =\frac{\lambda\Gamma}{\log y_q}.
+\]
+Thus \eqref{eq:dyadicmass} follows for large $N$.
+It also implies $\log y_q\gg\Gamma$, since the reciprocal mass of a
+dyadic interval is bounded. Finally $y_q\le N/(qd_q)$.
+
+For $q_1,q_2\in\mathcal D_h$, set $y=\min(y_{q_1},y_{q_2})$ and take
+the prime interval
+\[
+ \mathcal P=\{p:\exp(L^{1/100})\le p
+          \le\exp((\log y)L^{-1/100})\}.
+\]
+It is nonempty for large $N$ by \eqref{eq:appendixparameters}.
+Let $\mathcal P_q$ consist of the primes in $\mathcal P$ dividing none
+of the integers in $E_q^*\cap[y_q,2y_q)$.
+The sieve \eqref{eq:sieve}, applied to the omitted primes, and
+\eqref{eq:dyadicmass} imply
+\[
+ \sum_{p\in\mathcal P_q}\frac1p
+ \le\log\left(\frac{C_0\log y_q}{\Gamma}\right)
+\]
+for an absolute $C_0$. The sieve cutoff holds because
+$L^{-1/100}\le1/\sqrt{\log\log y_q}$ for large $N$.
+The Mertens prime estimate gives
+\begin{align*}
+ \sum_{p\in\mathcal P\setminus(\mathcal P_{q_1}\cup\mathcal P_{q_2})}
+ \frac1p
+ &\ge\log\left(
+ \frac{\Gamma^2}{2C_0^2 L^{1/50}
+                         \log\max(y_{q_1},y_{q_2})}\right)\\
+ &\ge\log\left(\frac{\Gamma^2}{2C_0^2 L^{1/50}(w+z)}\right)
+ \ge1.
+\end{align*}
+Every prime counted here divides both $x_{q_1}$ and $x_{q_2}$.
+Indeed it divides a cofactor $n/(qd_q)$, and $x_q$ is a multiple of $n$.
+There are at least $\exp(L^{1/100})$ such primes, all at least that
+large. Their product exceeds $N$, whereas
+$|x_{q_1}-x_{q_2}|<K\le N$. Hence $x_{q_1}=x_{q_2}$.
+This proves the claim. An empty $\mathcal D_h$ imposes no divisibility
+condition.
+
+\subsection{Summing the large frequencies}
+
+For $M/2<|h|\le Q/2$ the set $\mathcal D_h$ is a proper subset of
+$\pp(E)$. Otherwise its common multiple in $I_h$ would be a multiple
+of $Q$, at distance less than $K/2$ from such a centered $h$, which is
+impossible.
+For fixed $\mathcal D\subsetneq\pp(E)$, the number of residue classes
+$h$ for which $I_h$ contains a multiple of $\lcm(\mathcal D)$ is at most
+\[
+ (K+1)\frac Q{\lcm(\mathcal D)}
+ \le N\prod_{q\in\pp(E)\setminus\mathcal D}q
+ \le N^{1+\card{\pp(E)\setminus\mathcal D}}.
+\]
+Using \eqref{eq:Fourierdecay} and at most $N^s$ choices of a complement
+of size $s$ gives
+\begin{equation}\label{eq:minor}
+ \frac1Q\sum_{M/2<|h|\le Q/2}|\Phi(h)|
+ \le\frac1Q\sum_{s\ge1}N^{1+s}N^sN^{-10s}
+ \le\frac2{QN}.
+\end{equation}
+Equations \eqref{eq:major} and \eqref{eq:minor} show that
+\eqref{eq:Fourierprob} is at least $1/(2Q)$.
+
+Finally, $\mathbb E R(U)=r$ and each selected summand is at most $1/M$.
+The elementary bounded-summand concentration inequality gives
+\[
+ \mathbb P(|R(U)-r|\ge1)\le2\exp(-M^2/(2N)).
+\]
+Since every prime-power component of $Q$ is at most $S$, the prime
+number theorem gives $\log Q=O(S)$. Also $S=o(M^2/N)$.
+The last probability is therefore less than $1/(4Q)$ for large $N$.
+With positive probability $R(U)-r$ is an integer of absolute value less
+than $1$, so it is zero. This proves Lemma~\ref{lem:exact}.
+
+\section*{Acknowledgments}
+The authors acknowledge assistance from OpenAI's ChatGPT with proof
+development, checking the mathematical arguments, and preparing the
+exposition.
+
+\begin{thebibliography}{9}
+
+\bibitem{Bloom319}
+T.~F. Bloom, \emph{Erd\H{o}s Problem \#319},
+\url{https://www.erdosproblems.com/319}, accessed November 11, 2026.
+
+\bibitem{Croot}
+E.~S. Croot III, \emph{On unit fractions with denominators in short
+intervals}, Acta Arith. \textbf{99} (2001), no.~2, 99--114.
+\href{https://doi.org/10.4064/aa99-2-1}{doi:10.4064/aa99-2-1}.
+Preprint \href{https://arxiv.org/abs/math/9904181}{arXiv:math/9904181}.
+
+\bibitem{EG}
+P.~Erd\H{o}s and R.~L. Graham, \emph{Old and New Problems and Results in
+Combinatorial Number Theory}, Monographies de L'Enseignement
+Math\'ematique, vol.~28, Universit\'e de Gen\`eve, Geneva, 1980.
+
+\bibitem{DensityOne}
+g-01234 (popular\_12345), \emph{A candidate proof that $c(N)/N\to1$ in
+Erd\H{o}s Problem 319}, circulation draft, July 16, 2026.
+\href{https://github.com/g-01234/erdos-319-density-one/blob/f55a25a29dcb17193918d27506be5e7a5b5d7d40/docs/proof.md}
+{Author's manuscript}.
+
+\bibitem{LS}
+Y.~P. Liu and M.~Sawhney, \emph{On further questions regarding unit
+fractions}, Int. Math. Res. Not. IMRN \textbf{2026} (2026), no.~2,
+rnaf382. \href{https://doi.org/10.1093/imrn/rnaf382}{doi:10.1093/imrn/rnaf382}.
+Preprint \href{https://arxiv.org/abs/2404.07113}{arXiv:2404.07113}.
+
+\bibitem{RexHannes}
+RexHannes, \emph{A large-prime obstruction for Erd\H{o}s Problem \#319},
+unpublished mathematical note, 2026.
+
+\end{thebibliography}
+\end{document}
+
