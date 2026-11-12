@@ -20,6 +20,8 @@ The selected `Salt/` files are from `jyh/salt` at commit `9b4b5a891ed4eb5219322e
 
 ## Other dependencies and mathematical sources
 
+The exact-module utility in `scripts/Replay.lean` adapts `replayFromImports` from Lean's `src/LeanChecker.lean`, by Kim Morrison and Sebastian Ullrich. The upstream source bears `Copyright (c) 2023 Kim Morrison. All rights reserved.` and is released under Apache-2.0. The adaptation accepts one exact module name and reports a successful replay marker. The original notice is also retained in [NOTICE](NOTICE). [Pinned upstream source](https://github.com/leanprover/lean4/blob/v4.35.0-rc2/src/LeanChecker.lean).
+
 Mathlib, Lean and the dependency packages downloaded through Lake retain their respective licenses. Their exact versions are in `lake-manifest.json` and `lean-toolchain`. Mathematical papers and the earlier density-one manuscripts are cited in the paper and [PRIOR_WORK.md](PRIOR_WORK.md). Their contents have not been relicensed as new work by this team.
 
 The quantitative completion uses the earlier prime-thinning strategy of peilinliu66-dev, with the method credit given in the source record. No ownership of that earlier contribution is claimed.

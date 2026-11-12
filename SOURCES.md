@@ -4,7 +4,7 @@ The manuscript bibliography supplies the principal mathematical references. The 
 
 | Source | Fixed revision | Role |
 | --- | --- | --- |
-| Lean | `leanprover/lean4:v4.35.0-rc2` | Kernel, elaborator and standard library |
+| Lean | `leanprover/lean4:v4.35.0-rc2` | Kernel, elaborator, standard library and adapted exact-module replay utility, with upstream credit in THIRD_PARTY_NOTICES.md and NOTICE |
 | Mathlib | `065356127b1dc0016f66b7283ce0ce2c4055aa55` | Foundational mathematical library and tactics |
 | H0W4RD-dev/erdos319-density-one | proof `ed555ed4120225800a6c642e6ba81704d5ed6b11`, evidence `3c1e1c6f349b6b5628fdc01386a6ac5ed55b7b61` | `Erdos319.lean` and `Submission.lean`, and attributed analytic proof techniques extended by the sharp modules |
 | plby/lean-proofs | `8822f7ddef30fadbd92e1c6ab4ed897af356af5e` | Adapted analytic and modular inverse proof sources, including the selected modules under `Erdos319Sharp/Imported/` |

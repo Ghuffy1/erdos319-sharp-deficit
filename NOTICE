@@ -8,3 +8,9 @@ The paper and its typesetting source retain the named authors' copyright.
 Ghuffy1 is the designated owner and main submitter. The four named authors
 are credited equally for the present contribution. Earlier mathematical
 and formal work retains its separate attribution in PRIOR_WORK.md.
+
+The exact-module replay utility adapts replayFromImports from Lean's
+src/LeanChecker.lean, by Kim Morrison and Sebastian Ullrich.
+Copyright (c) 2023 Kim Morrison. All rights reserved.
+Released under the Apache License, Version 2.0, reproduced in LICENSE.
+The adaptation selects one exact module and emits a successful replay marker.
