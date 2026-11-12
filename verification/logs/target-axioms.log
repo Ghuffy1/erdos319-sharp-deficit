@@ -1,0 +1,133 @@
+def Erdos319Formal.Primitive : Finset.{0} ℕ → Prop :=
+fun A =>
+  ∃ δ,
+    Eq.{1} (Erdos319Formal.signedSum A δ) 0 ∧
+      ∀ C ⊆ A, Eq.{1} (Erdos319Formal.signedSum C δ) 0 → Eq.{1} C EmptyCollection.emptyCollection.{0} ∨ Eq.{1} C A
+def Erdos319Sharp.IsPrimitiveSigning : Finset.{0} ℕ → (ℕ → Units.{0} ℤ) → Prop :=
+fun A δ =>
+  Eq.{1} (Erdos319Sharp.signedSum A δ) 0 ∧
+    ∀ T ⊆ A, Eq.{1} (Erdos319Sharp.signedSum T δ) 0 → Eq.{1} T EmptyCollection.emptyCollection.{0} ∨ Eq.{1} T A
+def Erdos319Formal.maxSize : ℕ → ℕ :=
+fun N =>
+  Finset.sup.{0, 0} (Finset.filter.{0} Erdos319Formal.Primitive (Finset.powerset.{0} (Finset.Icc.{0} 1 N)))
+    Finset.card.{0}
+def Erdos319Submission.LiteralPrimitive : Finset.{0} ℕ → Prop :=
+fun A =>
+  ∃ δ,
+    (∀ (n : ℕ), Eq.{1} (δ n) 1 ∨ Eq.{1} (δ n) (-1)) ∧
+      Eq.{1} (∑ n ∈ A, HDiv.hDiv.{0, 0, 0} ↑(δ n) ↑n) 0 ∧
+        ∀ C ⊂ A, Finset.Nonempty.{0} C → Ne.{1} (∑ n ∈ C, HDiv.hDiv.{0, 0, 0} ↑(δ n) ↑n) 0
+def Erdos319Jsp.IsOriginalMaximum : ℕ → ℕ → Prop :=
+fun N k =>
+  IsGreatest.{0}
+    (Set.ofPred.{0} fun j =>
+      ∃ A ⊆ Finset.Icc.{0} 1 N, Erdos319Submission.LiteralPrimitive A ∧ Eq.{1} (Finset.card.{0} A) j)
+    k
+def Erdos319Challenge.Admissible : Finset.{0} ℕ → Prop :=
+fun A =>
+  ∃ δ,
+    (∀ (n : ℕ), Membership.mem.{0, 0} A n → Eq.{1} (δ n) 1 ∨ Eq.{1} (δ n) (-1)) ∧
+      Eq.{1} (∑ n ∈ A, HDiv.hDiv.{0, 0, 0} ↑(δ n) ↑n) 0 ∧
+        ∀ B ⊂ A, Finset.Nonempty.{0} B → Ne.{1} (∑ n ∈ B, HDiv.hDiv.{0, 0, 0} ↑(δ n) ↑n) 0
+Erdos319Formal.maxSize_isGreatest (N : ℕ) :
+  IsGreatest.{0}
+    (Set.ofPred.{0} fun k => ∃ A ⊆ Finset.Icc.{0} 1 N, Erdos319Formal.Primitive A ∧ Eq.{1} (Finset.card.{0} A) k)
+    (Erdos319Formal.maxSize N)
+Erdos319Submission.literalPrimitive_iff (A : Finset.{0} ℕ) :
+  Erdos319Submission.LiteralPrimitive A ↔ Erdos319Formal.Primitive A
+Erdos319Submission.literal_maximum (N : ℕ) :
+  IsGreatest.{0}
+    (Set.ofPred.{0} fun k =>
+      ∃ A ⊆ Finset.Icc.{0} 1 N, Erdos319Submission.LiteralPrimitive A ∧ Eq.{1} (Finset.card.{0} A) k)
+    (Erdos319Formal.maxSize N)
+Erdos319Submission.original_problem_density_one :
+  Filter.Tendsto.{0, 0} (fun N => HDiv.hDiv.{0, 0, 0} ↑(Erdos319Formal.maxSize N) ↑N) Filter.atTop.{0} (nhds.{0} 1)
+Erdos319Submission.original_problem_nonempty_witnesses (ε : ℝ) :
+  LT.lt.{0} 0 ε →
+    LT.lt.{0} ε 1 →
+      ∀ᶠ (N : ℕ) in Filter.atTop.{0},
+        ∃ A ⊆ Finset.Icc.{0} 1 N,
+          Finset.Nonempty.{0} A ∧
+            Erdos319Submission.LiteralPrimitive A ∧
+              LE.le.{0} (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} 1 ε) ↑N) ↑(Finset.card.{0} A)
+Erdos319Sharp.sharpUpperWitnesses_proved : Erdos319Sharp.SharpUpperWitnesses
+Erdos319Sharp.sharpLowerBound_proved : Erdos319Sharp.SharpLowerBound
+Erdos319Sharp.erdos319_sharp_deficit :
+  Filter.Tendsto.{0, 0}
+    (fun N =>
+      HDiv.hDiv.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} ↑N ↑(Erdos319Sharp.maxSize N)) (Real.log (Real.log ↑N)))
+        (HMul.hMul.{0, 0, 0} (↑N) (Real.log (Real.log (Real.log ↑N)))))
+    Filter.atTop.{0} (nhds.{0} (Real.exp (Neg.neg.{0} Real.eulerMascheroniConstant)))
+Erdos319Sharp.erdos319_sharp_deficit_ratio :
+  Filter.Tendsto.{0, 0}
+    (fun N =>
+      HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} ↑N ↑(Erdos319Sharp.maxSize N))
+        (HDiv.hDiv.{0, 0, 0}
+          (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (Real.exp (Neg.neg.{0} Real.eulerMascheroniConstant)) ↑N)
+            (Real.log (Real.log (Real.log ↑N))))
+          (Real.log (Real.log ↑N))))
+    Filter.atTop.{0} (nhds.{0} 1)
+Erdos319Jsp.maximum_correspondence (N : ℕ) : Erdos319Jsp.IsOriginalMaximum N (Erdos319Formal.maxSize N)
+Erdos319Jsp.sharp_asymptotic :
+  Filter.Tendsto.{0, 0}
+    (fun N =>
+      HDiv.hDiv.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} ↑N ↑(Erdos319Formal.maxSize N)) (Real.log (Real.log ↑N)))
+        (HMul.hMul.{0, 0, 0} (↑N) (Real.log (Real.log (Real.log ↑N)))))
+    Filter.atTop.{0} (nhds.{0} (Real.exp (Neg.neg.{0} Real.eulerMascheroniConstant)))
+Erdos319Jsp.sharp_asymptotic_ratio :
+  Filter.Tendsto.{0, 0}
+    (fun N =>
+      HDiv.hDiv.{0, 0, 0} (HSub.hSub.{0, 0, 0} ↑N ↑(Erdos319Formal.maxSize N))
+        (HDiv.hDiv.{0, 0, 0}
+          (HMul.hMul.{0, 0, 0} (HMul.hMul.{0, 0, 0} (Real.exp (Neg.neg.{0} Real.eulerMascheroniConstant)) ↑N)
+            (Real.log (Real.log (Real.log ↑N))))
+          (Real.log (Real.log ↑N))))
+    Filter.atTop.{0} (nhds.{0} 1)
+Erdos319Jsp.sharp_for_every_literal_maximum (c : ℕ → ℕ) (hc : ∀ (N : ℕ), Erdos319Jsp.IsOriginalMaximum N (c N)) :
+  Filter.Tendsto.{0, 0}
+    (fun N =>
+      HDiv.hDiv.{0, 0, 0} (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} ↑N ↑(c N)) (Real.log (Real.log ↑N)))
+        (HMul.hMul.{0, 0, 0} (↑N) (Real.log (Real.log (Real.log ↑N)))))
+    Filter.atTop.{0} (nhds.{0} (Real.exp (Neg.neg.{0} Real.eulerMascheroniConstant)))
+Erdos319Jsp.full_solution :
+  (∀ (N : ℕ), Erdos319Jsp.IsOriginalMaximum N (Erdos319Formal.maxSize N)) ∧
+    Filter.Tendsto.{0, 0}
+      (fun N =>
+        HDiv.hDiv.{0, 0, 0}
+          (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} ↑N ↑(Erdos319Formal.maxSize N)) (Real.log (Real.log ↑N)))
+          (HMul.hMul.{0, 0, 0} (↑N) (Real.log (Real.log (Real.log ↑N)))))
+      Filter.atTop.{0} (nhds.{0} (Real.exp (Neg.neg.{0} Real.eulerMascheroniConstant)))
+Erdos319Challenge.admissible_iff (A : Finset.{0} ℕ) :
+  Erdos319Challenge.Admissible A ↔ Erdos319Submission.LiteralPrimitive A
+Erdos319Challenge.original_maximum (N : ℕ) :
+  IsGreatest.{0}
+    (Set.ofPred.{0} fun k => ∃ A ⊆ Finset.Icc.{0} 1 N, Erdos319Challenge.Admissible A ∧ Eq.{1} (Finset.card.{0} A) k)
+    (Erdos319Formal.maxSize N)
+Erdos319Challenge.original_sharp :
+  Filter.Tendsto.{0, 0}
+    (fun N =>
+      HDiv.hDiv.{0, 0, 0}
+        (HMul.hMul.{0, 0, 0} (HSub.hSub.{0, 0, 0} ↑N ↑(Erdos319Formal.maxSize N)) (Real.log (Real.log ↑N)))
+        (HMul.hMul.{0, 0, 0} (↑N) (Real.log (Real.log (Real.log ↑N)))))
+    Filter.atTop.{0} (nhds.{0} (Real.exp (Neg.neg.{0} Real.eulerMascheroniConstant)))
+'Erdos319Formal.maxSize_isGreatest' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Submission.literalPrimitive_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Submission.literal_maximum' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Submission.original_problem_density_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Submission.original_problem_nonempty_witnesses' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'Erdos319Sharp.sharpUpperWitnesses_proved' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Sharp.sharpLowerBound_proved' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Sharp.erdos319_sharp_deficit' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Sharp.erdos319_sharp_deficit_ratio' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Jsp.maximum_correspondence' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Jsp.sharp_asymptotic' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Jsp.sharp_asymptotic_ratio' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Jsp.sharp_for_every_literal_maximum' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Jsp.full_solution' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Challenge.admissible_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Challenge.original_maximum' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'Erdos319Challenge.original_sharp' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

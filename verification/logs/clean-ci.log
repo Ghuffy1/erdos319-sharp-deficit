@@ -1,0 +1,739 @@
+﻿2026-11-12T05:50:28.2671109Z Current runner version: '2.338.2'
+2026-11-12T05:50:28.2698105Z ##[group]Runner Image Provisioner
+2026-11-12T05:50:28.2698928Z Hosted Compute Agent
+2026-11-12T05:50:28.2699472Z Version: 20261028.624
+2026-11-12T05:50:28.2700428Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-12T05:50:28.2701117Z Build Date: 2026-10-28T21:51:42Z
+2026-11-12T05:50:28.2701823Z Worker ID: {14f4b0be-1eef-495b-872c-8eecb02cf2c3}
+2026-11-12T05:50:28.2702623Z Region: us-west-2
+2026-11-12T05:50:28.2703147Z Cloud: AWS
+2026-11-12T05:50:28.2703697Z ##[endgroup]
+2026-11-12T05:50:28.2705231Z ##[group]Operating System
+2026-11-12T05:50:28.2705908Z Ubuntu
+2026-11-12T05:50:28.2706396Z 24.04.5
+2026-11-12T05:50:28.2706864Z LTS
+2026-11-12T05:50:28.2707387Z ##[endgroup]
+2026-11-12T05:50:28.2707908Z ##[group]Runner Image
+2026-11-12T05:50:28.2708831Z Image: ubuntu-24.04
+2026-11-12T05:50:28.2709395Z Version: 20261101.114.1
+2026-11-12T05:50:28.2711169Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.114/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-12T05:50:28.2712743Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.114
+2026-11-12T05:50:28.2713743Z ##[endgroup]
+2026-11-12T05:50:28.2714865Z ##[group]GITHUB_TOKEN Permissions
+2026-11-12T05:50:28.2716983Z Contents: read
+2026-11-12T05:50:28.2717536Z Metadata: read
+2026-11-12T05:50:28.2718068Z ##[endgroup]
+2026-11-12T05:50:28.2720636Z Secret source: Actions
+2026-11-12T05:50:28.2721605Z Cache mode: write
+2026-11-12T05:50:28.2722360Z Prepare workflow directory
+2026-11-12T05:50:28.3175209Z Prepare all required actions
+2026-11-12T05:50:28.3306788Z Getting action download info
+2026-11-12T05:50:28.6997414Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-12T05:50:29.9273693Z Download action repository 'leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee' (SHA:ba3fdfe5c4476c925da13bf11a005ddb47e47aee)
+2026-11-12T05:50:30.2902859Z Getting action download info
+2026-11-12T05:50:30.4274428Z Download action repository 'actions/cache@caa296126883cff596d87d8935842f9db880ef25' (SHA:caa296126883cff596d87d8935842f9db880ef25)
+2026-11-12T05:50:30.6443796Z Complete job name: verify
+2026-11-12T05:50:30.7124638Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-11-12T05:50:30.7126083Z with:
+2026-11-12T05:50:30.7126873Z   repository: Ghuffy1/erdos319-sharp-deficit
+2026-11-12T05:50:30.7133372Z   token: ***
+2026-11-12T05:50:30.7134095Z   ssh-strict: true
+2026-11-12T05:50:30.7134798Z   ssh-user: git
+2026-11-12T05:50:30.7135507Z   persist-credentials: true
+2026-11-12T05:50:30.7136308Z   clean: true
+2026-11-12T05:50:30.7137047Z   sparse-checkout-cone-mode: true
+2026-11-12T05:50:30.7137865Z   fetch-depth: 1
+2026-11-12T05:50:30.7138582Z   fetch-tags: false
+2026-11-12T05:50:30.7139381Z   show-progress: true
+2026-11-12T05:50:30.7140329Z   lfs: false
+2026-11-12T05:50:30.7141041Z   submodules: false
+2026-11-12T05:50:30.7141780Z   set-safe-directory: true
+2026-11-12T05:50:30.7142646Z   allow-unsafe-pr-checkout: false
+2026-11-12T05:50:30.7143716Z env:
+2026-11-12T05:50:30.7144373Z   LEAN_NUM_THREADS: 1
+2026-11-12T05:50:30.7145124Z ##[endgroup]
+2026-11-12T05:50:33.8705205Z Syncing repository: Ghuffy1/erdos319-sharp-deficit
+2026-11-12T05:50:33.8706767Z ##[group]Getting Git version info
+2026-11-12T05:50:33.8707351Z Working directory is '/home/runner/work/erdos319-sharp-deficit/erdos319-sharp-deficit'
+2026-11-12T05:50:33.8708066Z [command]/usr/bin/git version
+2026-11-12T05:50:34.0195486Z git version 2.56.0
+2026-11-12T05:50:34.0212153Z ##[endgroup]
+2026-11-12T05:50:34.0229015Z Temporarily overriding HOME='/home/runner/work/_temp/eca4ff28-fb9b-41f7-a8d9-f29f8f9a8273' before making global git config changes
+2026-11-12T05:50:34.0231009Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-12T05:50:34.0232069Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/erdos319-sharp-deficit/erdos319-sharp-deficit
+2026-11-12T05:50:34.0611460Z Deleting the contents of '/home/runner/work/erdos319-sharp-deficit/erdos319-sharp-deficit'
+2026-11-12T05:50:34.0619675Z ##[group]Initializing the repository
+2026-11-12T05:50:34.0620923Z [command]/usr/bin/git init /home/runner/work/erdos319-sharp-deficit/erdos319-sharp-deficit
+2026-11-12T05:50:34.1084634Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-12T05:50:34.1085621Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-12T05:50:34.1086331Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-12T05:50:34.1086761Z hint: call:
+2026-11-12T05:50:34.1087020Z hint:
+2026-11-12T05:50:34.1087362Z hint: 	git config --global init.defaultBranch <name>
+2026-11-12T05:50:34.1087683Z hint:
+2026-11-12T05:50:34.1088139Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-12T05:50:34.1088616Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-12T05:50:34.1089066Z hint:
+2026-11-12T05:50:34.1089329Z hint: 	git branch -m <name>
+2026-11-12T05:50:34.1089600Z hint:
+2026-11-12T05:50:34.1090387Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-12T05:50:34.1094665Z Initialized empty Git repository in /home/runner/work/erdos319-sharp-deficit/erdos319-sharp-deficit/.git/
+2026-11-12T05:50:34.1106122Z [command]/usr/bin/git remote add origin https://github.com/Ghuffy1/erdos319-sharp-deficit
+2026-11-12T05:50:34.1153354Z ##[endgroup]
+2026-11-12T05:50:34.1154204Z ##[group]Disabling automatic garbage collection
+2026-11-12T05:50:34.1156120Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-12T05:50:34.1183359Z ##[endgroup]
+2026-11-12T05:50:34.1184150Z ##[group]Setting up auth
+2026-11-12T05:50:34.1189017Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-12T05:50:34.1217681Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-12T05:50:34.4451582Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-12T05:50:34.4493399Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-12T05:50:34.4636353Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-12T05:50:34.4671130Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-12T05:50:34.4826236Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-12T05:50:34.4854039Z ##[endgroup]
+2026-11-12T05:50:34.4854797Z ##[group]Fetching the repository
+2026-11-12T05:50:34.4863285Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +003f453d2844709337770e7d67f527a516d83d78:refs/remotes/origin/main
+2026-11-12T05:50:34.9926390Z From https://github.com/Ghuffy1/erdos319-sharp-deficit
+2026-11-12T05:50:34.9928386Z  * [new ref]         003f453d2844709337770e7d67f527a516d83d78 -> origin/main
+2026-11-12T05:50:34.9936584Z ##[endgroup]
+2026-11-12T05:50:34.9938708Z ##[group]Determining the checkout info
+2026-11-12T05:50:34.9939415Z ##[endgroup]
+2026-11-12T05:50:34.9940155Z [command]/usr/bin/git sparse-checkout disable
+2026-11-12T05:50:34.9991513Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-12T05:50:35.0014301Z ##[group]Checking out the ref
+2026-11-12T05:50:35.0020791Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-12T05:50:35.0267386Z Switched to a new branch 'main'
+2026-11-12T05:50:35.0281669Z branch 'main' set up to track 'origin/main'.
+2026-11-12T05:50:35.0293193Z ##[endgroup]
+2026-11-12T05:50:35.0338954Z [command]/usr/bin/git log -1 --format=%H
+2026-11-12T05:50:35.0352522Z 003f453d2844709337770e7d67f527a516d83d78
+2026-11-12T05:50:35.0726237Z ##[group]Run leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee
+2026-11-12T05:50:35.0726642Z with:
+2026-11-12T05:50:35.0726896Z   auto-config: false
+2026-11-12T05:50:35.0727120Z   build: false
+2026-11-12T05:50:35.0727326Z   test: false
+2026-11-12T05:50:35.0727518Z   lint: false
+2026-11-12T05:50:35.0727753Z   use-mathlib-cache: true
+2026-11-12T05:50:35.0728033Z   use-github-cache: false
+2026-11-12T05:50:35.0728286Z   mk_all-check: false
+2026-11-12T05:50:35.0728539Z   check-reservoir-eligibility: false
+2026-11-12T05:50:35.0728799Z   leanchecker: false
+2026-11-12T05:50:35.0729056Z   lean4checker: false
+2026-11-12T05:50:35.0729292Z   nanoda: false
+2026-11-12T05:50:35.0729701Z   nanoda-allow-sorry: true
+2026-11-12T05:50:35.0730205Z   axiom-audit: false
+2026-11-12T05:50:35.0730497Z   axiom-audit-allow: propext,Classical.choice,Quot.sound
+2026-11-12T05:50:35.0730849Z   lake-package-directory: .
+2026-11-12T05:50:35.0731134Z   reinstall-transient-toolchain: false
+2026-11-12T05:50:35.0731538Z env:
+2026-11-12T05:50:35.0731811Z   LEAN_NUM_THREADS: 1
+2026-11-12T05:50:35.0732044Z ##[endgroup]
+2026-11-12T05:50:35.0786642Z ##[start-action display=install elan;id=__leanprover_lean-action.__run]
+2026-11-12T05:50:35.0820668Z ##[group]Run : Install Elan
+2026-11-12T05:50:35.0820987Z : Install Elan
+2026-11-12T05:50:35.0821316Z ${GITHUB_ACTION_PATH}/scripts/install_elan.sh
+2026-11-12T05:50:35.0847585Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-12T05:50:35.0847920Z env:
+2026-11-12T05:50:35.0848118Z   LEAN_NUM_THREADS: 1
+2026-11-12T05:50:35.0848388Z ##[endgroup]
+2026-11-12T05:50:35.0932050Z ##[group]Elan Installation Output
+2026-11-12T05:50:35.1475117Z info: downloading installer
+2026-11-12T05:50:36.4789321Z info: downloading https://releases.lean-lang.org/lean4/v4.35.0-rc2/lean-4.35.0-rc2-linux.tar.zst
+2026-11-12T05:50:45.2404482Z info: installing /home/runner/.elan/toolchains/leanprover--lean4---v4.35.0-rc2
+2026-11-12T05:51:02.8519433Z Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)
+2026-11-12T05:51:02.9047203Z Lake version 5.0.0-src+11acb17 (Lean version 4.35.0-rc2)
+2026-11-12T05:51:02.9081033Z ##[endgroup]
+2026-11-12T05:51:02.9082219Z 
+2026-11-12T05:51:02.9121436Z ##[end-action id=__leanprover_lean-action.__run;outcome=success;conclusion=success;duration_ms=27833]
+2026-11-12T05:51:02.9124768Z ##[start-action display=Run actions/cache/restore@caa296126883cff596d87d8935842f9db880ef25;id=__leanprover_lean-action.cache-restore]
+2026-11-12T05:51:02.9142415Z ##[end-action id=__leanprover_lean-action.cache-restore;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-12T05:51:02.9146081Z ##[start-action display=configure `lean-action`;id=__leanprover_lean-action.config]
+2026-11-12T05:51:02.9222721Z ##[group]Run : Configure Lean Action
+2026-11-12T05:51:02.9223041Z : Configure Lean Action
+2026-11-12T05:51:02.9223503Z ${GITHUB_ACTION_PATH}/scripts/config.sh
+2026-11-12T05:51:02.9248795Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-12T05:51:02.9249109Z env:
+2026-11-12T05:51:02.9249305Z   LEAN_NUM_THREADS: 1
+2026-11-12T05:51:02.9249574Z   AUTO_CONFIG: false
+2026-11-12T05:51:02.9249928Z   BUILD: false
+2026-11-12T05:51:02.9250157Z   TEST: false
+2026-11-12T05:51:02.9250400Z   LINT: false
+2026-11-12T05:51:02.9250611Z ##[endgroup]
+2026-11-12T05:51:02.9358562Z ##[group]Configure lean-action
+2026-11-12T05:51:02.9399487Z ##[end-action id=__leanprover_lean-action.config;outcome=success;conclusion=success;duration_ms=25]
+2026-11-12T05:51:02.9401919Z ##[start-action display=reinstall transient toolchain;id=__leanprover_lean-action.__run_2]
+2026-11-12T05:51:02.9405738Z ##[end-action id=__leanprover_lean-action.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-12T05:51:02.9407752Z ##[start-action display=ensure all files are imported;id=__leanprover_lean-action.mk_all]
+2026-11-12T05:51:02.9411717Z ##[end-action id=__leanprover_lean-action.mk_all;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-12T05:51:02.9413480Z ##[start-action display=detect mathlib;id=__leanprover_lean-action.detect-mathlib]
+2026-11-12T05:51:02.9416752Z ##[end-action id=__leanprover_lean-action.detect-mathlib;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-12T05:51:02.9418336Z ##[start-action display=get mathlib cache;id=__leanprover_lean-action.__run_3]
+2026-11-12T05:51:02.9558193Z ##[group]Run : Get Mathlib Cache
+2026-11-12T05:51:02.9558485Z : Get Mathlib Cache
+2026-11-12T05:51:02.9558770Z echo "::group::Mathlib Cache"
+2026-11-12T05:51:02.9559124Z # Use cache.mathlib.org unless the workflow sets `MATHLIB_CACHE_GET_URL`.
+2026-11-12T05:51:02.9559568Z # The cache client reads an empty value as a URL, so unset it to get the client's default.
+2026-11-12T05:51:02.9560268Z if [ -z "${MATHLIB_CACHE_GET_URL+x}" ]; then
+2026-11-12T05:51:02.9560663Z   export MATHLIB_CACHE_GET_URL="https://cache.mathlib.org/mathlib4"
+2026-11-12T05:51:02.9561054Z elif [ -z "$MATHLIB_CACHE_GET_URL" ]; then
+2026-11-12T05:51:02.9561347Z   unset MATHLIB_CACHE_GET_URL
+2026-11-12T05:51:02.9561580Z fi
+2026-11-12T05:51:02.9561813Z lake exe cache get
+2026-11-12T05:51:02.9562054Z echo "::endgroup::"
+2026-11-12T05:51:02.9562285Z echo
+2026-11-12T05:51:02.9583520Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-12T05:51:02.9583918Z env:
+2026-11-12T05:51:02.9584139Z   LEAN_NUM_THREADS: 1
+2026-11-12T05:51:02.9584398Z ##[endgroup]
+2026-11-12T05:51:02.9707988Z ##[group]Mathlib Cache
+2026-11-12T05:51:03.0248489Z info: mathlib: materializing new dependency
+2026-11-12T05:51:03.2871628Z info: mathlib: fetching revision '065356127b1dc0016f66b7283ce0ce2c4055aa55' from https://github.com/leanprover-community/mathlib4.git
+2026-11-12T05:51:05.9501414Z info: mathlib: checking out revision '065356127b1dc0016f66b7283ce0ce2c4055aa55'
+2026-11-12T05:51:17.2506944Z info: plausible: materializing new dependency
+2026-11-12T05:51:17.3178530Z info: plausible: fetching revision 'e50948299c4dc4a4c21b1c34b6a6a4fddc19f912' from https://github.com/leanprover-community/plausible
+2026-11-12T05:51:17.9361971Z info: plausible: checking out revision 'e50948299c4dc4a4c21b1c34b6a6a4fddc19f912'
+2026-11-12T05:51:18.8493687Z info: LeanSearchClient: materializing new dependency
+2026-11-12T05:51:18.8642092Z info: LeanSearchClient: fetching revision '95e037bfdc31d3916ac615446847fb01960e2719' from https://github.com/leanprover-community/LeanSearchClient
+2026-11-12T05:51:19.2062147Z info: LeanSearchClient: checking out revision '95e037bfdc31d3916ac615446847fb01960e2719'
+2026-11-12T05:51:19.9514818Z info: importGraph: materializing new dependency
+2026-11-12T05:51:19.9642155Z info: importGraph: fetching revision '10930f8138f0462dbd744a91fc03a16fae0e046f' from https://github.com/leanprover-community/import-graph
+2026-11-12T05:51:20.3441600Z info: importGraph: checking out revision '10930f8138f0462dbd744a91fc03a16fae0e046f'
+2026-11-12T05:51:21.0801096Z info: proofwidgets: materializing new dependency
+2026-11-12T05:51:21.0930078Z info: proofwidgets: fetching revision '4c70ac059693669e5756e32a7a94b57ee1e99dc5' from https://github.com/leanprover-community/ProofWidgets4
+2026-11-12T05:51:21.4737626Z info: proofwidgets: checking out revision '4c70ac059693669e5756e32a7a94b57ee1e99dc5'
+2026-11-12T05:51:22.8341117Z info: aesop: materializing new dependency
+2026-11-12T05:51:22.8482421Z info: aesop: fetching revision '75d936c7af167cc93fac0d31237682fc2204591d' from https://github.com/leanprover-community/aesop
+2026-11-12T05:51:23.2854280Z info: aesop: checking out revision '75d936c7af167cc93fac0d31237682fc2204591d'
+2026-11-12T05:51:24.1048061Z info: Qq: materializing new dependency
+2026-11-12T05:51:24.1172343Z info: Qq: fetching revision '786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334' from https://github.com/leanprover-community/quote4
+2026-11-12T05:51:24.4915922Z info: Qq: checking out revision '786b7acdca7eb4e9c76c5d1d5bd810e7e5c56334'
+2026-11-12T05:51:25.2058560Z info: batteries: materializing new dependency
+2026-11-12T05:51:25.2181717Z info: batteries: fetching revision 'ed9b316aabe389fec1ef43c3326ab48c7e59be42' from https://github.com/leanprover-community/batteries
+2026-11-12T05:51:25.7888367Z info: batteries: checking out revision 'ed9b316aabe389fec1ef43c3326ab48c7e59be42'
+2026-11-12T05:51:26.7642734Z info: Cli: materializing new dependency
+2026-11-12T05:51:26.7760859Z info: Cli: fetching revision '2842b9871b04862f944c032e34052cb9448ccb71' from https://github.com/leanprover/lean4-cli
+2026-11-12T05:51:27.1231042Z info: Cli: checking out revision '2842b9871b04862f944c032e34052cb9448ccb71'
+2026-11-12T05:51:28.1843939Z ✔ [1/5] Built Cache.Cli (220ms)
+2026-11-12T05:51:31.8891776Z ✔ [3/11] Built Cache.Lean (263ms)
+2026-11-12T05:51:32.8889270Z ✔ [6/12] Built Cache.IO (975ms)
+2026-11-12T05:51:33.0892951Z ✔ [7/12] Built Cache.Env (222ms)
+2026-11-12T05:51:33.6907309Z ✔ [8/12] Built Cache.Hashing (554ms)
+2026-11-12T05:51:33.8957685Z ✔ [9/12] Built Cache.Infra (283ms)
+2026-11-12T05:51:35.3949508Z ✔ [10/12] Built Cache.Requests (1.4s)
+2026-11-12T05:51:35.7953505Z ✔ [11/15] Built Cache.Marker (391ms)
+2026-11-12T05:51:36.1961287Z ✔ [12/19] Built Cache.Upload.Dest (422ms)
+2026-11-12T05:51:36.5987956Z ✔ [13/20] Built Cache.Upload.Curl (424ms)
+2026-11-12T05:51:37.0181352Z ✔ [14/20] Built Cache.Upload.Rclone (427ms)
+2026-11-12T05:51:37.3991601Z ✔ [16/42] Built Cache.Upload.Azure (410ms)
+2026-11-12T05:51:37.9205575Z ✔ [17/42] Built Cache.Query (490ms)
+2026-11-12T05:51:38.4017378Z ✔ [18/42] Built Cache.Upload.S3 (499ms)
+2026-11-12T05:51:38.5025747Z ✔ [19/42] Built Cache.Cli:c.o (80ms)
+2026-11-12T05:51:38.6020161Z ✔ [20/42] Built Cache.Lean:c.o (94ms)
+2026-11-12T05:51:39.6039119Z ✔ [22/42] Built Cache.IO:c.o (1.0s)
+2026-11-12T05:51:39.9042784Z ✔ [23/42] Built Cache.Hashing:c.o (277ms)
+2026-11-12T05:51:40.0058508Z ✔ [24/42] Built Cache.Env:c.o (97ms)
+2026-11-12T05:51:40.1061600Z ✔ [25/42] Built Cache.Infra:c.o (144ms)
+2026-11-12T05:51:41.7071700Z ✔ [26/42] Built Cache.Requests:c.o (1.6s)
+2026-11-12T05:51:41.8054067Z ✔ [27/42] Built Cache.Marker:c.o (69ms)
+2026-11-12T05:51:41.9061862Z ✔ [28/42] Built Cache.Upload.Dest:c.o (71ms)
+2026-11-12T05:51:42.0057780Z ✔ [29/42] Built Cache.Upload.Curl:c.o (118ms)
+2026-11-12T05:51:42.1059500Z ✔ [30/42] Built Cache.Upload.Azure:c.o (82ms)
+2026-11-12T05:51:42.2072088Z ✔ [31/42] Built Cache.Upload.Rclone:c.o (108ms)
+2026-11-12T05:51:42.4055988Z ✔ [32/42] Built Cache.Query:c.o (182ms)
+2026-11-12T05:51:42.5061353Z ✔ [33/42] Built Cache.Upload.S3:c.o (194ms)
+2026-11-12T05:51:43.0080951Z ✔ [34/42] Built Cache.Warning (474ms)
+2026-11-12T05:51:43.4072227Z ✔ [35/42] Built Cache.Upload.Defs (422ms)
+2026-11-12T05:51:43.6074804Z ✔ [36/42] Built Cache.Warning:c.o (167ms)
+2026-11-12T05:51:43.7073126Z ✔ [37/42] Built Cache.Upload.Defs:c.o (92ms)
+2026-11-12T05:51:44.1071132Z ✔ [38/42] Built Cache.Upload (391ms)
+2026-11-12T05:51:44.2073136Z ✔ [39/42] Built Cache.Upload:c.o (74ms)
+2026-11-12T05:51:44.9091980Z ✔ [40/42] Built Cache.Main (783ms)
+2026-11-12T05:51:45.5103170Z ✔ [41/42] Built Cache.Main:c.o (592ms)
+2026-11-12T05:51:46.2124334Z ✔ [42/42] Built cache:exe (684ms)
+2026-11-12T05:51:47.6304117Z Current branch: HEAD
+2026-11-12T05:51:47.6304942Z Using cache from origin: (some leanprover-community/mathlib4)
+2026-11-12T05:51:47.6305802Z Attempting to download 8915 file(s) from leanprover-community/mathlib4 cache at https://cache.mathlib.org/mathlib4
+2026-11-12T05:51:47.8297701Z 
+2026-11-12T05:51:47.9397036Z Downloaded: 1 file(s) [attempted 1/8915 = 0%, 221 KB/s], Decompressed: 0
+2026-11-12T05:51:48.0421608Z Downloaded: 131 file(s) [attempted 131/8915 = 1%, 232 KB/s], Decompressed: 17
+2026-11-12T05:51:48.1431624Z Downloaded: 285 file(s) [attempted 285/8915 = 3%, 831 KB/s], Decompressed: 17
+2026-11-12T05:51:48.2461500Z Downloaded: 468 file(s) [attempted 468/8915 = 5%, 568 KB/s], Decompressed: 17
+2026-11-12T05:51:48.3487394Z Downloaded: 642 file(s) [attempted 642/8915 = 7%, 392 KB/s], Decompressed: 17
+2026-11-12T05:51:48.4472617Z Downloaded: 795 file(s) [attempted 795/8915 = 8%, 1025 KB/s], Decompressed: 17
+2026-11-12T05:51:48.5510742Z Downloaded: 898 file(s) [attempted 898/8915 = 10%, 407 KB/s], Decompressed: 120
+2026-11-12T05:51:48.6476947Z Downloaded: 1058 file(s) [attempted 1058/8915 = 11%, 937 KB/s], Decompressed: 120
+2026-11-12T05:51:48.7525241Z Downloaded: 1226 file(s) [attempted 1226/8915 = 13%, 705 KB/s], Decompressed: 120
+2026-11-12T05:51:48.8523458Z Downloaded: 1414 file(s) [attempted 1414/8915 = 15%, 119 KB/s], Decompressed: 120
+2026-11-12T05:51:48.9591722Z Downloaded: 1582 file(s) [attempted 1582/8915 = 17%, 5200 KB/s], Decompressed: 120
+2026-11-12T05:51:49.0715741Z Downloaded: 1718 file(s) [attempted 1718/8915 = 19%, 1737 KB/s], Decompressed: 120
+2026-11-12T05:51:49.1588860Z Downloaded: 1904 file(s) [attempted 1904/8915 = 21%, 306 KB/s], Decompressed: 120
+2026-11-12T05:51:49.2993948Z Downloaded: 2062 file(s) [attempted 2062/8915 = 23%, 1374 KB/s], Decompressed: 120
+2026-11-12T05:51:49.3872089Z Downloaded: 2223 file(s) [attempted 2223/8915 = 24%, 3893 KB/s], Decompressed: 120
+2026-11-12T05:51:49.4954308Z Downloaded: 2349 file(s) [attempted 2349/8915 = 26%, 760 KB/s], Decompressed: 120
+2026-11-12T05:51:49.5782587Z Downloaded: 2530 file(s) [attempted 2530/8915 = 28%, 207 KB/s], Decompressed: 120
+2026-11-12T05:51:49.7030866Z Downloaded: 2691 file(s) [attempted 2691/8915 = 30%, 1119 KB/s], Decompressed: 120
+2026-11-12T05:51:49.7974602Z Downloaded: 2859 file(s) [attempted 2859/8915 = 32%, 889 KB/s], Decompressed: 120
+2026-11-12T05:51:49.8932417Z Downloaded: 2998 file(s) [attempted 2998/8915 = 33%, 5757 KB/s], Decompressed: 120
+2026-11-12T05:51:49.9824850Z Downloaded: 3178 file(s) [attempted 3178/8915 = 35%, 2575 KB/s], Decompressed: 120
+2026-11-12T05:51:50.0862308Z Downloaded: 3346 file(s) [attempted 3346/8915 = 37%, 568 KB/s], Decompressed: 120
+2026-11-12T05:51:50.2961485Z Downloaded: 3527 file(s) [attempted 3527/8915 = 39%, 116 KB/s], Decompressed: 120
+2026-11-12T05:51:50.3914467Z Downloaded: 3542 file(s) [attempted 3542/8915 = 39%, 3220 KB/s], Decompressed: 120
+2026-11-12T05:51:50.4934088Z Downloaded: 3643 file(s) [attempted 3643/8915 = 40%, 289 KB/s], Decompressed: 120
+2026-11-12T05:51:50.5971723Z Downloaded: 3777 file(s) [attempted 3777/8915 = 42%, 507 KB/s], Decompressed: 120
+2026-11-12T05:51:50.7083772Z Downloaded: 3923 file(s) [attempted 3923/8915 = 44%, 2150 KB/s], Decompressed: 120
+2026-11-12T05:51:50.7873255Z Downloaded: 4071 file(s) [attempted 4071/8915 = 45%, 1085 KB/s], Decompressed: 120
+2026-11-12T05:51:50.8922221Z Downloaded: 4193 file(s) [attempted 4193/8915 = 47%, 1166 KB/s], Decompressed: 120
+2026-11-12T05:51:50.9975294Z Downloaded: 4351 file(s) [attempted 4351/8915 = 48%, 1316 KB/s], Decompressed: 120
+2026-11-12T05:51:51.1021534Z Downloaded: 4524 file(s) [attempted 4524/8915 = 50%, 1050 KB/s], Decompressed: 120
+2026-11-12T05:51:51.2014208Z Downloaded: 4707 file(s) [attempted 4707/8915 = 52%, 1430 KB/s], Decompressed: 120
+2026-11-12T05:51:51.3261514Z Downloaded: 4890 file(s) [attempted 4890/8915 = 54%, 710 KB/s], Decompressed: 120
+2026-11-12T05:51:51.4281971Z Downloaded: 5019 file(s) [attempted 5019/8915 = 56%, 127 KB/s], Decompressed: 120
+2026-11-12T05:51:51.5355359Z Downloaded: 5172 file(s) [attempted 5172/8915 = 58%, 2250 KB/s], Decompressed: 120
+2026-11-12T05:51:51.6351797Z Downloaded: 5328 file(s) [attempted 5328/8915 = 59%, 1204 KB/s], Decompressed: 120
+2026-11-12T05:51:51.7355526Z Downloaded: 5511 file(s) [attempted 5511/8915 = 61%, 1664 KB/s], Decompressed: 120
+2026-11-12T05:51:51.8371503Z Downloaded: 5662 file(s) [attempted 5662/8915 = 63%, 131 KB/s], Decompressed: 120
+2026-11-12T05:51:51.9363785Z Downloaded: 5840 file(s) [attempted 5840/8915 = 65%, 891 KB/s], Decompressed: 120
+2026-11-12T05:51:52.0355358Z Downloaded: 6017 file(s) [attempted 6017/8915 = 67%, 765 KB/s], Decompressed: 120
+2026-11-12T05:51:52.1431265Z Downloaded: 6177 file(s) [attempted 6177/8915 = 69%, 1613 KB/s], Decompressed: 120
+2026-11-12T05:51:52.2549059Z Downloaded: 6320 file(s) [attempted 6320/8915 = 70%, 1049 KB/s], Decompressed: 120
+2026-11-12T05:51:52.3553403Z Downloaded: 6447 file(s) [attempted 6447/8915 = 72%, 978 KB/s], Decompressed: 120
+2026-11-12T05:51:52.4552887Z Downloaded: 6565 file(s) [attempted 6565/8915 = 73%, 775 KB/s], Decompressed: 120
+2026-11-12T05:51:52.5611331Z Downloaded: 6726 file(s) [attempted 6726/8915 = 75%, 490 KB/s], Decompressed: 120
+2026-11-12T05:51:52.6611435Z Downloaded: 6904 file(s) [attempted 6904/8915 = 77%, 290 KB/s], Decompressed: 877
+2026-11-12T05:51:52.7642018Z Downloaded: 7102 file(s) [attempted 7102/8915 = 79%, 7318 KB/s], Decompressed: 877
+2026-11-12T05:51:52.8631166Z Downloaded: 7274 file(s) [attempted 7274/8915 = 81%, 1556 KB/s], Decompressed: 877
+2026-11-12T05:51:52.9622823Z Downloaded: 7456 file(s) [attempted 7456/8915 = 83%, 1895 KB/s], Decompressed: 877
+2026-11-12T05:51:53.0703477Z Downloaded: 7590 file(s) [attempted 7590/8915 = 85%, 318 KB/s], Decompressed: 877
+2026-11-12T05:51:53.1751577Z Downloaded: 7743 file(s) [attempted 7743/8915 = 86%, 2019 KB/s], Decompressed: 877
+2026-11-12T05:51:53.2749271Z Downloaded: 7852 file(s) [attempted 7852/8915 = 88%, 386 KB/s], Decompressed: 877
+2026-11-12T05:51:53.3771934Z Downloaded: 7956 file(s) [attempted 7956/8915 = 89%, 797 KB/s], Decompressed: 877
+2026-11-12T05:51:53.4778486Z Downloaded: 8114 file(s) [attempted 8114/8915 = 91%, 1910 KB/s], Decompressed: 877
+2026-11-12T05:51:53.5794458Z Downloaded: 8231 file(s) [attempted 8231/8915 = 92%, 554 KB/s], Decompressed: 877
+2026-11-12T05:51:53.7013688Z Downloaded: 8379 file(s) [attempted 8379/8915 = 93%, 1113 KB/s], Decompressed: 877
+2026-11-12T05:51:53.8731791Z Downloaded: 8530 file(s) [attempted 8530/8915 = 95%, 1111 KB/s], Decompressed: 877
+2026-11-12T05:51:53.9693083Z Downloaded: 8560 file(s) [attempted 8560/8915 = 96%, 2717 KB/s], Decompressed: 877
+2026-11-12T05:51:54.0845347Z Downloaded: 8727 file(s) [attempted 8727/8915 = 97%, 4780 KB/s], Decompressed: 877
+2026-11-12T05:51:54.1681566Z Downloaded: 8785 file(s) [attempted 8785/8915 = 98%, 494 KB/s], Decompressed: 877
+2026-11-12T05:51:54.1700379Z Downloaded: 8915 file(s) [attempted 8915/8915 = 100%, 494 KB/s], Decompressed: 877
+2026-11-12T05:52:53.7630585Z Decompressed 8915 file(s)
+2026-11-12T05:52:53.7631511Z Already decompressed 8915 file(s)
+2026-11-12T05:52:53.8036999Z ##[endgroup]
+2026-11-12T05:52:53.8037936Z 
+2026-11-12T05:52:53.8295621Z ##[end-action id=__leanprover_lean-action.__run_3;outcome=success;conclusion=success;duration_ms=110887]
+2026-11-12T05:52:53.8349251Z ##[start-action display=build Ghuffy1/erdos319-sharp-deficit;id=__leanprover_lean-action.build]
+2026-11-12T05:52:53.8356506Z ##[end-action id=__leanprover_lean-action.build;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-12T05:52:53.8359981Z ##[start-action display=test Ghuffy1/erdos319-sharp-deficit;id=__leanprover_lean-action.test]
+2026-11-12T05:52:53.8364411Z ##[end-action id=__leanprover_lean-action.test;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-12T05:52:53.8366871Z ##[start-action display=lint Ghuffy1/erdos319-sharp-deficit;id=__leanprover_lean-action.lint]
+2026-11-12T05:52:53.8372993Z ##[end-action id=__leanprover_lean-action.lint;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-12T05:52:53.8375246Z ##[start-action display=Run actions/cache/save@caa296126883cff596d87d8935842f9db880ef25;id=__leanprover_lean-action.__actions_cache]
+2026-11-12T05:52:53.8390155Z ##[end-action id=__leanprover_lean-action.__actions_cache;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-12T05:52:53.8392111Z ##[start-action display=check reservoir eligibility;id=__leanprover_lean-action.__run_4]
+2026-11-12T05:52:53.8395458Z ##[end-action id=__leanprover_lean-action.__run_4;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-12T05:52:53.8397900Z ##[start-action display=check environment with leanchecker;id=__leanprover_lean-action.__run_5]
+2026-11-12T05:52:53.8402659Z ##[end-action id=__leanprover_lean-action.__run_5;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-12T05:52:53.8404819Z ##[start-action display=check environment with nanoda;id=__leanprover_lean-action.nanoda]
+2026-11-12T05:52:53.8407918Z ##[end-action id=__leanprover_lean-action.nanoda;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-12T05:52:53.8410341Z ##[start-action display=audit axioms with axiom-audit;id=__leanprover_lean-action.axiom-audit]
+2026-11-12T05:52:53.8413717Z ##[end-action id=__leanprover_lean-action.axiom-audit;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-12T05:52:53.8472170Z ##[group]Run python3 scripts/verify.py --clean
+2026-11-12T05:52:53.8472636Z python3 scripts/verify.py --clean
+2026-11-12T05:52:54.0245195Z shell: /usr/bin/bash -e {0}
+2026-11-12T05:52:54.0245521Z env:
+2026-11-12T05:52:54.0245943Z   LEAN_NUM_THREADS: 1
+2026-11-12T05:52:54.0246169Z ##[endgroup]
+2026-11-12T05:52:54.7602416Z tool-versions
+2026-11-12T05:52:56.8104283Z build-001-Erdos319Sharp.Basic
+2026-11-12T05:53:05.0717510Z build-002-Erdos319Sharp.Harmonic
+2026-11-12T05:53:06.7978822Z build-003-Erdos319
+2026-11-12T05:54:41.0124519Z build-004-Erdos319Sharp.Target
+2026-11-12T05:54:46.2185601Z build-005-Erdos319Sharp.Baseline
+2026-11-12T05:55:00.5675451Z build-006-Erdos319Sharp.ReciprocalTails
+2026-11-12T05:55:16.6382819Z build-007-Erdos319Sharp.LcmLowerBound
+2026-11-12T05:55:32.3912669Z build-008-Erdos319Sharp.Imported.UnitFractions.Definitions
+2026-11-12T05:55:48.3790364Z build-009-Erdos319Sharp.Imported.UnitFractions.ForMathlib.IntegralRPow
+2026-11-12T05:55:53.6218020Z build-010-Erdos319Sharp.Imported.UnitFractions.ForMathlib.Misc
+2026-11-12T05:56:05.9672406Z build-011-Erdos319Sharp.Imported.UnitFractions.ForMathlib.BasicEstimates
+2026-11-12T05:56:42.9634746Z build-012-Erdos319Sharp.Imported.UnitFractions.AuxiliaryLemmas
+2026-11-12T05:57:30.7377798Z build-013-Erdos319Sharp.PrimeTailCover
+2026-11-12T05:57:45.8599050Z build-014-Salt.Maynard.Mertens
+2026-11-12T05:58:00.9139728Z build-015-Salt.BrunLower.MertensWindow
+2026-11-12T05:58:19.0986991Z build-016-Salt.Mertens.Second
+2026-11-12T05:58:32.1555002Z build-017-Salt.BrunLower.Defs
+2026-11-12T05:58:44.0015174Z build-018-Salt.BrunLower.WRatio
+2026-11-12T05:58:57.0547872Z build-019-Salt.Brun
+2026-11-12T05:59:07.8024549Z build-020-Salt.Brun.CongruenceCounting
+2026-11-12T05:59:18.9539512Z build-021-Salt.Brun.M4
+2026-11-12T05:59:30.3019594Z build-022-Salt.Brun.M2
+2026-11-12T05:59:42.2522555Z build-023-Salt.Brun.M3Expansion
+2026-11-12T05:59:54.5081437Z build-024-Salt.Brun.Sieve
+2026-11-12T06:00:06.7509666Z build-025-Salt.BrunLower.MertensDischarge
+2026-11-12T06:00:23.6017280Z build-026-Salt.Mertens.PrimePower
+2026-11-12T06:00:42.5671078Z build-027-Salt.Mertens.ZetaSide
+2026-11-12T06:00:56.2380541Z build-028-Salt.Mertens.GammaIntegral
+2026-11-12T06:01:10.4964392Z build-029-Salt.Mertens.Third
+2026-11-12T06:01:29.8671656Z build-030-Erdos319Sharp.Mertens
+2026-11-12T06:01:43.8198742Z build-031-Erdos319Sharp.DivisorReciprocals
+2026-11-12T06:01:57.9751207Z build-032-Erdos319Sharp.LcmMass
+2026-11-12T06:02:11.1326323Z build-033-Erdos319Sharp.MultiplicityCount
+2026-11-12T06:02:23.5966854Z build-034-Erdos319Sharp.PrimeSupply
+2026-11-12T06:02:35.6643038Z build-035-Erdos319Sharp.MultiplicityMoment
+2026-11-12T06:02:49.1246658Z build-036-Erdos319Sharp.SmoothTailRate
+2026-11-12T06:03:03.0886131Z build-037-Erdos319Sharp.CleaningBudget
+2026-11-12T06:03:16.0634418Z build-038-Erdos319Sharp.QuantitativeCleaning
+2026-11-12T06:03:31.2666976Z build-039-Erdos319Sharp.FiniteLocalization
+2026-11-12T06:03:43.8339049Z build-040-Erdos319Sharp.LocalizationScales
+2026-11-12T06:03:56.3918684Z build-041-Erdos319Sharp.LocalizationPrimeBands
+2026-11-12T06:04:09.1424554Z build-042-Erdos319Sharp.LocalizationEstimates
+2026-11-12T06:04:21.9035596Z build-043-Erdos319Sharp.LocalizationSieve
+2026-11-12T06:04:35.2651505Z build-044-Erdos319Sharp.Fourier
+2026-11-12T06:04:48.3452724Z build-045-Erdos319Sharp.Localization
+2026-11-12T06:05:01.4041299Z build-046-Erdos319Sharp.QuantitativeLocalization
+2026-11-12T06:05:14.0711783Z build-047-Erdos319Sharp.ExactTarget
+2026-11-12T06:05:29.1541626Z build-048-Erdos319Sharp.Uniform
+2026-11-12T06:05:42.8296477Z build-049-Erdos319Sharp.Major
+2026-11-12T06:05:58.4870838Z build-050-Erdos319Sharp.Middle
+2026-11-12T06:06:12.7422806Z build-051-Erdos319Sharp.Representation
+2026-11-12T06:06:26.3003014Z build-052-Erdos319Sharp.CorrectedRepresentation
+2026-11-12T06:06:39.6644960Z build-053-Erdos319Sharp.ExactSubset
+2026-11-12T06:06:53.7282743Z build-054-Erdos319Sharp.ZeroSum
+2026-11-12T06:06:56.4807538Z build-055-Erdos319Sharp.ReciprocalResidues
+2026-11-12T06:07:10.2392806Z build-056-Erdos319Sharp.ModularTarget
+2026-11-12T06:07:25.1049560Z build-057-Erdos319Sharp.CommonPrimeTarget
+2026-11-12T06:07:41.5705708Z build-058-Erdos319Sharp.OppositeSignTarget
+2026-11-12T06:07:56.3283387Z build-059-Erdos319Sharp.MinorityAlgebra
+2026-11-12T06:08:10.3860804Z build-060-Erdos319Sharp.PrimeAvoidance
+2026-11-12T06:08:25.5553475Z build-061-Erdos319Sharp.PrimeAssignment
+2026-11-12T06:08:41.4213562Z build-062-Erdos319Sharp.MinorityCounting
+2026-11-12T06:08:56.2885534Z build-063-Erdos319Sharp.PrimeBand
+2026-11-12T06:09:11.6535205Z build-064-Erdos319Sharp.MinorityBand
+2026-11-12T06:09:27.0240219Z build-065-Erdos319Sharp.ConstructionParameters
+2026-11-12T06:09:42.6855063Z build-066-Erdos319Sharp.BulkSets
+2026-11-12T06:09:57.5442422Z build-067-Erdos319Sharp.BulkMass
+2026-11-12T06:10:12.3959542Z build-068-Erdos319Sharp.ConstructionPrimeBand
+2026-11-12T06:10:24.9662086Z build-069-Erdos319Sharp.ConstructionGrowth
+2026-11-12T06:10:38.0468460Z build-070-Erdos319Sharp.BoundaryScales
+2026-11-12T06:10:51.0028359Z build-071-Erdos319Sharp.BulkParameters
+2026-11-12T06:11:04.1596494Z build-072-Erdos319Sharp.ProgressionAvoidance
+2026-11-12T06:11:06.7081859Z build-073-Erdos319Sharp.FiniteSelection
+2026-11-12T06:11:08.3444231Z build-074-Erdos319Sharp.ConstructionSelection
+2026-11-12T06:11:21.1886652Z build-075-Erdos319Sharp.BoundedCRT
+2026-11-12T06:11:23.6332334Z build-076-Erdos319Sharp.Residue
+2026-11-12T06:11:25.4665232Z build-077-Erdos319Sharp.PairConnector
+2026-11-12T06:11:27.2009979Z build-078-Erdos319Sharp.PathSupport
+2026-11-12T06:11:29.0313386Z build-079-Erdos319Sharp.LocalResidue
+2026-11-12T06:11:41.6737439Z build-080-Erdos319Sharp.PrimeProductResidue
+2026-11-12T06:11:55.3174025Z build-081-Erdos319Sharp.PathIntegral
+2026-11-12T06:12:07.9754702Z build-082-Erdos319Sharp.PathSelection
+2026-11-12T06:12:09.9111582Z build-083-Erdos319Sharp.PathLocalSum
+2026-11-12T06:12:11.7451236Z build-084-Erdos319Sharp.WeightedResidues
+2026-11-12T06:12:24.9022081Z build-085-Erdos319Sharp.PathResidues
+2026-11-12T06:12:26.7460579Z build-086-Erdos319Sharp.DivisorBlockResidue
+2026-11-12T06:12:39.9921522Z build-087-Erdos319Sharp.PathDichotomy
+2026-11-12T06:12:54.1453039Z build-088-Erdos319Sharp.PathBounds
+2026-11-12T06:13:07.8976006Z build-089-Erdos319Sharp.PathCore
+2026-11-12T06:13:22.0416862Z build-090-Erdos319Sharp.PathVertexChoice
+2026-11-12T06:13:34.7063135Z build-091-Erdos319Sharp.PrimeSetConnector
+2026-11-12T06:13:36.6431365Z build-092-Erdos319Sharp.Imported.ErdosProblems.Erdos285.Dispersion
+2026-11-12T06:13:51.5016680Z build-093-Erdos319Sharp.Imported.UnitFractions.Fourier
+2026-11-12T06:14:20.1994015Z build-094-Erdos319Sharp.Imported.ErdosProblems.Erdos285.Modular
+2026-11-12T06:14:36.8576945Z build-095-Erdos319Sharp.Imported.ErdosProblems.Erdos285.FourierBound
+2026-11-12T06:14:50.4133915Z build-096-Erdos319Sharp.Imported.ErdosProblems.Erdos285.SubsetSum
+2026-11-12T06:15:06.1663075Z build-097-Erdos319Sharp.ModularInverse
+2026-11-12T06:15:18.9165166Z build-098-Erdos319Sharp.PrimeFiber
+2026-11-12T06:15:31.5672481Z build-099-Erdos319Sharp.ResidueCorrection
+2026-11-12T06:15:44.6158572Z build-100-Erdos319Sharp.PathMass
+2026-11-12T06:15:57.3624618Z build-101-Erdos319Sharp.QuantitativePath
+2026-11-12T06:16:10.2106474Z build-102-Erdos319Sharp.PathError
+2026-11-12T06:16:23.5583259Z build-103-Erdos319Sharp.BoundedPath
+2026-11-12T06:16:36.5124837Z build-104-Erdos319Sharp.PrimeSetPath
+2026-11-12T06:16:49.4596915Z build-105-Erdos319Sharp.ConstructionSupport
+2026-11-12T06:17:03.0117089Z build-106-Erdos319Sharp.ConstructionMassWindow
+2026-11-12T06:17:17.5637472Z build-107-Erdos319Sharp.BulkErrorScales
+2026-11-12T06:17:31.5116852Z build-108-Erdos319Sharp.BulkApproximation
+2026-11-12T06:17:45.3713883Z build-109-Erdos319Sharp.PrimePool
+2026-11-12T06:17:59.1173946Z build-110-Erdos319Sharp.LogarithmicPrimeSupply
+2026-11-12T06:18:13.9705451Z build-111-Erdos319Sharp.CorrectionCost
+2026-11-12T06:18:28.0115029Z build-112-Erdos319Sharp.DenominatorStep
+2026-11-12T06:18:41.8593842Z build-113-Erdos319Sharp.DenominatorExcess
+2026-11-12T06:18:44.5013221Z build-114-Erdos319Sharp.PrimePowerExcess
+2026-11-12T06:18:46.0368899Z build-115-Erdos319Sharp.DenseTail
+2026-11-12T06:18:59.2726650Z build-116-Erdos319Sharp.TailDivisibility
+2026-11-12T06:19:13.4214689Z build-117-Erdos319Sharp.DivisorMoments
+2026-11-12T06:19:27.6710720Z build-118-Erdos319Sharp.MissingDivisorMass
+2026-11-12T06:19:41.9244857Z build-119-Erdos319Sharp.FirstMissingPowers
+2026-11-12T06:19:56.2641241Z build-120-Erdos319Sharp.MissingCofactors
+2026-11-12T06:20:10.7164766Z build-121-Erdos319Sharp.ExcessWeights
+2026-11-12T06:20:24.9730613Z build-122-Erdos319Sharp.PrimaryHeight
+2026-11-12T06:20:39.8231598Z build-123-Erdos319Sharp.PrimaryProducts
+2026-11-12T06:20:53.9682274Z build-124-Erdos319Sharp.DenominatorDescent
+2026-11-12T06:21:08.3154756Z build-125-Erdos319Sharp.RationalCompatibility
+2026-11-12T06:21:21.0590879Z build-126-Erdos319Sharp.CoprimeArithmetic
+2026-11-12T06:21:33.6857268Z build-127-Erdos319Sharp.FiniteDescent
+2026-11-12T06:21:46.6431654Z build-128-Erdos319Sharp.DenseCore
+2026-11-12T06:22:01.4808600Z build-129-Erdos319Sharp.DenseRepresentation
+2026-11-12T06:22:15.6226173Z build-130-Erdos319Sharp.UnitReservoir
+2026-11-12T06:22:28.5703181Z build-131-Erdos319Sharp.TerminalReservoir
+2026-11-12T06:22:43.0065909Z build-132-Erdos319Sharp.UniformCompletion
+2026-11-12T06:22:56.3487932Z build-133-Erdos319Sharp.QuantitativeCompletion
+2026-11-12T06:23:10.2909620Z build-134-Erdos319Sharp.CompletionParameters
+2026-11-12T06:23:24.5405836Z build-135-Erdos319Sharp.PrimarySums
+2026-11-12T06:23:38.5850484Z build-136-Erdos319Sharp.CompletionHeight
+2026-11-12T06:23:52.6401090Z build-137-Erdos319Sharp.UpperAssembly
+2026-11-12T06:24:06.7930713Z build-138-Erdos319Sharp.UpperWitnessConstruction
+2026-11-12T06:24:21.9473453Z build-139-Erdos319Sharp.MinorityDensity
+2026-11-12T06:24:36.9037670Z build-140-Erdos319Sharp.MinorityError
+2026-11-12T06:24:51.0506868Z build-141-Erdos319Sharp.MinorityBound
+2026-11-12T06:25:05.5089644Z build-142-Erdos319Sharp.DenseSigning
+2026-11-12T06:25:20.0631494Z build-143-Erdos319Sharp.CoreMissingPowers
+2026-11-12T06:25:34.5215608Z build-144-Erdos319Sharp.DenseDeletion
+2026-11-12T06:25:51.1773546Z build-145-Erdos319Sharp.OmissionNormalization
+2026-11-12T06:26:06.5361296Z build-146-Erdos319Sharp.Reduction
+2026-11-12T06:26:10.8760741Z build-147-Erdos319Sharp.SharpUpper
+2026-11-12T06:26:23.7249296Z build-148-Erdos319Sharp.CommonMass
+2026-11-12T06:26:38.6682231Z build-149-Erdos319Sharp.RankinFactors
+2026-11-12T06:26:53.3171483Z build-150-Erdos319Sharp.RankinProduct
+2026-11-12T06:27:06.7750259Z build-151-Erdos319Sharp.ExcessEuler
+2026-11-12T06:27:20.7281292Z build-152-Erdos319Sharp.PrimeWeightCover
+2026-11-12T06:27:45.3208016Z build-153-Erdos319Sharp.ZeroSumBlocks
+2026-11-12T06:27:47.9588865Z build-154-Erdos319Sharp.Peeling
+2026-11-12T06:27:49.5848916Z build-155-Erdos319Sharp.CompatiblePeeling
+2026-11-12T06:28:03.3248715Z build-156-Erdos319Sharp.ExcessGroups
+2026-11-12T06:28:16.5636840Z build-157-Erdos319Sharp.WeightSupport
+2026-11-12T06:28:29.6153854Z build-158-Erdos319Sharp.PrimeBlock
+2026-11-12T06:28:44.5594722Z build-159-Erdos319Sharp.PrimeBlockEstimates
+2026-11-12T06:28:58.0050004Z build-160-Erdos319Sharp.PrimeTail
+2026-11-12T06:29:11.6521327Z build-161-Erdos319Sharp.PrimeTailCutoff
+2026-11-12T06:29:25.1101312Z build-162-Erdos319Sharp.RankinTail
+2026-11-12T06:29:39.0698418Z build-163-Erdos319Sharp.Regularization
+2026-11-12T06:29:52.9251936Z build-164-Erdos319Sharp.DyadicObstruction
+2026-11-12T06:30:08.1890835Z build-165-Erdos319Sharp.DyadicMass
+2026-11-12T06:30:22.5471471Z build-166-Erdos319Sharp.HarmonicSmallPrimes
+2026-11-12T06:30:36.5995809Z build-167-Erdos319Sharp.InverseHarmonic
+2026-11-12T06:30:50.8515925Z build-168-Erdos319Sharp.GroupHarmonic
+2026-11-12T06:31:05.4025729Z build-169-Erdos319Sharp.WeightedGroupMass
+2026-11-12T06:31:19.7469450Z build-170-Erdos319Sharp.PrimitivePeeling
+2026-11-12T06:31:33.8927162Z build-171-Erdos319Sharp.UniformWeightedMass
+2026-11-12T06:31:48.8472769Z build-172-Erdos319Sharp.DenseCorePeeling
+2026-11-12T06:32:04.2990466Z build-173-Erdos319Sharp.MissingMassLower
+2026-11-12T06:32:18.4602335Z build-174-Erdos319Sharp.SingleDivisorCount
+2026-11-12T06:32:32.5162439Z build-175-Erdos319Sharp.PrefixDensity
+2026-11-12T06:32:47.4792633Z build-176-Erdos319Sharp.InverseDensity
+2026-11-12T06:33:02.6377158Z build-177-Erdos319Sharp.CofactorDensity
+2026-11-12T06:33:17.2065678Z build-178-Erdos319Sharp.ExcessCounting
+2026-11-12T06:33:32.0629024Z build-179-Erdos319Sharp.SmallMissingPowers
+2026-11-12T06:33:47.6160693Z build-180-Erdos319Sharp.OmissionCounting
+2026-11-12T06:34:02.4691299Z build-181-Erdos319Sharp.LowerBoundScales
+2026-11-12T06:34:17.4221041Z build-182-Erdos319Sharp.SharpLower
+2026-11-12T06:34:32.3846313Z build-183-Erdos319Sharp.SharpFinal
+2026-11-12T06:34:47.4452639Z build-184-Erdos319Sharp
+2026-11-12T06:35:00.7171238Z build-185-Submission
+2026-11-12T06:35:13.9637797Z build-186-Solution
+2026-11-12T06:35:26.2173527Z build-187-Challenge
+2026-11-12T06:35:39.5715852Z default-build
+2026-11-12T06:35:49.9238669Z target-axioms
+2026-11-12T06:35:53.4210850Z replay-001-Erdos319Sharp.Basic
+2026-11-12T06:35:55.4865564Z replay-002-Erdos319Sharp.Harmonic
+2026-11-12T06:35:57.3340688Z replay-003-Erdos319
+2026-11-12T06:36:04.5454033Z replay-004-Erdos319Sharp.Target
+2026-11-12T06:36:06.7425984Z replay-005-Erdos319Sharp.Baseline
+2026-11-12T06:36:10.5039260Z replay-006-Erdos319Sharp.ReciprocalTails
+2026-11-12T06:36:13.8779958Z replay-007-Erdos319Sharp.LcmLowerBound
+2026-11-12T06:36:17.1801054Z replay-008-Erdos319Sharp.Imported.UnitFractions.Definitions
+2026-11-12T06:36:20.5401338Z replay-009-Erdos319Sharp.Imported.UnitFractions.ForMathlib.IntegralRPow
+2026-11-12T06:36:22.6351271Z replay-010-Erdos319Sharp.Imported.UnitFractions.ForMathlib.Misc
+2026-11-12T06:36:25.9563892Z replay-011-Erdos319Sharp.Imported.UnitFractions.ForMathlib.BasicEstimates
+2026-11-12T06:36:29.9845203Z replay-012-Erdos319Sharp.Imported.UnitFractions.AuxiliaryLemmas
+2026-11-12T06:36:33.8934794Z replay-013-Erdos319Sharp.PrimeTailCover
+2026-11-12T06:36:37.1585391Z replay-014-Salt.Maynard.Mertens
+2026-11-12T06:36:40.5656386Z replay-015-Salt.BrunLower.MertensWindow
+2026-11-12T06:36:44.3972952Z replay-016-Salt.Mertens.Second
+2026-11-12T06:36:47.8142444Z replay-017-Salt.BrunLower.Defs
+2026-11-12T06:36:51.0502191Z replay-018-Salt.BrunLower.WRatio
+2026-11-12T06:36:54.2454489Z replay-019-Salt.Brun
+2026-11-12T06:36:57.4457785Z replay-020-Salt.Brun.CongruenceCounting
+2026-11-12T06:37:00.8368751Z replay-021-Salt.Brun.M4
+2026-11-12T06:37:04.0606920Z replay-022-Salt.Brun.M2
+2026-11-12T06:37:07.3830235Z replay-023-Salt.Brun.M3Expansion
+2026-11-12T06:37:10.7165561Z replay-024-Salt.Brun.Sieve
+2026-11-12T06:37:14.0428116Z replay-025-Salt.BrunLower.MertensDischarge
+2026-11-12T06:37:17.4683342Z replay-026-Salt.Mertens.PrimePower
+2026-11-12T06:37:20.8157413Z replay-027-Salt.Mertens.ZetaSide
+2026-11-12T06:37:24.1167639Z replay-028-Salt.Mertens.GammaIntegral
+2026-11-12T06:37:27.4589431Z replay-029-Salt.Mertens.Third
+2026-11-12T06:37:31.2548392Z replay-030-Erdos319Sharp.Mertens
+2026-11-12T06:37:34.5465913Z replay-031-Erdos319Sharp.DivisorReciprocals
+2026-11-12T06:37:37.8203945Z replay-032-Erdos319Sharp.LcmMass
+2026-11-12T06:37:41.1323277Z replay-033-Erdos319Sharp.MultiplicityCount
+2026-11-12T06:37:44.3945241Z replay-034-Erdos319Sharp.PrimeSupply
+2026-11-12T06:37:47.7021881Z replay-035-Erdos319Sharp.MultiplicityMoment
+2026-11-12T06:37:51.0110083Z replay-036-Erdos319Sharp.SmoothTailRate
+2026-11-12T06:37:54.2939651Z replay-037-Erdos319Sharp.CleaningBudget
+2026-11-12T06:37:57.5873618Z replay-038-Erdos319Sharp.QuantitativeCleaning
+2026-11-12T06:38:00.8543849Z replay-039-Erdos319Sharp.FiniteLocalization
+2026-11-12T06:38:04.1174340Z replay-040-Erdos319Sharp.LocalizationScales
+2026-11-12T06:38:07.3209389Z replay-041-Erdos319Sharp.LocalizationPrimeBands
+2026-11-12T06:38:10.6197404Z replay-042-Erdos319Sharp.LocalizationEstimates
+2026-11-12T06:38:13.8278789Z replay-043-Erdos319Sharp.LocalizationSieve
+2026-11-12T06:38:17.0838480Z replay-044-Erdos319Sharp.Fourier
+2026-11-12T06:38:20.5724276Z replay-045-Erdos319Sharp.Localization
+2026-11-12T06:38:23.7722743Z replay-046-Erdos319Sharp.QuantitativeLocalization
+2026-11-12T06:38:27.0791491Z replay-047-Erdos319Sharp.ExactTarget
+2026-11-12T06:38:30.3654422Z replay-048-Erdos319Sharp.Uniform
+2026-11-12T06:38:33.6189935Z replay-049-Erdos319Sharp.Major
+2026-11-12T06:38:36.8817567Z replay-050-Erdos319Sharp.Middle
+2026-11-12T06:38:40.1459501Z replay-051-Erdos319Sharp.Representation
+2026-11-12T06:38:43.3952699Z replay-052-Erdos319Sharp.CorrectedRepresentation
+2026-11-12T06:38:46.6763621Z replay-053-Erdos319Sharp.ExactSubset
+2026-11-12T06:38:49.9687364Z replay-054-Erdos319Sharp.ZeroSum
+2026-11-12T06:38:51.7077123Z replay-055-Erdos319Sharp.ReciprocalResidues
+2026-11-12T06:38:55.0363991Z replay-056-Erdos319Sharp.ModularTarget
+2026-11-12T06:38:58.3154226Z replay-057-Erdos319Sharp.CommonPrimeTarget
+2026-11-12T06:39:01.6255786Z replay-058-Erdos319Sharp.OppositeSignTarget
+2026-11-12T06:39:04.9751655Z replay-059-Erdos319Sharp.MinorityAlgebra
+2026-11-12T06:39:08.3568227Z replay-060-Erdos319Sharp.PrimeAvoidance
+2026-11-12T06:39:11.6682210Z replay-061-Erdos319Sharp.PrimeAssignment
+2026-11-12T06:39:14.9235294Z replay-062-Erdos319Sharp.MinorityCounting
+2026-11-12T06:39:18.1718077Z replay-063-Erdos319Sharp.PrimeBand
+2026-11-12T06:39:21.3963477Z replay-064-Erdos319Sharp.MinorityBand
+2026-11-12T06:39:24.6199049Z replay-065-Erdos319Sharp.ConstructionParameters
+2026-11-12T06:39:27.8732482Z replay-066-Erdos319Sharp.BulkSets
+2026-11-12T06:39:31.0860322Z replay-067-Erdos319Sharp.BulkMass
+2026-11-12T06:39:34.2935435Z replay-068-Erdos319Sharp.ConstructionPrimeBand
+2026-11-12T06:39:37.4997813Z replay-069-Erdos319Sharp.ConstructionGrowth
+2026-11-12T06:39:40.6996012Z replay-070-Erdos319Sharp.BoundaryScales
+2026-11-12T06:39:43.9028267Z replay-071-Erdos319Sharp.BulkParameters
+2026-11-12T06:39:47.1018396Z replay-072-Erdos319Sharp.ProgressionAvoidance
+2026-11-12T06:39:48.7583002Z replay-073-Erdos319Sharp.FiniteSelection
+2026-11-12T06:39:50.4049962Z replay-074-Erdos319Sharp.ConstructionSelection
+2026-11-12T06:39:53.6303104Z replay-075-Erdos319Sharp.BoundedCRT
+2026-11-12T06:39:55.3008527Z replay-076-Erdos319Sharp.Residue
+2026-11-12T06:39:56.9769729Z replay-077-Erdos319Sharp.PairConnector
+2026-11-12T06:39:58.6720914Z replay-078-Erdos319Sharp.PathSupport
+2026-11-12T06:40:00.4188876Z replay-079-Erdos319Sharp.LocalResidue
+2026-11-12T06:40:03.6223432Z replay-080-Erdos319Sharp.PrimeProductResidue
+2026-11-12T06:40:06.8032810Z replay-081-Erdos319Sharp.PathIntegral
+2026-11-12T06:40:10.0686518Z replay-082-Erdos319Sharp.PathSelection
+2026-11-12T06:40:11.7893044Z replay-083-Erdos319Sharp.PathLocalSum
+2026-11-12T06:40:13.5455790Z replay-084-Erdos319Sharp.WeightedResidues
+2026-11-12T06:40:16.8242366Z replay-085-Erdos319Sharp.PathResidues
+2026-11-12T06:40:18.5321982Z replay-086-Erdos319Sharp.DivisorBlockResidue
+2026-11-12T06:40:21.7860593Z replay-087-Erdos319Sharp.PathDichotomy
+2026-11-12T06:40:25.1241507Z replay-088-Erdos319Sharp.PathBounds
+2026-11-12T06:40:28.5437169Z replay-089-Erdos319Sharp.PathCore
+2026-11-12T06:40:31.8317656Z replay-090-Erdos319Sharp.PathVertexChoice
+2026-11-12T06:40:35.2000439Z replay-091-Erdos319Sharp.PrimeSetConnector
+2026-11-12T06:40:36.9223854Z replay-092-Erdos319Sharp.Imported.ErdosProblems.Erdos285.Dispersion
+2026-11-12T06:40:39.0799940Z replay-093-Erdos319Sharp.Imported.UnitFractions.Fourier
+2026-11-12T06:40:42.7756228Z replay-094-Erdos319Sharp.Imported.ErdosProblems.Erdos285.Modular
+2026-11-12T06:40:46.2412357Z replay-095-Erdos319Sharp.Imported.ErdosProblems.Erdos285.FourierBound
+2026-11-12T06:40:49.4305386Z replay-096-Erdos319Sharp.Imported.ErdosProblems.Erdos285.SubsetSum
+2026-11-12T06:40:52.6617348Z replay-097-Erdos319Sharp.ModularInverse
+2026-11-12T06:40:55.8489098Z replay-098-Erdos319Sharp.PrimeFiber
+2026-11-12T06:40:59.0370332Z replay-099-Erdos319Sharp.ResidueCorrection
+2026-11-12T06:41:02.2310850Z replay-100-Erdos319Sharp.PathMass
+2026-11-12T06:41:05.4786569Z replay-101-Erdos319Sharp.QuantitativePath
+2026-11-12T06:41:08.6394720Z replay-102-Erdos319Sharp.PathError
+2026-11-12T06:41:11.9426052Z replay-103-Erdos319Sharp.BoundedPath
+2026-11-12T06:41:15.1278243Z replay-104-Erdos319Sharp.PrimeSetPath
+2026-11-12T06:41:18.3252890Z replay-105-Erdos319Sharp.ConstructionSupport
+2026-11-12T06:41:21.5174839Z replay-106-Erdos319Sharp.ConstructionMassWindow
+2026-11-12T06:41:24.7075564Z replay-107-Erdos319Sharp.BulkErrorScales
+2026-11-12T06:41:27.9324218Z replay-108-Erdos319Sharp.BulkApproximation
+2026-11-12T06:41:31.0939264Z replay-109-Erdos319Sharp.PrimePool
+2026-11-12T06:41:34.2407042Z replay-110-Erdos319Sharp.LogarithmicPrimeSupply
+2026-11-12T06:41:37.4286322Z replay-111-Erdos319Sharp.CorrectionCost
+2026-11-12T06:41:40.6297102Z replay-112-Erdos319Sharp.DenominatorStep
+2026-11-12T06:41:44.0571388Z replay-113-Erdos319Sharp.DenominatorExcess
+2026-11-12T06:41:45.7685059Z replay-114-Erdos319Sharp.PrimePowerExcess
+2026-11-12T06:41:47.4037838Z replay-115-Erdos319Sharp.DenseTail
+2026-11-12T06:41:50.6366051Z replay-116-Erdos319Sharp.TailDivisibility
+2026-11-12T06:41:53.8486970Z replay-117-Erdos319Sharp.DivisorMoments
+2026-11-12T06:41:57.1555619Z replay-118-Erdos319Sharp.MissingDivisorMass
+2026-11-12T06:42:00.3902746Z replay-119-Erdos319Sharp.FirstMissingPowers
+2026-11-12T06:42:03.6346190Z replay-120-Erdos319Sharp.MissingCofactors
+2026-11-12T06:42:06.8524261Z replay-121-Erdos319Sharp.ExcessWeights
+2026-11-12T06:42:10.0912209Z replay-122-Erdos319Sharp.PrimaryHeight
+2026-11-12T06:42:13.3692636Z replay-123-Erdos319Sharp.PrimaryProducts
+2026-11-12T06:42:16.6271396Z replay-124-Erdos319Sharp.DenominatorDescent
+2026-11-12T06:42:19.7972925Z replay-125-Erdos319Sharp.RationalCompatibility
+2026-11-12T06:42:22.9733010Z replay-126-Erdos319Sharp.CoprimeArithmetic
+2026-11-12T06:42:26.3154677Z replay-127-Erdos319Sharp.FiniteDescent
+2026-11-12T06:42:29.5225351Z replay-128-Erdos319Sharp.DenseCore
+2026-11-12T06:42:32.7122630Z replay-129-Erdos319Sharp.DenseRepresentation
+2026-11-12T06:42:35.8928468Z replay-130-Erdos319Sharp.UnitReservoir
+2026-11-12T06:42:39.1116325Z replay-131-Erdos319Sharp.TerminalReservoir
+2026-11-12T06:42:42.3639417Z replay-132-Erdos319Sharp.UniformCompletion
+2026-11-12T06:42:45.6776627Z replay-133-Erdos319Sharp.QuantitativeCompletion
+2026-11-12T06:42:48.9090103Z replay-134-Erdos319Sharp.CompletionParameters
+2026-11-12T06:42:52.1797649Z replay-135-Erdos319Sharp.PrimarySums
+2026-11-12T06:42:55.4209421Z replay-136-Erdos319Sharp.CompletionHeight
+2026-11-12T06:42:58.6684288Z replay-137-Erdos319Sharp.UpperAssembly
+2026-11-12T06:43:01.9526851Z replay-138-Erdos319Sharp.UpperWitnessConstruction
+2026-11-12T06:43:05.1615327Z replay-139-Erdos319Sharp.MinorityDensity
+2026-11-12T06:43:08.4343777Z replay-140-Erdos319Sharp.MinorityError
+2026-11-12T06:43:11.6721902Z replay-141-Erdos319Sharp.MinorityBound
+2026-11-12T06:43:14.9003722Z replay-142-Erdos319Sharp.DenseSigning
+2026-11-12T06:43:18.1748225Z replay-143-Erdos319Sharp.CoreMissingPowers
+2026-11-12T06:43:21.4119271Z replay-144-Erdos319Sharp.DenseDeletion
+2026-11-12T06:43:24.7298862Z replay-145-Erdos319Sharp.OmissionNormalization
+2026-11-12T06:43:27.9805108Z replay-146-Erdos319Sharp.Reduction
+2026-11-12T06:43:29.9443029Z replay-147-Erdos319Sharp.SharpUpper
+2026-11-12T06:43:33.1626311Z replay-148-Erdos319Sharp.CommonMass
+2026-11-12T06:43:36.4360761Z replay-149-Erdos319Sharp.RankinFactors
+2026-11-12T06:43:39.7039331Z replay-150-Erdos319Sharp.RankinProduct
+2026-11-12T06:43:42.9523306Z replay-151-Erdos319Sharp.ExcessEuler
+2026-11-12T06:43:46.3642519Z replay-152-Erdos319Sharp.PrimeWeightCover
+2026-11-12T06:43:49.6066748Z replay-153-Erdos319Sharp.ZeroSumBlocks
+2026-11-12T06:43:51.3154459Z replay-154-Erdos319Sharp.Peeling
+2026-11-12T06:43:52.9792601Z replay-155-Erdos319Sharp.CompatiblePeeling
+2026-11-12T06:43:56.6090631Z replay-156-Erdos319Sharp.ExcessGroups
+2026-11-12T06:43:59.8989692Z replay-157-Erdos319Sharp.WeightSupport
+2026-11-12T06:44:03.1523305Z replay-158-Erdos319Sharp.PrimeBlock
+2026-11-12T06:44:06.5129716Z replay-159-Erdos319Sharp.PrimeBlockEstimates
+2026-11-12T06:44:09.7930796Z replay-160-Erdos319Sharp.PrimeTail
+2026-11-12T06:44:13.0711455Z replay-161-Erdos319Sharp.PrimeTailCutoff
+2026-11-12T06:44:16.3675907Z replay-162-Erdos319Sharp.RankinTail
+2026-11-12T06:44:19.6165463Z replay-163-Erdos319Sharp.Regularization
+2026-11-12T06:44:22.9060095Z replay-164-Erdos319Sharp.DyadicObstruction
+2026-11-12T06:44:26.2385536Z replay-165-Erdos319Sharp.DyadicMass
+2026-11-12T06:44:29.5641514Z replay-166-Erdos319Sharp.HarmonicSmallPrimes
+2026-11-12T06:44:32.8364285Z replay-167-Erdos319Sharp.InverseHarmonic
+2026-11-12T06:44:36.2875331Z replay-168-Erdos319Sharp.GroupHarmonic
+2026-11-12T06:44:39.6476012Z replay-169-Erdos319Sharp.WeightedGroupMass
+2026-11-12T06:44:42.9535291Z replay-170-Erdos319Sharp.PrimitivePeeling
+2026-11-12T06:44:46.3077032Z replay-171-Erdos319Sharp.UniformWeightedMass
+2026-11-12T06:44:49.7028401Z replay-172-Erdos319Sharp.DenseCorePeeling
+2026-11-12T06:44:53.0451308Z replay-173-Erdos319Sharp.MissingMassLower
+2026-11-12T06:44:56.5103143Z replay-174-Erdos319Sharp.SingleDivisorCount
+2026-11-12T06:44:59.9038388Z replay-175-Erdos319Sharp.PrefixDensity
+2026-11-12T06:45:03.2957508Z replay-176-Erdos319Sharp.InverseDensity
+2026-11-12T06:45:06.7426341Z replay-177-Erdos319Sharp.CofactorDensity
+2026-11-12T06:45:10.1251637Z replay-178-Erdos319Sharp.ExcessCounting
+2026-11-12T06:45:13.4562948Z replay-179-Erdos319Sharp.SmallMissingPowers
+2026-11-12T06:45:16.8289538Z replay-180-Erdos319Sharp.OmissionCounting
+2026-11-12T06:45:20.1650866Z replay-181-Erdos319Sharp.LowerBoundScales
+2026-11-12T06:45:23.5451642Z replay-182-Erdos319Sharp.SharpLower
+2026-11-12T06:45:26.9125067Z replay-183-Erdos319Sharp.SharpFinal
+2026-11-12T06:45:30.2325751Z replay-184-Erdos319Sharp
+2026-11-12T06:45:33.5320965Z replay-185-Submission
+2026-11-12T06:45:36.8588539Z replay-186-Solution
+2026-11-12T06:45:40.1846447Z replay-187-Challenge
+2026-11-12T06:45:43.8564775Z Verification passed for the pinned source inputs.
+2026-11-12T06:45:43.9408624Z Post job cleanup.
+2026-11-12T06:45:44.3980697Z [command]/usr/bin/git version
+2026-11-12T06:45:44.4047412Z git version 2.56.0
+2026-11-12T06:45:44.4171104Z Temporarily overriding HOME='/home/runner/work/_temp/93ce3166-bf26-48b7-959d-4ddcc7e35154' before making global git config changes
+2026-11-12T06:45:44.4175115Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-12T06:45:44.4200230Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/erdos319-sharp-deficit/erdos319-sharp-deficit
+2026-11-12T06:45:44.4336244Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-12T06:45:44.4404113Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-12T06:45:44.5286433Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-12T06:45:44.5309344Z http.https://github.com/.extraheader
+2026-11-12T06:45:44.5319469Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-12T06:45:44.5347641Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-12T06:45:44.5498543Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-12T06:45:44.5523943Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-12T06:45:44.5813325Z Cleaning up orphan processes
+2026-11-12T06:45:44.6202690Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

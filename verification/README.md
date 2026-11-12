@@ -1,5 +1,7 @@
 # Verification methodology
 
+The [completed verification report](report.md) records the selected source revision. The clean CI run built and replayed all 187 local modules and completed the 17 target audits. The additional local run completed its normal build, all target audits and 108 module replays before the complete CI result made further duplicate checking unnecessary.
+
 Run `python scripts/verify.py --setup --clean` from the selected source revision. The exact toolchain and dependency lockfile are retained.
 
 The verifier checks the local import closure and source hashes, verifies the checked-out dependency revisions, builds every local module in dependency order, runs the normal default build, elaborates the theorem and statement audits, and replays each exact local module against its imported environment. It validates the replay markers and the target axiom output before reporting success.

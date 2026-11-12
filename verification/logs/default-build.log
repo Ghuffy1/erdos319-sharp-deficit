@@ -1,0 +1,542 @@
+⚠ [8938/8946] Replayed Erdos319Sharp.Imported.UnitFractions.ForMathlib.BasicEstimates
+warning: Erdos319Sharp/Imported/UnitFractions/ForMathlib/BasicEstimates.lean:283:8: `Finset.prod_le_prod'` has been deprecated: Use `Finset.prod_le_prod` instead
+
+Hint: Replace the deprecated name:
+  Finset.prod_le_prod'̵
+warning: Erdos319Sharp/Imported/UnitFractions/ForMathlib/BasicEstimates.lean:1273:8: `Finset.sum_nonneg'` has been deprecated: Use `Finset.sum_nonneg` instead
+
+Note: The updated constant has a different type:
+  ∀ {ι : Type u_1} {N : Type u_5} [inst : AddCommMonoid N] [inst_1 : Preorder N] {f : ι → N} {s : Finset ι}
+    [AddLeftMono N], (∀ i ∈ s, 0 ≤ f i) → 0 ≤ ∑ i ∈ s, f i
+instead of
+  ∀ {ι : Type u_1} {N : Type u_5} [inst : AddCommMonoid N] [inst_1 : Preorder N] {f : ι → N} {s : Finset ι}
+    [AddLeftMono N], (∀ (i : ι), 0 ≤ f i) → 0 ≤ ∑ i ∈ s, f i
+warning: Erdos319Sharp/Imported/UnitFractions/ForMathlib/BasicEstimates.lean:1282:8: `Finset.sum_nonneg'` has been deprecated: Use `Finset.sum_nonneg` instead
+
+Note: The updated constant has a different type:
+  ∀ {ι : Type u_1} {N : Type u_5} [inst : AddCommMonoid N] [inst_1 : Preorder N] {f : ι → N} {s : Finset ι}
+    [AddLeftMono N], (∀ i ∈ s, 0 ≤ f i) → 0 ≤ ∑ i ∈ s, f i
+instead of
+  ∀ {ι : Type u_1} {N : Type u_5} [inst : AddCommMonoid N] [inst_1 : Preorder N] {f : ι → N} {s : Finset ι}
+    [AddLeftMono N], (∀ (i : ι), 0 ≤ f i) → 0 ≤ ∑ i ∈ s, f i
+warning: Erdos319Sharp/Imported/UnitFractions/ForMathlib/BasicEstimates.lean:1761:81: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [8939/8946] Replayed Salt.Maynard.Mertens
+warning: Salt/Maynard/Mertens.lean:372:21: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: Salt/Maynard/Mertens.lean:376:21: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+⚠ [8942/8947] Replayed Erdos319Sharp.Imported.UnitFractions.AuxiliaryLemmas
+warning: Erdos319Sharp/Imported/UnitFractions/AuxiliaryLemmas.lean:673:14: `List.pow_card_le_prod` has been deprecated: Use `List.pow_length_le_prod` instead
+
+Hint: Replace the deprecated name:
+  L̵i̵s̵t̵.̵p̵o̵w̵_̵c̵a̵r̵d̵_̵l̵e̵_̵p̵r̵o̵d̵L̲i̲s̲t̲.̲p̲o̲w̲_̲l̲e̲n̲g̲t̲h̲_̲l̲e̲_̲p̲r̲o̲d̲
+⚠ [8943/8947] Replayed Salt.BrunLower.MertensWindow
+warning: Salt/BrunLower/MertensWindow.lean:598:19: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: Salt/BrunLower/MertensWindow.lean:602:19: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+⚠ [8945/8957] Replayed Erdos319Sharp.PrimeTailCover
+warning: Erdos319Sharp/PrimeTailCover.lean:18:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [8946/8957] Replayed Salt.BrunLower.Defs
+warning: Salt/BrunLower/Defs.lean:256:37: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Salt/BrunLower/Defs.lean:269:37: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [8951/9117] Replayed Salt.Brun.M2
+warning: Salt/Brun/M2.lean:29:18: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: Salt/Brun/M2.lean:64:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Salt/Brun/M2.lean:120:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Salt/Brun/M2.lean:121:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Salt/Brun/M2.lean:122:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Salt/Brun/M2.lean:182:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8957/9117] Replayed Erdos319Sharp.FiniteLocalization
+warning: Erdos319Sharp/FiniteLocalization.lean:63:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8959/9117] Replayed Erdos319Sharp.ExactTarget
+warning: Erdos319Sharp/ExactTarget.lean:76:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8962/9117] Replayed Erdos319Sharp.PrimeAvoidance
+warning: Erdos319Sharp/PrimeAvoidance.lean:90:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [8963/9117] Replayed Erdos319Sharp.ProgressionAvoidance
+warning: Erdos319Sharp/ProgressionAvoidance.lean:13:54: Variable name `hp` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hp
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8965/9117] Replayed Erdos319Sharp.Imported.ErdosProblems.Erdos285.Dispersion
+warning: Erdos319Sharp/Imported/ErdosProblems/Erdos285/Dispersion.lean:61:10: `Finset.prod_le_prod'` has been deprecated: Use `Finset.prod_le_prod` instead
+
+Hint: Replace the deprecated name:
+  Finset.prod_le_prod'̵
+info: Erdos319Sharp/Imported/ErdosProblems/Erdos285/Dispersion.lean:608:0: 'Erdos319Imported.Erdos285.Dispersion.martin_inverse_dispersion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [8966/9117] Replayed Erdos319Sharp.Imported.UnitFractions.Fourier
+warning: Erdos319Sharp/Imported/UnitFractions/Fourier.lean:431:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Erdos319Sharp/Imported/UnitFractions/Fourier.lean:456:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [8967/9117] Replayed Erdos319Sharp.DenominatorExcess
+warning: Erdos319Sharp/DenominatorExcess.lean:53:2: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [Finsupp.filter_apply, hpb] at hPositive
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Erdos319Sharp/DenominatorExcess.lean:71:33: This simp argument is unused:
+  Finsupp.filter_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hpb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Erdos319Sharp/DenominatorExcess.lean:90:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [8976/9121] Replayed Erdos319Sharp.Localization
+warning: Erdos319Sharp/Localization.lean:39:70: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos319Sharp/Localization.lean:39:70: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8979/9121] Replayed Erdos319Sharp.Regularization
+warning: Erdos319Sharp/Regularization.lean:36:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [8981/9121] Replayed Erdos319Sharp.PrimeAssignment
+warning: Erdos319Sharp/PrimeAssignment.lean:47:6: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [8984/9121] Replayed Erdos319Sharp.PathResidues
+warning: Erdos319Sharp/PathResidues.lean:18:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Erdos319Sharp/PathResidues.lean:19:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8988/9121] Replayed Erdos319Sharp.Imported.ErdosProblems.Erdos285.Modular
+warning: Erdos319Sharp/Imported/ErdosProblems/Erdos285/Modular.lean:116:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Erdos319Sharp/Imported/ErdosProblems/Erdos285/Modular.lean:116:24: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Erdos319Sharp/Imported/ErdosProblems/Erdos285/Modular.lean:117:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: Erdos319Sharp/Imported/ErdosProblems/Erdos285/Modular.lean:117:24: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [8991/9121] Replayed Erdos319Sharp.Middle
+warning: Erdos319Sharp/Middle.lean:56:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos319Sharp/Middle.lean:56:39: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8993/9121] Replayed Erdos319Sharp.LocalResidue
+warning: Erdos319Sharp/LocalResidue.lean:23:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Erdos319Sharp/LocalResidue.lean:28:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [8994/9121] Replayed Salt.Mertens.PrimePower
+warning: Salt/Mertens/PrimePower.lean:174:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Salt/Mertens/PrimePower.lean:177:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: Salt/Mertens/PrimePower.lean:202:36: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [8995/9121] Replayed Erdos319Sharp.LocalizationEstimates
+warning: Erdos319Sharp/LocalizationEstimates.lean:61:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8996/9121] Replayed Erdos319Sharp.PairConnector
+warning: Erdos319Sharp/PairConnector.lean:20:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Erdos319Sharp/PairConnector.lean:21:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8997/9121] Replayed Erdos319Sharp.DivisorBlockResidue
+warning: Erdos319Sharp/DivisorBlockResidue.lean:25:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [8999/9121] Replayed Erdos319Sharp.Representation
+warning: Erdos319Sharp/Representation.lean:47:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9005/9121] Replayed Erdos319Sharp.PathVertexChoice
+warning: Erdos319Sharp/PathVertexChoice.lean:35:6: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9012/9121] Replayed Salt.Mertens.Third
+warning: Salt/Mertens/Third.lean:282:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Salt/Mertens/Third.lean:283:54: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Salt/Mertens/Third.lean:287:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: Salt/Mertens/Third.lean:288:42: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9015/9121] Replayed Erdos319Sharp.PathLocalSum
+warning: Erdos319Sharp/PathLocalSum.lean:32:26: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Erdos319Sharp/PathLocalSum.lean:43:33: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: Erdos319Sharp/PathLocalSum.lean:69:35: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Erdos319Sharp/PathLocalSum.lean:69:48: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Erdos319Sharp/PathLocalSum.lean:69:63: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: Erdos319Sharp/PathLocalSum.lean:72:37: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Erdos319Sharp/PathLocalSum.lean:72:50: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: Erdos319Sharp/PathLocalSum.lean:72:65: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Erdos319Sharp/PathLocalSum.lean:74:37: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: Erdos319Sharp/PathLocalSum.lean:74:50: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: Erdos319Sharp/PathLocalSum.lean:74:65: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9018/9121] Replayed Erdos319Sharp.PathDichotomy
+warning: Erdos319Sharp/PathDichotomy.lean:125:48: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+⚠ [9019/9121] Replayed Erdos319Sharp.ResidueCorrection
+warning: Erdos319Sharp/ResidueCorrection.lean:36:43: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Nat.cast_mul, div_eq_mul_inv, mul_inv_rev]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9021/9121] Replayed Erdos319Sharp.DivisorReciprocals
+warning: Erdos319Sharp/DivisorReciprocals.lean:17:43: Variable name `hD` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hD
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9024/9121] Replayed Erdos319Sharp.PathCore
+warning: Erdos319Sharp/PathCore.lean:60:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Erdos319Sharp/PathCore.lean:60:39: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [9029/9121] Replayed Erdos319Sharp.RationalCompatibility
+warning: Erdos319Sharp/RationalCompatibility.lean:69:34: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Erdos319Sharp/RationalCompatibility.lean:69:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [9035/9121] Replayed Erdos319Sharp.PrimeTail
+warning: Erdos319Sharp/PrimeTail.lean:19:43: Variable name `hY` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hY
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos319Sharp/PrimeTail.lean:108:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos319Sharp/PrimeTail.lean:108:60: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9041/9121] Replayed Erdos319Sharp.CommonPrimeTarget
+warning: Erdos319Sharp/CommonPrimeTarget.lean:70:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos319Sharp/CommonPrimeTarget.lean:75:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9042/9121] Replayed Erdos319Sharp.PrimeSetPath
+warning: Erdos319Sharp/PrimeSetPath.lean:28:18: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Erdos319Sharp/PrimeSetPath.lean:33:21: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Erdos319Sharp/PrimeSetPath.lean:33:33: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Erdos319Sharp/PrimeSetPath.lean:45:21: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+⚠ [9048/9121] Replayed Erdos319Sharp.TailDivisibility
+warning: Erdos319Sharp/TailDivisibility.lean:42:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos319Sharp/TailDivisibility.lean:42:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9052/9121] Replayed Erdos319Sharp.DivisorMoments
+warning: Erdos319Sharp/DivisorMoments.lean:29:2: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Erdos319Sharp/DivisorMoments.lean:53:2: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [9053/9121] Replayed Erdos319Sharp.DenseRepresentation
+warning: Erdos319Sharp/DenseRepresentation.lean:46:30: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9061/9121] Replayed Erdos319Sharp.MissingDivisorMass
+warning: Erdos319Sharp/MissingDivisorMass.lean:68:5: Variable name `hδ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hδ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9065/9121] Replayed Erdos319Sharp.ConstructionParameters
+warning: Erdos319Sharp/ConstructionParameters.lean:58:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos319Sharp/ConstructionParameters.lean:58:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9067/9121] Replayed Erdos319Sharp.MinorityDensity
+warning: Erdos319Sharp/MinorityDensity.lean:62:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos319Sharp/MinorityDensity.lean:97:4: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [hEq, primeAvoidanceDensity] at hDensity
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [9069/9121] Replayed Erdos319Sharp.CofactorDensity
+warning: Erdos319Sharp/CofactorDensity.lean:62:62: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9075/9121] Replayed Erdos319Sharp.ConstructionGrowth
+warning: Erdos319Sharp/ConstructionGrowth.lean:90:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Erdos319Sharp/ConstructionGrowth.lean:90:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9077/9121] Replayed Erdos319Sharp.MinorityBound
+warning: Erdos319Sharp/MinorityBound.lean:82:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9080/9121] Replayed Erdos319Sharp.PrimaryHeight
+warning: Erdos319Sharp/PrimaryHeight.lean:69:45: Variable name `hd` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos319Sharp/PrimaryHeight.lean:143:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: Erdos319Sharp/PrimaryHeight.lean:148:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+⚠ [9082/9121] Replayed Erdos319Sharp.GroupHarmonic
+warning: Erdos319Sharp/GroupHarmonic.lean:109:79: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9092/9121] Replayed Erdos319Sharp.PrimarySums
+warning: Erdos319Sharp/PrimarySums.lean:31:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9096/9121] Replayed Erdos319Sharp.DenseDeletion
+warning: Erdos319Sharp/DenseDeletion.lean:83:30: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9113/9121] Replayed Erdos319Sharp.OmissionNormalization
+warning: Erdos319Sharp/OmissionNormalization.lean:39:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos319Sharp/OmissionNormalization.lean:111:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (9121 jobs).

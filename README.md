@@ -18,6 +18,7 @@ The signing is fixed when testing every nonempty proper subset. The maximum rang
 - [Literal original-statement bridge](Submission.lean).
 - [Sharp proof endpoint](Erdos319Sharp/SharpFinal.lean).
 - [Statement correspondence and coverage](STATEMENT.md).
+- [Verification report](verification/report.md), including the checked revision, clean CI run, target axiom audit, and supporting logs.
 
 ## Authors and submission ownership
 
