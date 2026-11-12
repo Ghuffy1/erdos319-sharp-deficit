@@ -1,6 +1,6 @@
 # Verification methodology
 
-The [completed verification report](report.md) records the selected source revision. The clean CI run built and replayed all 187 local modules and completed the 17 target audits. The additional local run completed its normal build, all target audits and 108 module replays before the complete CI result made further duplicate checking unnecessary.
+The [completed verification report](report.md) records the final selected source revision. Its fresh clean CI run built and replayed all 187 local modules and completed the 17 target audits. An earlier local run with identical executable inputs completed its normal build, all target audits and 108 module replays. The report preserves the dates and scope of each run.
 
 Run `python scripts/verify.py --setup --clean` from the selected source revision. The exact toolchain and dependency lockfile are retained.
 

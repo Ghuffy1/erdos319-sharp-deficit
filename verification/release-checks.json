@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "selected_proof_commit": "43f24b821a8cb8052707fcadc9adcc2cd1678c13",
+  "checked_utc": "2026-11-12T08:14:20.597508+00:00",
+  "tracked_source_files_reviewed": 329,
+  "working_tree_and_git_blob_identity": "passed",
+  "source_module_hashes": 187,
+  "paper_pages_visually_reviewed": 15,
+  "paper_fonts_embedded": 26,
+  "paper_sha256": "fba9f1869ec8e5513cccdbad1fc0da6bcf3c21167127273fa0ac0596966be97c",
+  "paper_math_and_statement_review": "passed",
+  "upstream_tests": 50,
+  "catalog_scope": "one file, four permitted fields",
+  "copyright_correction": "Explicit upstream credit for the adapted LeanChecker replay utility retained in NOTICE and THIRD_PARTY_NOTICES.md.",
+  "prior_local_run_commit": "003f453d2844709337770e7d67f527a516d83d78",
+  "prior_local_run_completed_replays": 108,
+  "prior_local_executable_inputs_identical": true
+}

@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "proof_commit": "003f453d2844709337770e7d67f527a516d83d78",
-  "recorded_utc": "2026-11-12T06:49:07.098280+00:00",
-  "complete_verification_environment": "GitHub Actions clean Ubuntu 24.04 checkout",
+  "proof_commit": "43f24b821a8cb8052707fcadc9adcc2cd1678c13",
+  "recorded_utc": "2026-11-12T08:14:20.597508+00:00",
+  "complete_verification_environment": "Clean Ubuntu 24.04 GitHub Actions checkout",
   "toolchain": "leanprover/lean4:v4.35.0-rc2",
   "dependencies": [
     {
@@ -338,11 +338,13 @@
     "verification/targets.json": "250b2b1ac2a840f9da0ddab12678f6cdf4a00d3493e06b0452d3ef5734d7722e",
     "verification/Targets.lean": "73b39ee72a622cd79c35bba2a3466a58929e42f998ea3e18996ee32dca74e239"
   },
-  "local_completed_module_replays": 108,
-  "local_run_status": "stopped_after_full_ci_pass",
+  "prior_local_completed_module_replays": 108,
+  "prior_local_run_commit": "003f453d2844709337770e7d67f527a516d83d78",
+  "prior_local_inputs_identical": true,
   "ci_evidence": "ci-run.json",
-  "local_evidence": "local-results.json",
+  "prior_local_evidence": "local-results.json",
+  "release_evidence": "release-checks.json",
   "clean_ci_log": "logs/clean-ci.log",
-  "ci_log_sha256": "50e873b64e21964f53a94a32745c5dc3ce74dae18307081503d64de36a607a64",
-  "trust": "Author-controlled executions using the pinned Lean kernel and imported dependency environment."
+  "ci_log_sha256": "f5458a3e212288ba8e222baf88a7f13ff7b0457f7b54df492489646112167b31",
+  "trust": "Author-controlled checks using the pinned Lean kernel and imported dependency environment."
 }
