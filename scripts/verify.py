@@ -26,6 +26,16 @@ def read_json(path):
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
+def parse_axiom_closures(output):
+    closures = {}
+    for name, body in re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", output):
+        printed_names = [value.strip() for value in body.split(",") if value.strip()]
+        closures[name] = [re.sub(r"\.\{[^{}]*\}$", "", value) for value in printed_names]
+    for name in re.findall(r"'([^']+)' does not depend on any axioms", output):
+        closures[name] = []
+    return closures
+
+
 def without_comments(text):
     """Remove nested Lean comments and strings before the static source scan."""
     out = []
@@ -211,11 +221,7 @@ def main():
         run("default-build", [args.lake, "--no-cache", "--fail-fast", "build"])
         audit = run("target-axioms", [args.lake, "env", "lean", "-DwarningAsError=true", "verification/Targets.lean"])
         expected_targets = read_json(ROOT / "verification" / "targets.json")["axiom_targets"]
-        closures = {}
-        for name, body in re.findall(r"'([^']+)' depends on axioms:\s*\[([^\]]*)\]", audit):
-            closures[name] = [value.strip() for value in body.split(",") if value.strip()]
-        for name in re.findall(r"'([^']+)' does not depend on any axioms", audit):
-            closures[name] = []
+        closures = parse_axiom_closures(audit)
         for target in expected_targets:
             if target not in closures:
                 raise RuntimeError("Missing axiom output for " + target)
