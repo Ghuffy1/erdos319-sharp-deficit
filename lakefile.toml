@@ -1,4 +1,4 @@
-name = "Erdos319SharpSubmission"
+name = "Erdos319SharpPrivate"
 version = "1.0.0"
 defaultTargets = ["Erdos319Sharp", "Submission", "Solution", "Challenge"]
 

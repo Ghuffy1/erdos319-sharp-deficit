@@ -29,6 +29,8 @@ The designated repository owner and main submitter is **Ghuffy1**, Grant Huffman
 
 The pinned environment is Lean **4.35.0-rc2**, Mathlib **065356127b1dc0016f66b7283ce0ce2c4055aa55**, and the transitive revisions in [lake-manifest.json](lake-manifest.json).
 
+The internal Lake package identifier `Erdos319SharpPrivate` is retained from the checked development project to preserve build-cache compatibility. The repository and submission ownership are assigned to Ghuffy1 as recorded above.
+
 From a checkout of the selected proof commit, with the pinned Lean toolchain available, run
 
 ```sh

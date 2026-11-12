@@ -156,6 +156,11 @@ def main():
         results["proof_commit"] = subprocess.check_output(
             ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
         results["input_sha256_before"] = input_hashes()
+        for name, expected in results["input_sha256_before"].items():
+            blob = subprocess.check_output(
+                ["git", "show", results["proof_commit"] + ":" + name], cwd=ROOT)
+            if hashlib.sha256(blob).hexdigest() != expected:
+                raise RuntimeError("Working input differs from the selected commit: " + name)
         versions = run("tool-versions", [args.lake, "env", "lean", "--version"])
         expected_version = expected_toolchain.split(":v")[-1]
         if ("version " + expected_version) not in versions:

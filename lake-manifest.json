@@ -111,7 +111,7 @@
       "configFile": "lakefile.toml"
     }
   ],
-  "name": "Erdos319SharpSubmission",
+  "name": "Erdos319SharpPrivate",
   "lakeDir": ".lake",
   "fixedToolchain": false
 }
